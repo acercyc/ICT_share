@@ -14,7 +14,7 @@
 \newacro{cging}{coarse-graining}
 \newacro{cged}{coarse-grained}
 \newacro{ncg}{neural coarse-graining}
-\newacro{OurTheory}[NCGTC]{The Neural Coarse-graining Theory of Consciousness}
+\newacro{OurTheory}[ICTC]{The Information Closure Theory of Consciousness}
 
 
 % ============================================================================ %
@@ -45,7 +45,7 @@
 
 
 	\begin{abstract}
-		Neural systems process information through different levels of organisation in a hierarchical manner. Information at lower levels is finer-grained and can be coarse-grained for higher level computation. However, one is aware of information processed only at specific levels. Theorists have addressed this issue. For example, the intermediate level theory of consciousness suggests that the intermediate level seems to be privileged with respect to consciousness. It is true that we do not experience information processed by individual neurons which is always highly stochastic noisy. In addition, we have no conscious experience from interpersonal activities despite massive interactions among individuals. Instead, neurophysiological evidence has been showing that conscious experience tends to co-vary with information encoded in coarse-grained neural states such as neural population codes. We argue that the content of consciousness is determined by neural variables that obey informational closure and that other brain processes remain unconscious. Out theory provides a quantitative distinction between conscious and unconscious processing. 
+		Neural systems process information through different levels of organisation in a hierarchical manner. Information at lower levels is finer-grained and can be coarse-grained for higher level computation. However, one is aware of information processed only at specific levels. Theorists have addressed this issue. For example, the intermediate level theory of consciousness suggests that the intermediate level seems to be privileged with respect to consciousness. It is true that we do not experience information processed by individual neurons which is always highly stochastic noisy. In addition, we have no conscious experience from interpersonal activities despite massive interactions among individuals. Instead, neurophysiological evidence has been showing that conscious experience tends to co-vary with information encoded in coarse-grained neural states such as neural population codes. We argue that the content of consciousness is determined by neural variables that obey informational closure and that other brain processes remain unconscious. Out theory based on concise assumptions and propose quantitative definitions using information theorem for both conscious content and conscious level.
 		
 	\end{abstract}
 
@@ -93,20 +93,19 @@
 		Imagine you are a neuron in Alice's brain. Your daily work is to collect neurotransmitters through dendrites from other neurons, accumulate membrane potential, and finally send signals to other neurons through action potentials along axons. However, you have no idea that you are one of the neurons in Alice's supplementary motor area and involved in many motor control processes for Alice's action, for example, grabbing a cup. You are ignorant of intentions, goals, and motor plans that Alice has at every moment even though you are part of the physiological substrate responsible for all those actions.
 		A similar story also happens to Alice's conscious mind. To grab a cup, for example, Alice is conscious of her intention and visuosensory experience of this action. However, her conscious experience does not reflect the dynamic of your membrane potential or the action potentials you send to other neurons every second. That is, not all information you have is available to Alice's conscious mind.
 
-		\toWrite{maybe need a transition sentence here}
-
 		%% scale
 		
-		It seems to be true that we are not consciously accessing information processed at every scale in the neural system. There are both more microscopic and more macroscopic levels than the level corresponding to the conscious contents. On the one hand, dynamics of individual neurons are stochastic \citep{Goldwyn2011, White2000}. However, what we are aware of in our conscious mind shows astonishing stability and robustness against the ubiquitous noise in the neural system \citep{mathis1995computational}. In addition, some parts of the neural system contribute very little to conscious experience (the cerebellum for example \citep{lemon2010life}), also suggesting that conscious contents do not have one-to-one mapping to the entire state of the neural system. On the other hand, experience is more detailed than just a binary process, suggesting that the state space of conscious experience is much larger than what a single coarse-grained variable can represent. 
+		It seems to be true that we are not consciously accessing information processed at every scale in the neural system. There are both more microscopic and more macroscopic levels than the level corresponding to the conscious contents. On the one hand, dynamics of individual neurons are stochastic \citep{Goldwyn2011, White2000}. However, what we are aware of in our conscious mind shows astonishing stability and robustness against the ubiquitous noise in the neural system \citep{mathis1995computational}. In addition, some parts of the neural system contribute very little to conscious experience (the cerebellum for example \citep{lemon2010life}), also suggesting that conscious contents do not have one-to-one mapping to the entire state of the neural system. On the other hand, experience is more detailed than just a binary process, suggesting that the state space of conscious experience is much larger than what a single coarse-grained variable can represent. Here, we refer to this fact as \textbf{the scale problem of consciousness} (Fig.\ref{fig:scaleproblem}).
 
 		%% our argument
 		In this article, we propose a new information-based theory of consciousness, called \ac{OurTheory}. We argue that every process with a high degree of not-trivial information closure (NTIC) has consciousness. This means that the state of such a process corresponds one-to-one to conscious content. \footnote{In the following NTIC stands for "non-trivial informational closure" or "non-trivially informationally closed".}. We further postulate that the \textit{level} of consciousness corresponds to the degree of NTIC. (for the level versus content of consciousness see \cite{laureys2005neural, overgaard2010neural}).
 		
-		In the following, we first introduce non-trivial informational closure and its importance to information processing for human scale agents \ref{sec:Non-trivial informational closure}. We next argue that through coarse-graining the neural system can form a high degree of non-trivial informational closure at a specific coarse-grained level\ref{sec:Neural coarse-graining}. We also illustrate how \ac{OurTheory} \ref{sec:OurTheory} can parsimoniously explain empirical findings from previous consciousness studies \ref{sec:Conscious versus Unconscious Processing} and reconcile several current major theories of consciousness\ref{sec:Comparison with other theories}. Finally, we discuss the current theoretical and empirical limitations of \ac{OurTheory} and propose the implications from this theory to the current consciousness science \ref{sec:Limitation and Future work}. 
+		In the following, we first introduce non-trivial informational closure and its importance to information processing for human scale agents (sec.\ref{sec:Non-trivial informational closure}). We next argue that through coarse-graining the neural system can form a high degree of non-trivial informational closure at a specific coarse-grained level (sec.\ref{sec:Neural coarse-graining}). We also illustrate how \ac{OurTheory} can \ref{sec:Conscious versus Unconscious Processing}) and reconcile several current major theories of consciousness (sec.\ref{sec:Comparison with other theories}). Finally, we discuss the current theoretical and empirical limitations of \ac{OurTheory} and propose the implications from this theory to the current consciousness science (sec.\ref{sec:Limitation and Future work}). 
 
 
 		\begin{figure}[H]
 		    \centering
+		    \label{fig:scaleproblem}
 			\includegraphics[width=\textwidth]{WritingMaterials/Fig_ScaleProblemOfConsciousness/ScaleProblemOfConsciousness.pdf}
 			\caption{The scale problem of consciousness: Human conscious experience does not reflect information processed at every scale. Only information at a certain scale in the neural system is conscious.}
 	   	\end{figure}
@@ -137,9 +136,9 @@
 
             
 				\begin{figure}
-					\includegraphics[width=\textwidth]{WritingMaterials/Fig_SystemAndEnv/SystemAndEnv.pdf}
+					\includegraphics[width=\textwidth]{WritingMaterials/Fig_SystemAndEnv/SystemAndUniv.pdf}
 					\caption{Figure adapted from \cite{BERTSCHINGER.2006}}
-					\label{fig:SystemAndEnv}
+					\label{fig:SystemAndUniverse}
 				\end{figure}
 				\todo{Modify this figure}
 
@@ -209,7 +208,9 @@
 				\end{equation}
 
 			\noindent
-			This implies the system contains in itself all the information about its own future and the self-predictive information is gained from the information about the environment. Therefore, to form NTIC, the system can internalise and synchronise the dynamics of the environment, i.e. modelling the environment. Furthermore, having high degrees of NTIC entails having high predictive power about the environment. This gives biological agents a great functional and evolutionary advantage. Practically, \cite{guttenberg2016neural} proposed that NTIC can be formed by maximising the predictive power about the environment and the self-predictive information of the system concurrently.
+			This implies the system contains in itself all the information about its own future and the self-predictive information is gained from the information about the environment. Therefore, to form NTIC, the system can internalise and synchronise the dynamics of the environment, i.e. modelling the environment. Furthermore, having high degrees of NTIC entails having high predictive power about the environment. This gives biological agents a great functional and evolutionary advantage. 
+			
+			% Practically, \cite{guttenberg2016neural} proposed that NTIC can be formed by maximising the predictive power about the environment and the self-predictive information of the system concurrently.
 
 
 			% Biological evidence of informational closure in the neural system
@@ -229,19 +230,24 @@
 	\section{Coarse-graining In The Neural System} \label{sec:Neural coarse-graining}
 
 		%% stochasticity at microscopic levels
-		To create NTIC with a highly stochastic process is challenging. NTIC requires the predictability of the system state and is therefore impeded by noise in the system. Information processing at the microscopic levels (the cellular levels) in the neural system suffers from multiple environmental noise sources throughout, including sensory, cellular, electrical, and synaptic noises. For example, neurons have large trial-to-trial variability at the cellular level, and are subject to thermal fluctuations and other physical noises \citep{faisal2008noise}. 
+		Despite the evolutionary advantage of forming NTIC processes in a system, however, to create NTIC with a highly stochastic process is challenging. NTIC requires the predictability of the system state and is therefore impeded by noise in the system. Information processing at the microscopic levels (the cellular levels) in neural systems suffer from multiple environmental noise source es throughout, including sensory, cellular, electrical, and synaptic noises. For example, neurons have large trial-to-trial variability at the cellular level, and are subject to thermal fluctuations and other physical noises \citep{faisal2008noise}. 
 		
         % 		Furthermore, environmental information is always only partially observable to individual sensors and neurons which only receive little amount of information from the environment. Therefore, information about the environment state at the cellular level is difficult to represent at the cellular level. It is implausible to construct NTIC processes at microscopic levels.
 
         %% Our argument
-		However, we argue that, neural systems can form NTIC at certain macroscopic levels by coarse-graining microscopic neural states. Although the microscopic levels in the neural system are stochastic and cannot form NTIC processes, coarse-grained variables can still form stable and robust representations in the system. Coarse-graining refers to many-to-one functions that map microscopic states to macroscopic states. In other words, a number of different micro-states realise the same value of the macro-variable \citep{price2007causation}. This is a common neural coding scheme that we see in a large number of previous neurophysiological studies. For example, individual neural spikes in a transient time span are stochastic, but they can be coarse-grained as spiking rate variables, known as rate coding \citep{adrian1926impulses, gerstner2002spiking, maass2001pulsed, panzeri2015neural, stein2005neuronal}. Neurons encode stimulus intensity by increasing or decreasing firing rate. \citep{kandel2000principles}.  \citep{stein2005neuronal}. In contrast, rate codes are relatively stable and are highly robust against noise caused by the variation of inter-spike intervals. The robustness is direct consequence of the many to one map used.
+		However, we argue that, neural systems can form NTIC at certain macroscopic levels through coarse-graining microscopic neural states. Coarse-graining refers to many-to-one functions which aggregate microscopic states to a macroscopic state. In other words, a number of different micro-states realise the same value of the macro-variable \citep{price2007causation}. Neural systems, therefore, can form more stable and deterministic state transitions and be more capable to form NTIC processes at certain coarse-grained macroscopic levels. 
+		
+		
+		Coarse-graining is considered as a common coding strategy in the neural system against ubiquitous stochasticity at microscopic levels.
+		
+		Although the microscopic levels in the neural system are stochastic and may incapable of forming NTIC processes, the macroscopic processes in the system can still be  stable and robust. This is a common neural coding scheme that we see in a large number of neurophysiological studies. For example, individual neural spikes in a transient time span are stochastic, but they can be coarse-grained as spiking rate variables, known as rate coding \citep{adrian1926impulses, gerstner2002spiking, maass2001pulsed, panzeri2015neural, stein2005neuronal}. Neurons encode stimulus intensity by increasing or decreasing firing rate. \citep{kandel2000principles}.  \citep{stein2005neuronal}. In contrast, rate codes are relatively stable and are highly robust against noise caused by the variation of inter-spike intervals. The robustness is direct consequence of the many to one map used.
 
 		% population code
 		Another example of coarse-graining in neural systems is population coding. In this coding scheme, information (e.g. orientation of a bar) is represented by activation patterns of a population of neurons. Multiple activation patterns could represent the same information content. The subspaces of the joint state space of these neurons are the macroscopic coarse-grained variables. Therefore, the information is encoded in coarse-grained variables whose values are jointly determined by neural activation patterns within a neural population \citep{kristan1997population, pouget2000information, binder2009encyclopedia, QuianQuiroga2009}. In such cases, encoded information cannot be read out by the stochastic activities of a single neuron. Instead, coarse-grained variables (such as population averaging or population vector, i.e. weighted sum of the preferred directions of a population of neurons) are able to represent information more stably. Encoding information at coarse-grained levels allow the neural system to ignore certain causal interactions relevant to fine-grained level of description \citep{Woodward2007-WOOCWA}.
 			
 			
 		% neural coarse-graining by Nic
-		The practical implementation mentioned above suggests that  NTIC can be formed by coarse-graining sensory inputs in artificial neural networks. \citep{guttenberg2016neural} proposed a "neural coarse-graining (NCG)" architecture (fig.\ref{fig:NCG}) which aims to capture the emergent large-scale dynamics in the environment. The NCG network learns to coarse-grain input signals and extract latent variables which are both predictive and predictable in the input signal and therefore form NTIC.
+		The practical implementation mentioned above suggests that  NTIC can be formed by coarse-graining sensory inputs in artificial neural networks. \citep{guttenberg2016neural} proposed a "neural coarse-graining (NCG)" architecture which aims to capture the emergent large-scale dynamics in the environment. The NCG network learns to coarse-grain input signals and extract latent variables which are both predictive and predictable in the input signal and therefore form NTIC.
 
 		%% not monotonic
 		It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining. We saw above that not coarse-graining enough and therefore considering processes that are too microscopic leads to low values of NTIC. We also saw that coarse-graining further can increase the values of NTIC. However, if the macroscopic variable is overly coarse-grained the system states can result in low degrees of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any information capacity and thus looses the self and environmental predictive power. 
@@ -271,38 +277,34 @@
 	
 
 
-        In this section, we propose a new theoretical framework of consciousness: \acf{OurTheory} \todo{We really need a good name}.
-        % \begin{enumerate}
-        %     \item We argue that the existence of an NTIC process within a system is sufficient for information processing to be conscious.
-        %     \item  A system that forms NTIC must necessarily satisfy coarse-graining
-        % \end{enumerate}
+        In this section, we propose a new theoretical framework of consciousness: \acf{OurTheory}.
         
         We argue that the existence of an NTIC process within a system is sufficient for information processing to be conscious.
 
-        In what follows, we will first establish two assumption on which this Theory depends. Then, we will develop the propositions in detail. 
+        In what follows, we will first establish three assumptions on which this Theory depends. Then, we will develop the propositions in detail. 
     
-        The first assumption is that every human conscious precept is informative. Here, "informative" refers to the resolution of uncertainty. Being in a certain conscious state rules out a  number of other possible conscious states. This is in line with the impression that our conscious experience consist of multi-dimensional information and usually involves information from multiple modalities. Therefore, every human conscious precept resolves some amount of uncertainty and provides  information.  
+        The first assumption is that every human conscious precept is informative. Here, "informative" refers to the resolution of uncertainty. Being in a certain conscious state rules out a  number of other possible conscious states. This is in line with the impression that our conscious experience consist of multi-dimensional information and usually involves information from multiple modalities. Therefore, every human conscious precept resolves some amount of uncertainty and provides information.  
         
-        This assumption is in agreement with the "axiom", \textit{information}, in Integrated Information Theory (IIT 3.0) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}.
+        This assumption is also in agreement with the "axiom", \textit{information}, in Integrated Information Theory (IIT 3.0) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}.
         
-        We further assume that all information requires physical substrates. 
+        Second, we further assume that all information requires physical substrates. 
         From these two assumptions, it follows that the amount of (self-)information possessed by a conscious percept must be equal to the (self-)information of a particular event or entity in the physical reality. 
         
-        In this theory, we consider information is the common language between conscious experience and the physical reality. This means that consciousness is fundamentally associated with a specific kind of information, i.e., the information correlates of consciousness (ICC), \cite{chalmers1996conscious, tononi2004information, gamez2011information, Gamez2016}).
+        In this theory, we consider information is the common language between conscious experience and the physical reality. This means that consciousness is fundamentally associated with information, i.e., the information correlates of consciousness (ICC), \cite{chalmers1996conscious, tononi2004information, gamez2011information, Gamez2016}).
         
         The third assumption is that no consciousness can contain information of the entire universe. Together with assumption one and two, this means that the physical representations of the contents of any consciousness must be a coarse-graining of the universe states. 
         
-        Our main proposition is that the coarse-grainings that physically represent consciousnesses are those that are NTIC with respect to the universe state. More formally this means that every NTIC process $Y_t$ at time $t$ corresponds to a conscious process $C_t=\{C_t^{Content},C_t^{Level}\}$ such that the content $C_{t}^{Content}$ of $C_t$ is just $Y_t$:
+        Finally, our main proposition is that the coarse-grainings that physically represent consciousnesses are those that are NTIC with respect to the universe state. More formally this means that every NTIC process $Y_t$ at time $t$ corresponds to a conscious process $C_t=\{C_t^{Content},C_t^{Level}\}$ such that the content $C_{t}^{Content}$ of $C_t$ is just $Y_t$:
 		\begin{equation}\label{eq:cContent}
 			C_{t}^{Content} = Y_{t}.
 		\end{equation}
 		
 		
 		\noindent
-We further propose that the level of consciousness $C_{t}^{Level}$ can be measured by the degree of $NTIC_{t}$ of $Y_t$:
-			\begin{equation}\label{eq:cLevel}
-				C_{t}^{Level} = NTIC_{t}.
-			\end{equation}
+        We further propose that the level of consciousness $C_{t}^{Level}$ can be measured by the degree of $NTIC_{t}$ of $Y_t$:
+		\begin{equation}\label{eq:cLevel}
+			C_{t}^{Level} = NTIC_{t}.
+		\end{equation}
 		\newline
 
 		
@@ -312,9 +314,9 @@ We further propose that the level of consciousness $C_{t}^{Level}$ can be measur
 		% ---------------------------------------------------------------------------- %
         %        Level of Consciousness correlates degrees of NTIC of a process        %
         % ---------------------------------------------------------------------------- %
-	    \subsection{Level of Consciousness is equal to the degree of NTIC of a proces}
+	    \subsection{Level of Consciousness is equal to the degree of NTIC of a process}
 	    
-	    Our theory implies that conscious levels are determined by two quantities (Equation \ref{eq:nticObjective}). 
+	    Our theory implies that conscious levels are determined by two quantities (Eq. \ref{eq:nticObjective}). 
 	    
 	    First, to form high level of NTIC, one needs high self-predictive information $I(Y_{t+1};Y_{t})$ between the current internal state and the future internal state. 
 	    Consider two hypothetical systems composed of binary nodes. One has only three nodes and the other has 1 million nodes. Then the maximum possible self-predictive information for such systems are 3 bits and 1 million bits. So complex systems can potentially reach higher levels of consciousness.
@@ -341,7 +343,7 @@ We further propose that the level of consciousness $C_{t}^{Level}$ can be measur
         % ---------------------------------------------------------------------------- %
         %                Contents Corresponding to Coarse-grained States               %
         % ---------------------------------------------------------------------------- %
-		\subsection{Conscious Contents Corresponding to Coarse-grained States}\needfig{maybe I need a figure here}
+		\subsection{Conscious Contents Corresponding to States of a NTIC proces}\needfig{maybe I need a figure here}
         As we mentioned above, human conscious contents always consist of rich,  high dimensional, and integrated information. The state space of the correspondent physical system must have the same information capacity as the information content of consciousness.  We claim that conscious contents correspond to the state of the NTIC process. 
         
         This claim implies that the complexity of conscious contents is identical to the amount of information contained in the NTIC process. Therefore, a crucial predict from our theory is that the larger state space of the NTIC process has the richer conscious experience the process can have (e.g., an NTIC process involving a large amount of coarse variables). Crucially, even experience of full darkness contains rich information because it rules out other enormous potential alternative states of conscious contents. Equivalently, in the physical system, to know the state of the NTIC process when there is no sensory input (darkness) also requires the same amount of information from the system. 
@@ -642,7 +644,23 @@ We further propose that the level of consciousness $C_{t}^{Level}$ can be measur
 % ============================================================================ %
 %                                  Limitation                                  %
 % ============================================================================ %
-    \section{Limitation and Future work}\label{sec:Limitation and Future work}
+    \section{Limitation and Future work}\label{sec:Limitation and Future work}  
+        In this article, we propose the central proposition of our theory. We focused on convey the major concepts and mathematical formulation of the theory. In this section, we will discuss potential issues and challenges in the current version of \ac{OurTheory}.
+        
+        
+    
+    
+    
+        % multi NTIC problem
+        Our theory is not complete yet. 
+        To identify an NTIC individuals and their boundaries, we can adopt the algorithm for computing individuality developed by \cite{krakauer2014information}. This algorithm defines an individual starting from a small set of variables and repeatedly computes individuality after adding more variables into the system. If the measure of individuality increase, the algorithm considers the new variables as the part of the system, and vise verse. However, this algorithm does not consider coarse-grained processes in a system (see "Caveats and challenges"\cite[p. 13]{krakauer2014information}. 
+        
+        
+        In the following articles, we will discuss the relationship between synergy and NTIC process
+    
+    
+    
+    
         % Can't solve the hard problem
         It's important to clarify that our theory does not intend to solve the hard problem of consciousness\citep{chalmers1995facing}. Our theory claims that different states of an NTIC process should map to different conscious contents. However, knowing the state of a conscious process does not allow us to answer "What is it like to be this system"\citep{nagel1974like}. We can consider a simplified version of the inverted spectrum argument \citep{Shoemaker1982-SHOTIS, Block1990-BLOIE, Locke1979-LOCTCE-2}. Two NTIC creatures (Alice "$A$" and Bob "$B$") living in a simple environment($E$) which has only two states $E_1$ and $E_2$. In this simple case, Alice and Bob should have only two states ($A_1, A_2$ and $B_1, B_2$) when they form the maximal level of NTIC (i.e. 1 bit). Our theory can only claim that Alice has different conscious experience $\hat{A}_1$ and $\hat{A}_2$ at state $A_1$ and $A_2$, respectively (same as for $\hat{B}_1$ and $\hat{B}_2$ map to $B_1$ and $B_2$). However, there is no way to know whether $\hat{A}_1$ is the same as $\hat{B}_1$ or $\hat{B}_2$. 
         
