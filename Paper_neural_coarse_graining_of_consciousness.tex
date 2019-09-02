@@ -14,7 +14,7 @@
 \newacro{cging}{coarse-graining}
 \newacro{cged}{coarse-grained}
 \newacro{ncg}{neural coarse-graining}
-\newacro{OurTheory}[ICTC]{The Information Closure Theory of Consciousness}
+\newacro{OurTheory}[ICT]{The Information Closure Theory of Consciousness}
 
 
 % ============================================================================ %
@@ -95,19 +95,19 @@
 
 		%% scale
 		
-		It seems to be true that we are not consciously accessing information processed at every scale in the neural system. There are both more microscopic and more macroscopic levels than the level corresponding to the conscious contents. On the one hand, dynamics of individual neurons are stochastic \citep{Goldwyn2011, White2000}. However, what we are aware of in our conscious mind shows astonishing stability and robustness against the ubiquitous noise in the neural system \citep{mathis1995computational}. In addition, some parts of the neural system contribute very little to conscious experience (the cerebellum for example \citep{lemon2010life}), also suggesting that conscious contents do not have one-to-one mapping to the entire state of the neural system. On the other hand, experience is more detailed than just a binary process, suggesting that the state space of conscious experience is much larger than what a single coarse-grained variable can represent. Here, we refer to this fact as \textbf{the scale problem of consciousness} (Fig.\ref{fig:scaleproblem}).
+		It seems to be true that we are not consciously accessing information processed at every scale in the neural system. There are both more microscopic and more macroscopic levels than the level corresponding to the conscious contents. On the one hand, dynamics of individual neurons are stochastic \citep{Goldwyn2011, White2000}. However, what we are aware of in our conscious mind shows astonishing stability and robustness against the ubiquitous noise in the neural system \citep{mathis1995computational}. In addition, some parts of the neural system contribute very little to conscious experience (the cerebellum for example \citep{lemon2010life}), also suggesting that conscious contents do not have one-to-one mapping to the entire state of the neural system. On the other hand, human conscious experience is more detailed than just a simple (e.g. binary) process can represent, suggesting that the state space of conscious experience is much larger than what a single overly coarse-grained binary variable can represent. These facts suggest that conscious processes are scale dependent. We refer to this notion as \textbf{the scale problem of consciousness} (Fig.\ref{fig:scaleproblem}).
 
 		%% our argument
-		In this article, we propose a new information-based theory of consciousness, called \ac{OurTheory}. We argue that every process with a high degree of not-trivial information closure (NTIC) has consciousness. This means that the state of such a process corresponds one-to-one to conscious content. \footnote{In the following NTIC stands for "non-trivial informational closure" or "non-trivially informationally closed".}. We further postulate that the \textit{level} of consciousness corresponds to the degree of NTIC. (for the level versus content of consciousness see \cite{laureys2005neural, overgaard2010neural}).
+		In this article, we propose a new information-based theory of consciousness, called \ac{OurTheory}. We argue that every process with a high degree of not-trivial information closure (NTIC) has consciousness. This means that the state of such a process corresponds one-to-one to conscious content.\footnote{In the following NTIC stands for "non-trivial informational closure" or "non-trivially informationally closed".}. We further postulate that the \textit{level} of consciousness corresponds to the degree of NTIC. (for the level versus content of consciousness see \cite{laureys2005neural, overgaard2010neural}).
 		
-		In the following, we first introduce non-trivial informational closure and its importance to information processing for human scale agents (sec.\ref{sec:Non-trivial informational closure}). We next argue that through coarse-graining the neural system can form a high degree of non-trivial informational closure at a specific coarse-grained level (sec.\ref{sec:Neural coarse-graining}). We also illustrate how \ac{OurTheory} can \ref{sec:Conscious versus Unconscious Processing}) and reconcile several current major theories of consciousness (sec.\ref{sec:Comparison with other theories}). Finally, we discuss the current theoretical and empirical limitations of \ac{OurTheory} and propose the implications from this theory to the current consciousness science (sec.\ref{sec:Limitation and Future work}). 
+		In the following, we first introduce non-trivial informational closure and its importance to information processing for human scale agents (Sec.\ref{sec:Non-trivial informational closure}). We next argue that through coarse-graining the neural system can form a high degree of NTIC at a specific coarse-grained level (Sec.\ref{sec:Neural coarse-graining}). In the Sec.\ref{sec:OurTheory}, we propose our theory: \acf{OurTheory}. We also illustrate how \ac{OurTheory} can parsimoniously explain empirical findings from previous consciousness studies (Sec.\ref{sec:Conscious versus Unconscious Processing}) and reconcile several current major theories of consciousness (Sec.\ref{sec:Comparison with other theories}). Finally, we discuss the current theoretical and empirical limitations of \ac{OurTheory} and propose the implications from this theory to the current consciousness science (Sec.\ref{sec:Limitation and Future work}). 
 
 
 		\begin{figure}[H]
 		    \centering
 		    \label{fig:scaleproblem}
 			\includegraphics[width=\textwidth]{WritingMaterials/Fig_ScaleProblemOfConsciousness/ScaleProblemOfConsciousness.pdf}
-			\caption{The scale problem of consciousness: Human conscious experience does not reflect information processed at every scale. Only information at a certain scale in the neural system is conscious.}
+			\caption{The scale problem of consciousness: Human conscious experience does not reflect information processed at every scale. Only information at a certain coarse-grained scale in the neural system is conscious.}
 	   	\end{figure}
 
 
@@ -136,9 +136,9 @@
 
             
 				\begin{figure}
-					\includegraphics[width=\textwidth]{WritingMaterials/Fig_SystemAndEnv/SystemAndUniv.pdf}
-					\caption{Figure adapted from \cite{BERTSCHINGER.2006}}
-					\label{fig:SystemAndUniverse}
+					\includegraphics[width=\textwidth]{WritingMaterials/Fig_SystemAndEnv/SystemAndEnv_2.0.pdf}
+					\caption{} % Figure adapted from \cite{BERTSCHINGER.2006}
+					\label{fig:SystemAndEnv}
 				\end{figure}
 				\todo{Modify this figure}
 
@@ -248,6 +248,12 @@
 		% population code
 		Another example of coarse-graining in neural systems is population coding. In this coding scheme, information (e.g. orientation of a bar) is represented by activation patterns of a population of neurons. Multiple activation patterns could represent the same information content. The subspaces of the joint state space of these neurons are the macroscopic coarse-grained variables. Therefore, the information is encoded in coarse-grained variables whose values are jointly determined by neural activation patterns within a neural population \citep{kristan1997population, pouget2000information, binder2009encyclopedia, QuianQuiroga2009}. In such cases, encoded information cannot be read out by the stochastic activities of a single neuron. Instead, coarse-grained variables (such as population averaging or population vector, i.e. weighted sum of the preferred directions of a population of neurons) are able to represent information more stably. Encoding information at coarse-grained levels allow the neural system to ignore certain causal interactions relevant to fine-grained level of description \citep{Woodward2007-WOOCWA}.
 			
+		
+		% New 
+		The coding scheme through cg provides a system which contains high stochasticity at microscope levels can encode stable information at the macroscopic level. Therefore, allow the system to form ntic processes at macroscopic levels. We argue that through cg the neural systems form ntic processes and encode env dynamic. 
+
+
+			
 			
 		% neural coarse-graining by Nic
 		The practical implementation mentioned above suggests that  NTIC can be formed by coarse-graining sensory inputs in artificial neural networks. \citep{guttenberg2016neural} proposed a "neural coarse-graining (NCG)" architecture which aims to capture the emergent large-scale dynamics in the environment. The NCG network learns to coarse-grain input signals and extract latent variables which are both predictive and predictable in the input signal and therefore form NTIC.
@@ -279,6 +285,12 @@
 	\section{A neural coarse graining theory of consciousness}\label{sec:OurTheory}
 	
 
+		\begin{figure}[H]
+		    \centering
+		    \label{fig:fullgraph}
+			\includegraphics[width=\textwidth]{WritingMaterials/Fig_FullGraph/FullGraph.pdf}
+			\caption{The information flow amounts the universe $X$, the system $Y$, the environment of the system $E$, and the coarse-grained process of the system $Y$. The solid line with a filled arrow from $X_t$ to $X_{t+1}$ represents the microscopic dynamic of the universe. The solid lines with a empty arrow represent directions of coarse-graining. The dashed lines represents virtual dependencies between  two macroscopic variables. The red $\hat{Y}_t$, $\hat{Y}_{t+1}$, and the red dashed line in between represents a macroscopic process which forms informational closure at a certain coarse-grained level.}
+	   	\end{figure}
 
         In this section, we propose a new theoretical framework of consciousness: \acf{OurTheory}.
         
