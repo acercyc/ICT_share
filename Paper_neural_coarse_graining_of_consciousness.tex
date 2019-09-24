@@ -29,7 +29,7 @@
 % ============================================================================ %
 %                                    Authors                                   %
 % ============================================================================ %
-\author[]{Acer Y.C. Chang\thanks{acercyc@araya.org}}
+\author[]{Acer Y.C. Chang\thanks{Corresponding author, acercyc@araya.org}}
 \author[]{Martin Biehl\thanks{martin@araya.org}}
 \author[]{Yen Yu\thanks{yen.yu@araya.org}}
 \author[]{Ryota Kanai\thanks{kanair@araya.org }}
@@ -208,34 +208,14 @@
 		
   
         %% Our argument
-		However, it is possible that neural systems form NTIC at certain macroscopic levels through coarse-graining of microscopic neural states.
-		
-		Coarse-graining refers to many-to-one functions which aggregate microscopic states to a macroscopic state. In other words, a number of different micro-states correspond to the same value of the macro-variable \citep{price2007causation}. Coarse-grainings, can therefore form more stable and deterministic state transitions and more often form NTIC processes. 
-		
-		For neural systems this means that a microscopically noisy neural system may still give rise to an NTIC process
-		on a more macroscopic scale.
-		
-		In neural systems such coarse-grainings have been observed to represent external stimuli in empirical studies.
-		
-
-		=== so, to here, it's fine ===
-		Because coarse-graining is an effective way to create stable variables, a stochastic system (e.g., neural systems) can represent information stably by encoding information using coarse-grained macroscopic variables. 
-		
-		============================================================================
+		However, it is possible that neural systems form NTIC at certain macroscopic levels through coarse-graining of microscopic neural states. Coarse-graining refers to many-to-one functions which aggregate microscopic states to a macroscopic state. In other words, a number of different micro-states correspond to the same value of the macro-variable \citep{price2007causation}. Coarse-grainings, can therefore form more stable and deterministic state transitions and more often form NTIC processes. For neural systems this means that a microscopically noisy neural system may still give rise to an NTIC process on a more macroscopic scale.
 		
 		Indeed, empirical evidence suggests that coarse-graining is a common coding strategy to establish robustness against noise at microscopic levels of the neural system. For instance, the inter-spike intervals of an individual neuron are stochastic. This implies that the state of an individual neuron does not represent stable information. However, the firing rate, i.e. the average spike counts over a given time interval, is more stable and robust against noise such as the variability in inter-spike intervals. Using this temporal coarse-graining strategy, known as rate coding \citep{adrian1926impulses, gerstner2002spiking, maass2001pulsed, panzeri2015neural, stein2005neuronal}, neurons can encode stimulus intensity by increasing or decreasing the firing rate \citep{kandel2000principles}. \citep{stein2005neuronal}. The robustness of the rate coding is a direct consequence of the many to one mapping (i.e., coarse-graining).
 		
 		% population code
-		Population coding is another example of encoding information through coarse-graining in neural systems. In this coding scheme, information is encoded by activation patterns of a set of neurons (a neuron population). In the population coding scheme, many states for a neuron population map to the same state of encoded information, thereby reducing the influence of noise in individual neurons. That is, stable representations can be formed through coarse-graining the high dimensional state space of a neuron population to a lower dimensional macroscopic state space \citep{kristan1997population, pouget2000information, binder2009encyclopedia, QuianQuiroga2009}. Therefore, individual neuron states (the microscopic level) are not informative enough about the full encoded contents at the population level (the macroscopic level). Instead, coarse-grained variables are better substrates for stably encoding information and allow the neural system to ignore noisy interactions at the fine-grained level \citep{Woodward2007-WOOCWA}.
+		Population coding is another example of encoding information through coarse-graining in neural systems. In this coding scheme, information is encoded by activation patterns of a set of neurons (a neuron population). In the population coding scheme, many states for a neuron population map to the same state of macroscopic variables which encode particular informational contents, thereby reducing the influence of noise in individual neurons. That is, stable representations can be formed through coarse-graining the high dimensional state space of a neuron population to a lower dimensional macroscopic state space \citep{kristan1997population, pouget2000information, binder2009encyclopedia, QuianQuiroga2009}. Therefore, individual neuron states (the microscopic level) are not informative enough about the full encoded contents at the population level (the macroscopic level). Instead, coarse-grained variables are better substrates for stably encoding information and allow the neural system to ignore noisy interactions at the fine-grained level \citep{Woodward2007-WOOCWA}.
 		
         These two examples show that the known coding schemes can be viewed as coarse-graining, and provide stochastic neural systems with the ability to form more stable and deterministic macroscopic processes for encoding and processing information reliably. We argue that through coarse-graining the neural systems is able to form NTIC processes at macroscopic levels. Based on the merit of coarse-graining in neural systems, We propose a theory of consciousness in the next section. 
-
-
-			
-			
-% 		% neural coarse-graining by Nic
-% 		The practical implementation mentioned above suggests that  NTIC can be formed by coarse-graining sensory inputs in artificial neural networks. \citep{guttenberg2016neural} proposed a "neural coarse-graining (NCG)" architecture which aims to capture the emergent large-scale dynamics in the environment. The NCG network learns to coarse-grain input signals and extract latent variables which are both predictive and predictable in the input signal and therefore form NTIC.
-
 
 
 
@@ -246,12 +226,29 @@
 	
         In this section, we propose a new theoretical framework of consciousness: \acf{OurTheory}.  In \ac{OurTheory}, we claim that being NTIC is sufficient for a process to be conscious. The implications of \ac{OurTheory} will be discussed in Sec.~\ref{sec:cl}, \ref{sec:cc}, and \ref{sec:reconcile}. In what follows, we will first establish four assumptions on which \ac{OurTheory} depends, and then develop the specific propositions of \ac{OurTheory} in detail. 
         
-        The first assumption is that every human conscious percept is informative. Here, "informative" refers to the resolution of uncertainty. Being in a certain conscious state rules out a number of other possible conscious states. This is in line with the impression that our conscious experience consist of multi-dimensional information and usually involves information from multiple modalities. Therefore, every human conscious percept resolves some amount of uncertainty and provides information.  
+        % ---------------------------------------------------------------------------- %
+        %                             Ryota's common backup                            %
+        % ---------------------------------------------------------------------------- %
+            % kanair: I suggest that we cut all of this.
+            % Sep 15, 2019 12:52 AM
+            
+            % The 3 assumptions - Information - Necessity of Physical substrate - Boundary The main proposal is not necessarily derived from these assumptions. If anything, our theory is entirely on the boundary issue, namely, consciousness occurs at a particular scale.
+            % Sep 15, 2019 12:53 AM
+            
+            % I understand that for a theory to be complete, we want to specify the assumptions here, but I felt these are distracting, because their relevance to the current theory is somewhat weak.
+            % Sep 15, 2019 12:55 AM
+            
+            % Instead of delving into these assumptions, we should describe the main claims of the theory directly.
+        % ---------------------------------------------------------------------------- %
+            
+        
+        The first assumption is that consciousness is information. Every human conscious percept is informative. Here, "information" refers to the resolution of uncertainty. Being in a certain conscious state rules out a number of other possible conscious states. This is in line with the impression that our conscious experience consist of multi-dimensional information and usually involves information from multiple modalities. Therefore, every human conscious percept resolves some amount of uncertainty and provides information.  
         
         This assumption is also in agreement with the "axiom" of \textit{information} in Integrated Information Theory (IIT 3.0) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p.2]{oizumi2014phenomenology}.
         
         Second, we further assume that all information requires physical substrates. 
-        From these two assumptions, it follows that the amount of (self-)information possessed by a conscious percept must be equal to the (self-)information of a particular event or entity in the physical reality. 
+        From these two assumptions, it follows that for every conscious percept there exists a corresponding physical event whose self-information is is equal to the self-information of the percept.
+        % the amount of (self-)information possessed by a conscious percept must be equal to the (self-)information of a particular event or entity in the physical reality. 
         
         In this theory, we consider information is the common language between conscious experience and the physical reality. This means that consciousness is fundamentally associated with information \citep{chalmers1996conscious, tononi2004information, gamez2011information, Gamez2016}).
         
@@ -286,7 +283,7 @@
        
         A concrete example in the context of neuroscience is that $X$ represents the microscopic level of the universe, $S$ a cellular level process in the neural system, $Y$ a more macroscopic process of the neural system coarse-grained from the cellular level process $S$, and $E$ the environment which the cellular level process $S$ interacts with. The environment $E$ may includes other processes in the neural system, the sensors for perception and interoception, and external physical worlds, respectively.	   	
         
-        Our fourth assumption is that information provided by every conscious content is not trivial. More precisely, there exists a certain degree of mutual information between conscious processes and the environments which it interacts with. As mentioned in Sec.\ref{sec:Non-trivial informational closure} a process can be informationally closed to another one and still have mutual information with it, i.e. be NTIC. Therefore, a macroscopic process $Y$ can be NTIC to the system's environment $E$ and at the same time be informationally closed to its microscopic process $S$. In other words, the macroscopic process can encode environmental information (by forming NTIC) and, however, be ignorant to its microscopic processes (IC). This is in line with our conscious experience that information that every conscious percept provides represent rich and structured environmental states without involving much information at microscopic activities.
+        Our fourth assumption is that information provided by every conscious content is not trivial. More precisely, there exists a certain degree of mutual information between conscious processes and the environments which it interacts with. As mentioned in Sec.\ref{sec:Non-trivial informational closure} a process can be informationally closed to another one and still have mutual information with it, i.e. be NTIC. Therefore, a macroscopic process $Y$ can be NTIC to the system's environment $E$ and at the same time be informationally closed to its microscopic process $S$. In other words, the macroscopic process can encode environmental information (by forming NTIC), however, be ignorant to part of the information of its microscopic processes. This is in line with our conscious experience that information that every conscious percept provides represent rich and structured environmental states without involving much information at microscopic activities.
         
         Finally, together with the four assumptions above, our main proposition is that the coarse-graining that physically represent consciousnesses are those that are informationally closed with respect to the universe states and concurrently be NTIC with respect to its environment. More formally this means that every NTIC process $Y_t$ at time $t$ corresponds to a conscious process $C_t=\{C_t^{Content},C_t^{Level}\}$ such that the content $C_{t}^{Content}$ of $C_t$ is just $Y_t$:
 		\begin{equation}\label{eq:cContent}
@@ -309,7 +306,7 @@
             
             According to Eq.~\ref{eq:nticObjective}, \ac{OurTheory} implies that conscious levels are determined by two quantities. 
             
-            First, to form a high level of NTIC, one can increase the mutual information $I(Y_{t+1};Y_{t})$ between the current internal state $Y_t$ and the future internal state $Y_{t+1}$. In other words, conscious levels are associated with the degree of self-predictive information. This mutual information term can be further decomposed to two information entropy quantities: 
+            First, to form a high level of NTIC, one can increase the mutual information $I(Y_{t+1};Y_{t})$ between the current internal state $Y_t$ and the future internal state $Y_{t+1}$. In other words, conscious levels are associated with the degree of self-predictive information \citep{bialek2001predictability}. This mutual information term can be further decomposed to two information entropy quantities: 
             
             \begin{equation}
             \label{eq:SelfEntropy}
@@ -318,7 +315,7 @@
             
             This implies that a highly NTIC process must have rich dynamics with self-predictability over time. Another implication is that complex systems can potentially attain a higher level of consciousness due to the larger information capacity needed to attain high mutual information. This outcome is consistent with the common intuition that conscious levels are associated with the degree of complexity of the system.
     
-    	    Second, one can minimise the conditional mutual information $I(Y_{t+1};Y_{t}|E_{t})$ to increase the level of NTIC. This quantity suggests that conscious level increases with the amount of information about the environment state $E_t$ that the NTIC process encodes in its own state $Y_t$. An important implication is that agents interacting with a complex environment have the chance to build a higher level of NTIC within their systems than those living in a simple environment. In other words, the level of consciousness is constrained by environmental complexity. 
+    	    Second, one can minimise the conditional mutual information $I(Y_{t+1};Y_{t}|E_{t})$ to increase the level of NTIC. This quantity suggests that conscious level increases with the amount of information about the environment state $E_t$ that the NTIC process encodes in its own state $Y_t$. In other words, $Y_t$ should not contain more information about $Y_{t+1}$ than $E_t$. An important implication is that agents interacting with a complex environment have the chance to build a higher level of NTIC within their systems than those living in a simple environment. In other words, the level of consciousness is constrained by environmental complexity. 
     	   
     	    %% not monotonic
     		It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining. We saw above that not sufficiently coarse-grained variables have low values of NTIC. On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any information capacity and thus cannot have high mutual information across time steps.  Therefor, only processes at a certain level of coarse-graining in the neural system can form a high degree of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). \ac{OurTheory} indicates that consciousness occurs at the intermediate level of coarse-graining where the maximal NTIC is formed within the neural system. 
@@ -538,7 +535,7 @@
 		    
 		    \textbf{Prediction after system damaged}: \ac{OurTheory} and IIT lead to different predictions when a system suffers from a damage. For example, considering a densely connected networks whose dynamics forms an NTIC process. If we cut the network in half, IIT would predict that this results in two consciousnesses because elements in both networks still maintain high degrees of interactions. In contrast, \ac{OurTheory} would predict that this operation could completely destroy NTIC rendering both parts unconscious.
 		    
-		    In the current paper, we did not include the notion of integrated information within \ac{OurTheory}. However, one of the current weaknesses of \ac{OurTheory} is that it lacks the ability to individuate NTIC processes as distinct entities because a macro-process composed of two independent NTIC processes is also an NTIC. This is a severe limitation of our current theory.  The notion of integration is a possible remedy for this issue and we hope to address this more explicitly in future work using the concept of synergy. 
+		    \textbf{The concept of "integration"}: In IIT, integrated information is one of the core concept of defining conscious individuals. In the current paper, we did not include the notion of integrated information within \ac{OurTheory}. This, however, results in one of the current weaknesses of \ac{OurTheory} that it lacks the ability to individuate NTIC processes in some extreme cases (i.e., the problem of individuality). We discussed this weaknesses in Sec.~\ref{sec:Limitation and Future work}.
 		    
 
             % ============================================================================ %
@@ -683,92 +680,6 @@
 		
         While GWT emphasise the importance of global information sharing as a basis of consciousness, the precise meaning of information broadcasting has been somewhat unclear if one tries to describe it more formally in the language of information theory. \ac{OurTheory} offers one possible way to consider the meaning of broadcasting in GWT. Specifically, one could interpret the global workspace as the network of nodes where information is shared at the scale of NTIC where communication is performed through macro-variables that are linked via mutual predictability. That is, global workspace should be also NTIC. While this link remains speculative at this point, this interpretation encourages empirical studies into the relationship between the contents of consciousness and macrostate neural activities that are mutually predictive of each other. 
 		
-		
-% 		=================================== Old  =================================== 
-		
-% 	    There are nearly no have no commonality between GWT and \ac{OurTheory}. In GWT, only information can be accessed by GW is conscious. However, it's always difficult to identify the GW because there is no clear computational definition for it. In \ac{OurTheory}, any process forming NTIC is conscious. Therefore, to determine whether a process is conscious is a decidable problem for \ac{OurTheory} but not for GWT. 
-	    
-% 	    GWT claims that a module is not accessed by the GW is unconscious. 
-		
-		
-% 		Currently, we don't have strong theoretical implications to relate \ac{OurTheory} to GWT. However, based on \ac{OurTheory},  reasoning
-		
-% 		First, according to \ac{OurTheory}, consciousnesses occurs together with NTIC processes. Due to processes in the GW are accompanied by conscious experience, we suggest that the GW should occur at the scale where NTIC is formed. Second, notion of assess to GWS could be the state changes of the NTIC process at this coarse-grained level. Third, the all-or-none non-linear ignition may suggest the functions of coarse-graining are nonlinear. Finally, because NTIC encodes complex information about environmental states and dynamics,any state of the NTIC process can be seen as an integration of high dimensional information.
-		
-		
-% 		P-consciousness vs A=consciousness
-		
-		
-% 		Due to processes in the GW are accompanied by conscious experience, we can only postulate that the GW should occur at the scale where NTIC is formed. It is also likely that the 
-		
-% 		GWT proposes a number of core properties, e.g., stability, broadcasting, and non-linear ignition. 
-		
-% 		In \ac{OurTheory}, self-predictive information $I(Y_{t+1};Y_{t})$ is one of the quantity that contributes NTIC (Eq.~\ref{eq:nticObjective}). This property grantees the stability of a NTIC process. This outcome coincides with one of the GWT's claim that conscious contents often show stronger stability which may be necessary for the neural system to integrate information from a variety of modules. Although stability is claimed by both theories, the underliing reasons are different. GWT suggests that the neural mechanism to achieve stability is top-down amplifications from the GW to individual modules which gain the access to the GW. In contrast, \ac{OurTheory} suggests that stability is a natural consequence of NTIC without additional assumptions.
-		
-% 		We will address this comparison in our following modelling paper.
-% 		Currently, we do not have concrete prediction about how an NTIC process reacts to rapid changes in the environment.
-% 		More modeling work is needed 
-		
-		
-% 		However, regarding broadcasting and non-linear ignition
-		
-		
-		
-% 		conjectures to bridge the two theories. 
-		
-% 		GW itself could be the NTIC process 
-		
-% 		similar or dissimilar 
-		
-		
-% 		We suggests that the GW should occur at the scale where NTIC is formed. 
-% 		We further hypothesise that the GW recruits the NTIC process to achieve its functional goal and, therefore, is accompany by conscious experience. 
-		
-% 		Self-predictive information $I(Y_{t+1};Y_{t})$ is one of the quantity that contributes  NTIC (Eq.~\ref{eq:nticObjective}). This property grantees the stability of a NTIC process. This outcome coincides with one of the GWT's claim that conscious contents often show stronger stability which may be necessary for the neural system to integrate information from a variety of modules.Although stability is claimed by both theories, the proposed reasons are different. GWT suggests that the neural mechanism to achieve stability is top-down amplifications from the GW to individual modules which gain the access to the GW. In contrast, \ac{OurTheory} suggests that stability is a natural consequence of NTIC withour additional assumptions.
-		
-% 		The notion of assess to GWS could be the access at the coarse grained level. 
-		
-% 		We suggest that when a coarse-grained variable becomes a part of the NTIC process. This makes information about the states of the variable occur in the conscious contents. 
-		
-		
-		% ================================= Super old ================================ %
-		
-		    
-% 		\needhelp{I think I need some help here. I am not sure what should I write here. Or  what position I should take. To some extent, GWT is a very qualitative theory. It kind of just summarises everything. Without any modelling work on NTIC, it's difficult to say whether we will replicate those profiles of consciousness mentioned in GWT.}
-% 		\ideaBox{Need ending and better difference }
-% 		Global workspace theory (GWT; \cite{baars1988cognitive, baars1997theatre, baars2002conscious}) or Global Neuronal Workspace theory (GNWT; \cite{dehaene1998neuronal, dehaene2001towards, dehaene2011experimental}) states that the neural system consists of several specialised modules and a central global workspace (GW) which integrates and broadcasts information amount these modules. Only the information accessed by the global workspace can be consciously aware of. These modules competes with each other to gain the access to the GW and the information from the winner can trigger an all-or-none "ignition" in the GW. Information in the GW is able to be broadcasted to other modules. Conscious contents then associates information which gains access to the internal global workspace \cite{Dehaene2017}.
-		
-% 		In many aspects, our theory can well accommodate GWT. NTIC processes shares several properties with the GW. Here we discuss three core properties, stability, broadcasting, and non-linear ignition, emphasised by the GWT. 
-
-% 		% === Stability ===
-% 		Stability: GWT indicates that the conscious contents often show stronger stability which may be necessary for the neural system to integrate information from a variety of modules. Suggested by GWT, this is caused by top-down amplification from the GW to individual modules which gain the access to the GW \needref{}. In contrast, without assuming any additional mechanism, our theory argues that stability is a natural quality of NTIC due to its strong self-predictive characteristic. Our theory can even further quantify the stability of conscious contents by computing the mutual information between the current and the future states of a conscious process. 
-		
-% 		% === Broadcasting ===
-% 		\idea{A bit not sure about this part}Broadcasting: Because individual modules use different coding schemes, the neural system requires a mechanism for passing information between modules. GWT suggests that the GW is responsible for connecting the information source, translating the code, and finally making the information globally accessible. We argue that, because the NTIC process encodes high dimensional information about the environmental dynamics, it can be considered as an integrated informational entity \todo{Need rewording}. These with the coarse-graining variables involved in the NTIC process together. Other modules outside the NTIC process can decode and extract needed information for the current goal of the task. 
-        
-        
-%         % === Non-linear ignition ===
-%         Non-linear ignition: Non-linear ignition: Because mapping microscopic to macroscopic states is many-to-one, it commonly shows a nonlinear relationship between microstates and macrostates \needhelp{Is this statement correct?}. Therefore, a continuous state transition at microscopic levels may lead to a discrete and non-linear state transition at macroscopic levels. Based on our theory, when new information enters conscious contents, the NTIC process must undergo a corresponding state transition. This transition can trigger a significant change of the brain states and resembles non-linear ignition of brain activities
-        
-        
-%         \idea{Long distance connectivity?}
-%         \rewrite{(1) sudden, all-or-none ignition of prefronto-parietal networks; (2) concomitant all-or-none ampliﬁcation of sensory activation; (3) a late global P3b wave in event-related potentials; (4) late ampliﬁcation of broad-band power in the gamma range; (5) enhanced longdistance phase synchronization, particularly in the beta range; and (6) enhanced causal relations between distant areas, including a signiﬁcant top-down component. }
-%         Future modeling work is needed
-
-% 		% -------------------------------- Difference -------------------------------- %
-% 		\todo{Finish this part}
-% 		However, there are still fundamental differences between the two theories. 
-% 		In GWT, modules rival with each other to gain access to the GW. Our theory suggests that the one enters conscious contents is the one which can create the higher NTIC with other coarse-grained information. This difference leads very different predictions and implications. For GWT, to find the biological implementation of the rivalry mechanism (attention, for example) is critical. However, we do not assume any rivalry mechanism. Instead, we argue that, if  information carried by the coarse-grained variables can increase the predictability of the process and form high NTIC,  it naturally form a informationally closed boundary and 
-		
-% 		Up to now, GWT does not indicate in what conditions a process can be considered as a GW. This results in an intractable situation of finding the GW, especially when empirical data show distributed information encoded in many brain areas\citep{siegel2015cortical}. 
-		
-% 		Another difference between our theory and GWT is that our theory does not suggest a neuronal core anatomical area for consciousness. \todo{Link to Section 4}. Coarse-grained information in NTIC is more crucial for consciousness rather than neural substrates supporting the global workspace.
-		
-% 		In sum, our theory is compatible with previous physiological evidence supporting GWT.  
-
-
-
-
 
 % ============================================================================ %
 %                                  Limitation                                  %
@@ -786,13 +697,11 @@
         % Identity problem
         The current version of \ac{OurTheory} cannot entirely solve the problem of individuality in some extreme circumstances. In common cases, one can identify individual consciousnesses by computing the levels of NTIC of a process. This approach can also be applied to finding the boundaries of individual consciousnesses (for details of the boundary detection procedure, see \cite{krakauer2014information}). However, in some spacial circumstances, individuality of consciousness has more than one outcome. For instance,
             \needhelp{@Martin, if you think it's better to have a proof for this and if you don't mind, you can help me to write the proof here or create an appendix section and put it there. If you have no time, I can also do this.}
-        we can define a new process $Y$ and also its environment $E$ by recruiting two independent NTIC processes $Y^1~\&~Y^2$ and their environments $E^1~\&~E^2$, respectively. So that $Y = \{Y^1,Y^2\}$ and $E=\{E^1,E^2\}$. In such case, the new process $Y$ will also be NTIC to $E$. Therefore, the current version of \ac{OurTheory} cannot determine whether there are two smaller consciousnesses or one bigger consciousness (or 3 coexisting consciousnesses ). The problem of individuality is a significant theoretical weakness of the current version of \ac{OurTheory}. An intuitive solution is to recruit an "integration" quantity in our propositions. In our next theoretical article, we will discuss informational synergy and redundancy in the context of NTIC and consciousness. 
+        we can define a new process $Y$ and also its environment $E$ by recruiting two independent NTIC processes $Y^1~\&~Y^2$ and their environments $E^1~\&~E^2$, respectively. So that $Y = \{Y^1,Y^2\}$ and $E=\{E^1,E^2\}$. In such case, the new process $Y$ will also be NTIC to $E$. Therefore, the current version of \ac{OurTheory} cannot determine whether there are two smaller consciousnesses or one bigger consciousness (or 3 coexisting consciousnesses ). The problem of individuality is a significant theoretical weakness of the current version of \ac{OurTheory}. The notion of integration is a possible remedy for this issue and we will address this issue more explicitly in future work using the concept of synergy.
+        
         
         % About the environment
         The current version of \ac{OurTheory} assume that consciousness is only contributed by  non-trivial rather than trivial information encoded in a process. In other words, how much information about environmental states and dynamics encoded in a process is a key quantity for consciousness. However, we do not exclude the possibility that environmental information may be just a proxy of other informational quantities. So far, we can only claim NTIC is sufficient for consciousness. We are not able to draw further speculations. More theoretical work is needed. This issue will also be discuss in our next theoretical paper. 
-        
-        
-        
         
         
         % ================================= Empirical ================================ 
