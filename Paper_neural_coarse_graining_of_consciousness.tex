@@ -5,6 +5,17 @@
 % \excludeversion{WritingMaterials}
 % \excludeversion{backup}
 
+
+\usepackage{amsthm}
+ 
+% \theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem*{hypothesis}{Hypothesis}
+
+
+\newcommand{\cp}{C-process} 
+\newcommand{\cps}{C-processes} 
+
 \usepackage{chngcntr}
 \counterwithout{figure}{section}
 
@@ -17,13 +28,14 @@
 \newacro{cged}{coarse-grained}
 \newacro{ncg}{neural coarse-graining}
 \newacro{OurTheory}[ICT]{Information Closure Theory of Consciousness}
+\newacro{cp}{C-process}
 
 
 % ============================================================================ %
 %                                     Title                                    %
 % ============================================================================ %
 \title{Information Closure Theory of Consciousness}
-
+\date{}
 
 
 % ============================================================================ %
@@ -47,14 +59,14 @@
 
 
 	\begin{abstract}
-		Information processing in neural systems can be described and analysed at multiple spatiotemporal scales. Generally, information at lower levels is more fine-grained and can be coarse-grained in higher levels. However, information processed only at specific levels seems to be available for conscious awareness. We do not have direct experience of information available at the level of individual neurons, which is noisy and highly stochastic. Neither do we have experience of more macro-level interactions such as interpersonal communications. Neurophysiological evidence suggests that conscious experiences co-vary with information encoded in coarse-grained neural states such as the firing pattern of a population of neurons. In this article, we assume that conscious experience is confined due to informational closure from conscious processing to other coarse-grained levels. From this and three additional assumptions, we propose a new computational theory of consciousness: \ac{OurTheory}. \ac{OurTheory} proposes new quantitative definitions of both conscious content and conscious level. With the parsimonious assumptions and simple propositions, \ac{OurTheory} provides explanations and predictions of phenomena associated with consciousness. The implications of \ac{OurTheory} naturally reconciles issues in many existing theories of consciousness and provides explanations for many of our intuitions about consciousness. Most importantly, \ac{OurTheory} indicates that information is the common language bridging consciousness and physical reality. 
+		Information processing in neural systems can be described and analysed at multiple spatiotemporal scales. Generally, information at lower levels is more fine-grained and can be coarse-grained in higher levels. However, information processed only at specific levels seems to be available for conscious awareness. We do not have direct experience of information available at the level of individual neurons, which is noisy and highly stochastic. Neither do we have experience of more macro-level interactions such as interpersonal communications. Neurophysiological evidence suggests that conscious experiences co-vary with information encoded in coarse-grained neural states such as the firing pattern of a population of neurons. In this article, we introduce a new informational theory of consciousness: \acf{OurTheory}. We hypothesise that conscious processes are processes which form \ac{ntic} with respect to the environment at certain coarse-grained levels. This hypothesis implies that conscious experience is confined due to informational closure from conscious processing to other coarse-grained levels. \ac{OurTheory} proposes new quantitative definitions of both conscious content and conscious level. With the parsimonious definitions and a hypothesise, \ac{OurTheory} provides explanations and predictions of various phenomena associated with consciousness. The implications of \ac{OurTheory} naturally reconciles issues in many existing theories of consciousness and provides explanations for many of our intuitions about consciousness. Most importantly, \ac{OurTheory} demonstrates that information can be the common language between consciousness and physical reality.
 
 		
 	\end{abstract}
 
 
 	\section*{Keywords:}
-	Keywords: consciousness, informational closure, neural coarse-graining, level of analysis
+	Keywords: consciousness, informational closure, non-trivial informational closure, coarse-graining, level of analysis,
 
             
             
@@ -76,7 +88,7 @@
 		It seems to be true that we are not consciously accessing information processed at every scale in the neural system. There are both more microscopic and more macroscopic levels than the level corresponding to the conscious contents. On the one hand, dynamics of individual neurons are stochastic \citep{Goldwyn2011, White2000}. However, what we are aware of in our conscious mind shows astonishing stability and robustness against the ubiquitous noise in the neural system \citep{mathis1995computational}. In addition, some parts of the neural system contribute very little to conscious experience (the cerebellum for example \citep{lemon2010life}), also suggesting that conscious contents do not have one-to-one mapping to the entire state of the neural system. On the other hand, human conscious experience is more detailed than just a simple (e.g. binary) process can represent, suggesting that the state space of conscious experience is much larger than what a single overly coarse-grained binary variable can represent. These facts suggest that conscious processes occur at a particular scale. We currently lack a theory to identify the scale which conscious processes correspond to. We refer to this notion as \textbf{the scale problem of consciousness} (Fig.~\ref{fig:scaleproblem}).
 
 		%% our argument
-		In this article, we propose a new information-based theory of consciousness, called \ac{OurTheory}. We argue that every process with a high degree of non-trivial information closure (NTIC) has consciousness. This means that the state of such a process corresponds one-to-one to conscious content.\footnote{In the following IC stands for "informational closure" or "informationally closed" and NTIC stands for "non-trivial informational closure" or "non-trivially informationally closed".}. We further postulate that the \textit{level} of consciousness corresponds to the degree of NTIC. (for a discussion of the distinction between level versus content of consciousness see \cite{laureys2005neural, overgaard2010neural}).
+		In this article, we propose a new information-based theory of consciousness, called \ac{OurTheory}. We argue that every process with a positive non-trivial information closure (NTIC) has consciousness. This means that the state of such a process corresponds one-to-one to conscious content.\footnote{In the following IC stands for "informational closure" or "informationally closed" and NTIC stands for "non-trivial informational closure" or "non-trivially informationally closed".}. We further postulate that the \textit{level} of consciousness corresponds to the degree of NTIC. (for a discussion of the distinction between level versus content of consciousness see \cite{laureys2005neural, overgaard2010neural}).
 		
 		In the following, we first introduce non-trivial informational closure and argue for its importance to information processing for human scale agents (Sec.\ref{sec:Non-trivial informational closure}). We next argue that through coarse-graining the neural system can form a high degree of NTIC at a specific coarse-grained level (Sec.\ref{sec:Neural coarse-graining}). In the Sec.\ref{sec:OurTheory}, we propose our theory: \acf{OurTheory}. We also illustrate how \ac{OurTheory} can parsimoniously explain empirical findings from previous consciousness studies (Sec.\ref{sec:Conscious versus Unconscious Processing}) and reconcile several current major theories of consciousness (Sec.\ref{sec:Comparison with other theories}). Finally, we discuss the current theoretical and empirical limitations of \ac{OurTheory} and propose the implications from \ac{OurTheory} to the current consciousness science (Sec.\ref{sec:Limitation and Future work}). 
 
@@ -158,25 +170,26 @@
 
 			\noindent
 			And, non-trivial informational closure can be defined as
-				\begin{equation}
+				\begin{align}
 				\label{eq:NTIC}
-    				\left.\begin{array}
-    				{rl}{NTIC} & {:=I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t})}
-    				\end{array} \right.
-				\end{equation}
+    				% \left.\begin{array}
+    				NTIC_t(E\rightarrow Y) :&=I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t})\\
+    				&=I(Y_{t+1};E_{t})-I(Y_{t+1};E_{t}|Y_{t})
+    				% \end{array} \right.
+				\end{align}
 				
 				
-			\noindent
-            The definition can also be re-arranged as 
-				\begin{equation}
-				\label{eq:NTIC2}
-    				\left.\begin{array}
-    				{rl}{\qquad} & {\ =I(Y_{t+1};E_{t})-I(Y_{t+1};E_{t}|Y_{t})}
-    				\end{array} \right.
-				\end{equation}				
+% 			\noindent
+%             The definition can also be re-arranged as 
+% 				\begin{equation}
+% 				\label{eq:NTIC2}
+%     				\left.\begin{array}
+%     				{rl}{\qquad} & {\ =I(Y_{t+1};E_{t})-I(Y_{t+1};E_{t}|Y_{t})}
+%     				\end{array} \right.
+% 				\end{equation}				
 
 			\noindent
-			Hence, maximising NTIC amounts to
+			Hence, maximising $NTIC_t(E\rightarrow Y)$ amounts to
 				\begin{equation}
     				\label{eq:nticObjective}
     				\begin{aligned}
@@ -185,7 +198,7 @@
     				\end{aligned}
 				\end{equation}
 				
-			One can also maximise NTIC by 
+			One can also maximise $NTIC_t(E\rightarrow Y)$ by 
 				\begin{equation}
     				\label{eq:nticObjective2}
     				\begin{aligned}
@@ -215,7 +228,7 @@
 		% population code
 		Population coding is another example of encoding information through coarse-graining in neural systems. In this coding scheme, information is encoded by activation patterns of a set of neurons (a neuron population). In the population coding scheme, many states for a neuron population map to the same state of macroscopic variables which encode particular informational contents, thereby reducing the influence of noise in individual neurons. That is, stable representations can be formed through coarse-graining the high dimensional state space of a neuron population to a lower dimensional macroscopic state space \citep{kristan1997population, pouget2000information, binder2009encyclopedia, QuianQuiroga2009}. Therefore, individual neuron states (the microscopic level) are not informative enough about the full encoded contents at the population level (the macroscopic level). Instead, coarse-grained variables are better substrates for stably encoding information and allow the neural system to ignore noisy interactions at the fine-grained level \citep{Woodward2007-WOOCWA}.
 		
-        These two examples show that the known coding schemes can be viewed as coarse-graining, and provide stochastic neural systems with the ability to form more stable and deterministic macroscopic processes for encoding and processing information reliably. We argue that through coarse-graining the neural systems is able to form NTIC processes at macroscopic levels. Based on the merit of coarse-graining in neural systems, We propose a theory of consciousness in the next section. 
+        These two examples show that the known coding schemes can be viewed as coarse-graining, and provide stochastic neural systems with the ability to form more stable and deterministic macroscopic processes for encoding and processing information reliably. We argue that through coarse-graining the neural systems is able to form NTIC processes at macroscopic levels. Based on the merit of coarse-graining in neural systems, We propose a new theory of consciousness in the next section. 
 
 
 
@@ -224,7 +237,70 @@
 % ============================================================================ %
 	\section{\acf{OurTheory}}\label{sec:OurTheory}
 	
-        In this section, we propose a new theoretical framework of consciousness: \acf{OurTheory}.  In \ac{OurTheory}, we claim that being NTIC is sufficient for a process to be conscious. The implications of \ac{OurTheory} will be discussed in Sec.~\ref{sec:cl}, \ref{sec:cc}, and \ref{sec:reconcile}. In what follows, we will first establish four assumptions on which \ac{OurTheory} depends, and then develop the specific propositions of \ac{OurTheory} in detail. 
+        In this section, we propose a new theoretical framework of consciousness: \acf{OurTheory}. The main hypothesis is that conscious processes are captured by what we call \textit{C-processes}. We first define C-processes, then state our hypothesis and discuss its implications.
+        
+        
+		\begin{figure}[H]
+		    \centering
+			\includegraphics[width=\textwidth]{WritingMaterials/Fig_FullGraph/FullGraph.pdf}
+			\caption{The information flow amounts the universe $X$, the system $S$, the environment of the system $E$, and the coarse-grained process of the system $S$. The solid line with a filled arrow from $X_t$ to $X_{t+1}$ represents the microscopic dynamic of the universe. The solid lines with a empty arrow represent directions of coarse-graining. The dashed lines represents virtual dependencies between  two macroscopic variables. The red $Y_t$, $Y_{t+1}$, and the red dashed line in between represents a macroscopic process which forms informational closure at a certain coarse-grained level.}
+			\label{fig:fullgraph}
+	   	\end{figure}
+
+	   	% ------------------------------- definition 1 ------------------------------- %
+	   	In order to define C-processes we need to define coarse-grainings first. Every coarse-graining is characterized by a function that maps the microscopic process to the coarse-grained macroscopic process. More formally: 
+	   	
+	   	\begin{definition}
+	   	Given a stochastic process $X$ with state space $\mathcal{X}$ a \emph{coarse-graining of $X$} is a stochastic process $Y$ with state space $\mathcal{Y}$ such that there exists a function\footnote{Functions in the mathematical sense used here are always either one-to-one or many-to-one.} $f_Y:\mathcal{X}\rightarrow \mathcal{Y}$ with $Y_t=f_Y(X_t)$.  
+	   	\end{definition}
+	   	A more general definition of coarse-grainings that maps temporally extended sequences of the microscopic process to macroscopic states are possible but for his first exposure of our theory the simpler definition above is sufficient. 
+	   	
+	   	% ------------------------------- definition 2 ------------------------------- %
+        \begin{definition}
+        Given a stochastic process $X$ called the universe process, a \emph{C-process} is a coarse-graining $Y$ of $X$ such that the following two conditions are satisfied (see Fig.~\ref{fig:fullgraph}):
+        \begin{enumerate}
+        \item $Y$ is informationally closed to $X$
+        \item there exists a pair $(S,E)$ of coarse-grainings of $X$ such that 
+        \begin{itemize}
+            \item $Y$ is a coarse-graining of $S$,
+            \item the state space $\mathcal{X}$ of $X$ is equal to the Cartesian product of the state spaces $\mathcal{S}$ and $\mathcal{E}$ of processes $S$ and $E$ respectively, formally $\mathcal{X}=\mathcal{S}\times\mathcal{E}$, and 
+            \item $Y$ is NTIC to $E$, formally:
+        \begin{align}
+            NTIC_t(E\rightarrow Y) >0
+        \end{align}
+        \end{itemize} 
+        \end{enumerate}
+       \end{definition}
+        
+         \begin{definition}
+        Given a stochastic process $X$ called the universe process, a \emph{C-process} is a coarse-graining $Y$ of $X$ such that the following two conditions are satisfied (see Fig.~\ref{fig:fullgraph}):
+        \begin{enumerate}
+        \item $Y$ is informationally closed to $X$
+        \item there exists a coarse-graining $E$ of $X$ such that
+        \begin{itemize}
+            \item the state space $\mathcal{X}$ of $X$ is equal to the Cartesian product of the state spaces $\mathcal{Y}$ and $\mathcal{E}$ of processes $Y$ and $E$ respectively, formally $\mathcal{X}=\mathcal{Y}\times\mathcal{E}$, and 
+            \item $Y$ is NTIC to $E$, formally:
+        \begin{align}
+            NTIC_t(E\rightarrow Y) >0
+        \end{align}
+        \end{itemize} 
+        \end{enumerate}
+       \end{definition}
+      
+        
+        
+        With the two definitions we can state the main hypothesis of \ac{OurTheory}:
+        
+        \begin{hypothesis}
+        A process $Y$ is conscious if and only if it is a C-process of some process $X$. Also the content of consciousness $C_t^{Content}$ at time $t$ is the state $Y_t$ of the C-process at time $t$ and the level of consciousness $C_t^{Level}$ is the degree of NTIC of the C-process to the environment i.e. $NTIC_t(E\rightarrow Y)$:
+        \begin{align}
+            C_t^{Content} &= Y_t \label{eq:cContent}\\
+            C_t^{Level} &= NTIC_t(E\rightarrow Y) \label{eq:cLevel}
+        \end{align}
+        \end{hypothesis}
+        
+        
+        %  In \ac{OurTheory}, we claim that being NTIC is sufficient for a process to be conscious. The implications of \ac{OurTheory} will be discussed in Sec.~\ref{sec:cl}, \ref{sec:cc}, and \ref{sec:reconcile}. In what follows, we will first establish four assumptions on which \ac{OurTheory} depends, and then develop the specific propositions of \ac{OurTheory} in detail. 
         
         % ---------------------------------------------------------------------------- %
         %                             Ryota's common backup                            %
@@ -240,70 +316,61 @@
             
             % Instead of delving into these assumptions, we should describe the main claims of the theory directly.
         % ---------------------------------------------------------------------------- %
+        
+        A concrete example in the context of neuroscience is that $X$ represents the microscopic level of the universe, $S$ a cellular level process in the neural system, $Y$ a more macroscopic process of the neural system coarse-grained from the cellular level process $S$, and $E$ the environment which the cellular level process $S$ interacts with. The environment $E$ may include other processes in the neural system, the sensors for perception and interoception, and external physical worlds.\\
+        
+        Based on the hypothesis, \ac{OurTheory} leads to four core implications: 
+        \begin{description}
+            \item[Implication 1.] Consciousness is information. Being in a certain conscious state rules out other possible conscious states $y'_t\neq y_t$. This is in line with the impression that our conscious experience consist of multi-dimensional information and usually involves information from multiple modalities. Therefore, every conscious percept resolves some amount of uncertainty and provides information. \\ 
+            This implication is also in agreement with the "axiom" of \textit{information} in Integrated Information Theory (IIT 3.0) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p.2]{oizumi2014phenomenology}.
             
-        
-        The first assumption is that consciousness is information. Every human conscious percept is informative. Here, "information" refers to the resolution of uncertainty. Being in a certain conscious state rules out a number of other possible conscious states. This is in line with the impression that our conscious experience consist of multi-dimensional information and usually involves information from multiple modalities. Therefore, every human conscious percept resolves some amount of uncertainty and provides information.  
-        
-        This assumption is also in agreement with the "axiom" of \textit{information} in Integrated Information Theory (IIT 3.0) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p.2]{oizumi2014phenomenology}.
-        
-        Second, we further assume that all information requires physical substrates. 
-        From these two assumptions, it follows that for every conscious percept there exists a corresponding physical event whose self-information is is equal to the self-information of the percept.
-        % the amount of (self-)information possessed by a conscious percept must be equal to the (self-)information of a particular event or entity in the physical reality. 
-        
-        In this theory, we consider information is the common language between conscious experience and the physical reality. This means that consciousness is fundamentally associated with information \citep{chalmers1996conscious, tononi2004information, gamez2011information, Gamez2016}).
-        
-        === How about if I change this ===
-        The third assumption is that no consciousness can contain complete information about the universe. This means that there exists a informational boundary for every consciousness, i.e. informationally closed to the the universe. This is in line with our conscious experience that information provided by every conscious percept is limited.
-        
-        === to this ===
-        The third assumption is that there exists a informational boundary for every consciousness. The informational boundary here means that no consciousness can contain information of the entire universe and every consciousness is informationally closed to the the universe. This is in line with our conscious experience that information provided by every conscious percept is limited.
-    
-        Together with the first three assumptions, this means that the physical representations of the contents of any consciousness must be a coarse-graining of the universe states and also informationally closed to the universe.
-        
-        Note that a coarse-grained process $Y$ can be a coarse-graining of another coarse-grained process $S$ of the universe $X$ (see Fig.~\ref{fig:fullgraph}). Here, we consider $S$ as a coarse-graining of $X$ and call it the system. Then $Y$ is a coarse-graining of the system $S$. We can then also define another coarse-graining of $X$ called the environment $E$ of $S$. This is the coarse-graining that contains the information about $X$ that is not contained in $S$. Importantly, in this case, if a macroscopic process $Y$ is informationally closed to the universe $X$, this implies $Y$ is also informationally closed to both the system $S$ and the environment $E$. 
-        
-            \needhelp{@Martin, if you think it's better to have a proof for this and if you don't mind, you can help me to write the proof here or create an appendix section and put it there. If you have no time, I can also do this.}
-		\begin{equation}
-			\label{eq:ICchain}
-			\begin{aligned}
-		    & I(Y_{t+1};X_t|Y_{t})=0 & \implies & I(Y_{t+1};S_t|Y_{t})=0 \\
-		    & {} & \implies & I(Y_{t+1};E_t|Y_{t})=0
-			\end{aligned}
-		\end{equation}
-		
-        
-        This results in a crucial implication that informational closure can occur between levels in a system. The macroscopic level $Y$ can be informationally closed to its microscopic level $S$ within a system \citep{PFANTE.2014}.
+            \item[Implication 2.] Consciousness requires physical substrates.  Every conscious percept $y_t$ corresponds to a physical event. This means that the self-information of the conscious percept is also the self-information of the corresponding physical event. 
+            
+            %In \ac{OurTheory}, we consider information is the common language between conscious experience and the physical reality. This means that consciousness is fundamentally associated with information \citep{chalmers1996conscious, tononi2004information, gamez2011information, Gamez2016}).
+            
+            \item[Implication 3.] Conscious processes are self-determining. 
+            % There are no coarse-grainings that contain information about the future of the conscious process that is not already contained in the conscious process itself. 
+            No coarse-graining knows anything about the conscious process' future that the conscious process does not know itself. This is a direct implication of the requirement that $Y$ is informationally closed with respect to $X$. This is in line with our daily life conscious experience often shows stability and continuity and is ignorant of the stochasticity of the cellular levels. 
+            
+            % \item[Implication 4.] Conscious processes can be ignorant to part of the information of more microscopic processes and must be ignorant to part of the information about the universe process. This is due to $Y$ being a coarse-graining of the universe process $X$ and NTIC to the environment $E$. The environment must contain information (have multiple possible states) for NTIC to be positive. At a given time $t$ this information in $E_t$ must then be missing from $Y_t$  
+            % and possible intermediate coarse-grainings between $X$ and $Y$. 
+            
+            
+            % \item[Implication 5.] Even though conscious processes are ignorant of are informationally closed with respect to all other coarse-grainings of the universe. This is a direct consequence of $Y$ being informationally closed with respect to $X$. 
+            % Informational closure can occur between levels in a system. The macroscopic level $Y$ can be informationally closed with respect to its microscopic level $S$ within a system \citep{PFANTE.2014}.
+            
+            
+            % This implication is in line with our conscious experience that information provided by every conscious percept is limited.
+            % This means that the physical representations of the contents of any consciousness must be a coarse-graining of the universe states and also informationally closed to the universe. \\
+    %         Note that a coarse-grained process $Y$ can be a coarse-graining of another coarse-grained process $S$ of the universe $X$ (see Fig.~\ref{fig:fullgraph}). Here, we consider $S$ as a coarse-graining of $X$ and call it the system. Then $Y$ is a coarse-graining of the system $S$. We can then also define another coarse-graining of $X$ called the environment $E$ of $S$. This is the coarse-graining that contains the information about $X$ that is not contained in $S$. Importantly, in this case, if a macroscopic process $Y$ is informationally closed to the universe $X$, this implies $Y$ is also informationally closed to both the system $S$ and the environment $E$. \\
+    %         Together with the first three implications, this means that the physical representations of the contents of any consciousness must be a coarse-graining of the universe states and also informationally closed to the universe.
+            
+    % 		\begin{equation}
+    % 			\label{eq:ICchain}
+    % 			\begin{aligned}
+    % 		    & I(Y_{t+1};X_t|Y_{t})=0 & \implies & I(Y_{t+1};S_t|Y_{t})=0 \\
+    % 		    & {} & \implies & I(Y_{t+1};E_t|Y_{t})=0
+    % 			\end{aligned}
+    % 		\end{equation}
+            
+            
 
-		\begin{figure}[H]
-		    \centering
-			\includegraphics[width=\textwidth]{WritingMaterials/Fig_FullGraph/FullGraph.pdf}
-			\caption{The information flow amounts the universe $X$, the system $S$, the environment of the system $E$, and the coarse-grained process of the system $S$. The solid line with a filled arrow from $X_t$ to $X_{t+1}$ represents the microscopic dynamic of the universe. The solid lines with a empty arrow represent directions of coarse-graining. The dashed lines represents virtual dependencies between  two macroscopic variables. The red $Y_t$, $Y_{t+1}$, and the red dashed line in between represents a macroscopic process which forms informational closure at a certain coarse-grained level.}
-			\label{fig:fullgraph}
-	   	\end{figure}
-       
-        A concrete example in the context of neuroscience is that $X$ represents the microscopic level of the universe, $S$ a cellular level process in the neural system, $Y$ a more macroscopic process of the neural system coarse-grained from the cellular level process $S$, and $E$ the environment which the cellular level process $S$ interacts with. The environment $E$ may includes other processes in the neural system, the sensors for perception and interoception, and external physical worlds, respectively.	   	
-        
-        Our fourth assumption is that information provided by every conscious content is not trivial. More precisely, there exists a certain degree of mutual information between conscious processes and the environments which it interacts with. As mentioned in Sec.\ref{sec:Non-trivial informational closure} a process can be informationally closed to another one and still have mutual information with it, i.e. be NTIC. Therefore, a macroscopic process $Y$ can be NTIC to the system's environment $E$ and at the same time be informationally closed to its microscopic process $S$. In other words, the macroscopic process can encode environmental information (by forming NTIC), however, be ignorant to part of the information of its microscopic processes. This is in line with our conscious experience that information that every conscious percept provides represent rich and structured environmental states without involving much information at microscopic activities.
-        
-        Finally, together with the four assumptions above, our main proposition is that the coarse-graining that physically represent consciousnesses are those that are informationally closed with respect to the universe states and concurrently be NTIC with respect to its environment. More formally this means that every NTIC process $Y_t$ at time $t$ corresponds to a conscious process $C_t=\{C_t^{Content},C_t^{Level}\}$ such that the content $C_{t}^{Content}$ of $C_t$ is just $Y_t$:
-		\begin{equation}\label{eq:cContent}
-			C_{t}^{Content} = Y_{t}.
-		\end{equation}
-		
-		
-		\noindent
-        We further propose that the level of consciousness $C_{t}^{Level}$ can be measured by the degree of $NTIC_{t}$ of $Y_t$:
-		\begin{equation}\label{eq:cLevel}
-			C_{t}^{Level} = NTIC_{t}.
-		\end{equation}
-		We discuss the implications of these propositions in the following. 	
+            
+            \item[Implication 5.] The environment of a conscious process shares information with the future of the conscious process. This is due to the non-triviality of the informational closure of $Y$ to $E$. 
+            At the same time all of this information is known to the conscious processes themselves since they are informationally closed with respect to their environments. 
+            % This is a direct consequence of the requirement that $Y$ is NTIC to $E$. 
+            
+            % Information provided by every conscious content is not trivial. More precisely, there exists a certain degree of mutual information between conscious processes and the environments which it interacts with. As mentioned in Sec.\ref{sec:Non-trivial informational closure} a process can be informationally closed to another one and still have mutual information with it, i.e. be NTIC. Therefore, a macroscopic process $Y$ can be NTIC to the system's environment $E$ and at the same time be informationally closed to its microscopic process $S$. 
+            
+            \item[Implication 6.]
+            Conscious processes can encode environmental information (by forming NTIC), however, be ignorant to part of the information of more microscopic processes. This is in line with our conscious experience that information that every conscious percept provides represent rich and structured environmental states without involving all the information about microscopic activities.
+        \end{description}
 		
 		
 		% ---------------------------------------------------------------------------- %
         %        Level of Consciousness correlates degrees of NTIC of a process        %
         % ---------------------------------------------------------------------------- %
 	    \subsection{Level of Consciousness is equal to the degree of NTIC of a process}\label{sec:cl}
-            
             According to Eq.~\ref{eq:nticObjective}, \ac{OurTheory} implies that conscious levels are determined by two quantities. 
             
             First, to form a high level of NTIC, one can increase the mutual information $I(Y_{t+1};Y_{t})$ between the current internal state $Y_t$ and the future internal state $Y_{t+1}$. In other words, conscious levels are associated with the degree of self-predictive information \citep{bialek2001predictability}. This mutual information term can be further decomposed to two information entropy quantities: 
@@ -383,7 +450,7 @@
         %                            Unconscious Processing                            %
         % ---------------------------------------------------------------------------- %
         \subsection{Unconscious Processing}
-            In this section, we highlight two scenarios in which the degree of NTIC is rendered low for a process, and thereby making the process unconscious.
+            In this section, we highlight two scenarios in which the degree of NTIC is rendered low for a process, and thereby making the process less conscious.
         
             \subsubsection*{Informational is not Closed}\label{sec:reflexive}
                 If a process is not informationally closed, the degree of NTIC is low (Eq.~\ref{eq:nticObjective2}) resulting in low or no consciousness. In such cases, the current state of a process depends primarily on the environment state (see Fig.~\ref{fig:reflexive}), but receives little influence from its past state. Reflexive behaviours \citep{casali2013theoretically} can be considered an example of this scenario. In \ac{OurTheory}, if we can view reflexive behaviours as situations in which the internal state $Y_t$, which triggers reflexive action, is determined by the environment state $E_{t-1}$ overruling the influences from its own past $Y_{t-1}$.  Such interpretation of reflexive behaviour from the viewpoint of \ac{OurTheory} naturally explains why reflexes do not involve conscious experience of external stimuli. 
@@ -452,7 +519,7 @@
     	    
     	    In sum, we argue that cognitive functions involving the NTIC process are inevitably accompanied by consciousness. Having an NTIC process is potentially an effective approach to increase fitness in the evolution. It is likely that biological creatures evolve NTIC processes at some point in the evolution. Due to the fundamental relation between information and consciousness, biological creatures also evolve different degrees of consciousness depending on the physical scales and the complexity of the environments they adapt to. 
     	    
-    	    \ac{OurTheory} starting with non-functional assumptions and propositions, however, leads to profound implications about the functional aspects of consciousness. \ac{OurTheory} further demonstrates remarkable explanatory power for various findings of conscious and unconscious processing with concise propositions.
+    	    \ac{OurTheory} starts with a non-functional hypothesis, however, it accounts for the association between  functional and consciousness. \ac{OurTheory} further demonstrates remarkable explanatory power for various findings of conscious and unconscious processing with concise propositions.
 	    
 
     % \subsection{Inconsistency between Conscious States and Measured Physiological States}
@@ -642,34 +709,6 @@
     	    
     	    Different from the classical SMC, a new version of SMC, Predictive Processing of SensoriMotor Contingencies (PPSMC), proposed by \cite{seth2014predictive, seth2015presence} PPSMC combines SMC and the predictive processing framework together. PPSMC emphasises the important role of generative models in computing counterfactual, inferring hidden causes of sensory signals, and linking fictive sensory signals to possible actions. We argue that if the generative model involving the NTIC process for the computation of counterfactual, PPSMC will be compatible to our theory and may have strong explanatory power on some special conscious experience.
     	    
-    	    
-    	   
-        % ---------------------------------------------------------------------------- %
-        %                             First-order theories                             %
-        % ---------------------------------------------------------------------------- %
-% 		\subsection{First-order theories}
-            % The first-order theories suggest that consciousness is determined by early sensory information or neural activities\needref{First-order theories}. The first-order view maintains that conscious awareness is determined by early sensory activity alone, independently of higher-order representations.
-            % First-order theories suggests that phenomenal consciousness is associated with fine-grained contents for the first-order processes. Different from the first-order theories, our theory suggests that, whether the early sensory activities show in the conscious content, it depends on information encoded in the early sensory areas is recruited in the NTIC process at the macroscopic level or not. As we mentioned in \ref{sec:Unconscious Processing}, if the sensory activities are only passively triggered by the environmental states, they are not able to form hign NTIC and remain unconscious. We predict that, if early sensory information or neural activities after coarse-graining take parts in the NTIC process, early sensory information or neural activities can contribute conscious content. 
-		
-		
-        % ---------------------------------------------------------------------------- %
-        %                 Higher Order Thought theory of consciousness                 %
-        % ---------------------------------------------------------------------------- %
-% 		\subsection{Higher Order Thought theory of consciousness}
-% 		    \ideaBox{Okay, I don't know how to deal with HOT now. I don't understand it at all}
-% 		    In contrast to first-order theories, higher-order thought theories suggest that consciousness depends on higher-order representations which represent agents as being in particular internal states \citep{lau2011empirical}. First-order processing needs to be observed or represented by a higher-order observer to become conscious. 
-		    
-		    
-% 		    Meta-cognition is also associated with many conscious cognitive function. However, we propose a new perspective and indicate that HOT may be a misunderstanding \critical{Very bad writing. I need to rewrite this part}. 
-		    
-		    
-% 		    This may be the result of neural coarse-graining. Because contents in informational closure look like watching fine-grained information, people may have an wrong impression about it. 
-		    
-		    
-% 		    Coarse-grained information can be summary statistics which may be misunderstood as higher-order representation. It is true that the neural system does create  meta-representation to represent xxx\needref{Maybe come studies about confidence represenatation}. The higher-order representation may resemble coarse-grained variables. This may cause misidentify the entity which correlates conscious experience.  
-		    
-% 		    Moreover, the predictive information in NTIC is critical for other systems to build forward models for a wild range of tasks. Therefore, most of the high level cognition can utilise the state of informational closure. For example, mental planning needs a precise forward model to infer the environmental dynamics.
-
 				
         % ---------------------------------------------------------------------------- %
         %                            Global workspace theory                           %
@@ -706,7 +745,7 @@
         
         % ================================= Empirical ================================ 
         % finding the coarse-graining function 
-        Empirically, a major challenge to \ac{OurTheory} is to find proper coarse-graining functions which map microscopic processes to macroscopic NTIC processes. This will become an imperative issue of find neurological supporting evidence for \ac{OurTheory}. To find proper coarse-graining functions among infinite candidates \citep{price2007causation} seem to be very challenging. Nevertheless, there are still theoretical and technical progresses recently that may contribute to  solving this issue. For example, the concept of \textit{causal emergence} proposed by Hoel \citep{Hoel19790, Hoel2018} has been further developed recently. Causal emergence is highly relevant to informational closure at coarse-grained levels. In their new study by \cite{klein2019uncertainty}, they started to compare how different coarse-graining functions influence causal emergence at macroscopic levels. \cite{PFANTE.2014, PFANTE.2014b} provides thorough mathematical analyses on level identification including informational closure. In neuroscience, the understanding of neural population codes also achieves a tremendous progress due to the advancement of recording technique and data science \citep{Kohn2016, panzeri2015neural}. \cite{Gamez2016} has also systematically describe relevant issues in terms of finding data correlates of consciousness amount different levels of abstraction. We believe that interdisciplinary research is required to narrow down the scope of searching the coarse-graining functions and conscious processes at the coarse-grained level in the neural system and beyond. 
+        Empirically, a major challenge to \ac{OurTheory} is to find proper coarse-graining functions which map microscopic processes to macroscopic NTIC processes. This will become an imperative issue of finding neurological supporting evidence for \ac{OurTheory}. To find proper coarse-graining functions among infinite candidates \citep{price2007causation} seem to be very challenging. Nevertheless, there are still theoretical and technical progresses recently that may contribute to  solving this issue. For example, the concept of \textit{causal emergence} proposed by Hoel \citep{Hoel19790, Hoel2018} has been further developed recently. Causal emergence is highly relevant to informational closure at coarse-grained levels. In their new study by \cite{klein2019uncertainty}, they started to compare how different coarse-graining functions influence causal emergence at macroscopic levels. \cite{PFANTE.2014, PFANTE.2014b} provides thorough mathematical analyses on level identification including informational closure. In neuroscience, the understanding of neural population codes also achieves a tremendous progress due to the advancement of recording technique and data science \citep{Kohn2016, panzeri2015neural}. \cite{Gamez2016} has also systematically described relevant issues in terms of finding data correlates of consciousness amount different levels of abstraction. We believe that interdisciplinary research is required to narrow down the scope of searching the coarse-graining functions and conscious processes at the coarse-grained level in the neural system and beyond. 
         
         Finally another empirical challenge to \ac{OurTheory} is the lack of empirical supporting evidence. This is understandable because the concept of NTIC is relatively new in the history of information science, not to mention in neuroscience. Very few experiments and data collections are designed for examining NTIC properties in the neural system. To our knowledge, only two studies \citep{Palmer2015, sederberg2018learning} coincidentally examine similar properties in salamander retina. They found that the a large group of neural populations of retinal ganglion cells encoded predictive information about external stimuli also had high self-predictive information about their own future states. The results, in line with the characteristic of NTIC. We expect that there will be more empirical studies examining the NTIC property in the neural system. 
 
@@ -726,32 +765,17 @@
 	
 	
 	% For philosophy of mind
-	Regarding philosophy of mind, \ac{OurTheory} connects several distinct arguments together. \ac{OurTheory} can be seen as an identity theory because it assumes a fundamental relation between consciousness and information. Second, the implications of \ac{OurTheory} tightly link consciousness to several cognitive functions in the context of evolution. This explains why people might intuitively have a functionalist point of view of consciousness. \ac{OurTheory} emphasises that informational closure between levels of coarse-graining is critical to form NTIC processes in some stochastic systems. In this case, especially for the neural system, forming conscious processes at the macroscopic levels coincide with the perspective of emergentism. Finally, forming NTIC (conscious) processes through many-to-one maps, i.e., coarse-graining, implies multiple realizability of consciousness. As a result, \ac{OurTheory} provides a integrated view for these arguments and is further capable of indicating how and why they are conditionally true.
+	Regarding philosophy of mind, \ac{OurTheory} connects several distinct arguments together. \ac{OurTheory} can be seen as an identity theory because it assumes a fundamental relation between consciousness and information. Second, the implications of \ac{OurTheory} tightly link consciousness to several cognitive functions in the context of evolution. This explains why people might intuitively have a functionalist point of view of consciousness. \ac{OurTheory} emphasises that informational closure between levels of coarse-graining is critical to form NTIC processes in some stochastic systems. In this case, especially for the neural system, forming conscious processes at the macroscopic levels coincide with the perspective of emergentism. Finally, forming NTIC (conscious) processes through many-to-one maps, i.e., coarse-graining, implies multiple realizability of consciousness. As a result, \ac{OurTheory} provides an integrated view for these arguments and is further capable of indicating how and why they are conditionally true.
 
 	% Final 
 	So far, the current version of \ac{OurTheory} is still far from completion. Further theoretical and empirical research is indispensably required for \ac{OurTheory} to improve and solve several issues in the current version. Nevertheless, \ac{OurTheory} offers explanation and prediction for consciousness science. We hope that \ac{OurTheory} provides a new way of thinking and understanding neural substrates of consciousness.  
 	
-%     ================================ Old version ===============================
-% 	In this paper, We introduced a new computational theory of consciousness based on two assertions. First, consciousness occurs when a process forms an NTIC. Second, in the neural system, construction of an NTIC process requires coarse graining. From these assumptions, it follows that consciousness only appears at a certain macroscopic level which forms a high degree of NTIC. 	Our  theory offers an explanation for a large number of empirical findings in consciousness research and reconciles with several other theories of consciousness. 
-	
-% 	Our theory asserts that consciousness is an informational phenomenon. We further emphasise that the scale-dependent nature of information processing is critical to conscious experience. We believe that many discrepancies in previous studies of neural correlates of consciousness resulted from measurements at inappropriate scales. Except where and when, future studies should also focus on "what scale" of the neural system the data are acquired at.
-	
-% 	The computational nature of the theory makes it feasible to extrapolate and apply to other non-human systems. Note that, even though our theory does not start from a functionalist point of view, it comes out with explanatory power on the functional aspect of consciousness and points out the evolutionary drive of having conscious processing. 
-	
-
-	
-% 	Finally, we quote the famous epistemological questions: "If a tree falls in a forest and no one is around to hear it, does it make a sound?". Now, we can ask a new version of this question: "If an action potential rises outside an informationally closed process, does it make any conscious percept to this process?" We answer: "if the process is conscious, the event occurring outside the realm of the informational closure should never become part of the conscious contents."
-    
-    
 	% ============================================================================ %
 	%                                      End                                     %
 	% ============================================================================ %
-
-	\section*{Funding}
-        \needhelp{@Ryota, could you help me with this part?}
 	\section*{Acknowledgements}
-
-	\section*{Supplemental Data}
+	A.C., Y.Y, and R.K. are funded by Japan Science and Technology Agency (JST) CREST project. R.K. and M.B. are supported by Templeton World Charity Foundation.
+	   % Thank David Schwartzman for letting me concertrate several months for this work. 
 
 	\bibliographystyle{authordate1}
 	\bibliography{ref}
