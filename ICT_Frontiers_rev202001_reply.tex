@@ -1,0 +1,207 @@
+% \input{ICT_Frontiers_rev202001.tex}
+\documentclass[utf8]{article}
+% \usepackage{import}
+% \usepackage{RevisionToolsByAcer}
+% \ProvidesPackage{RevisionToolsByAcer}
+% \documentclass[utf8]{article}
+% \ProvidesPackage{RevisionToolsByAcer}
+
+
+%% Language and font encoding
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{xr}
+\externaldocument{ICT_Frontiers_rev202001}
+
+% Sets page size and margins
+% \usepackage[a4paper, top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=4cm]{geometry}
+% \usepackage[papersize={10in, 12in}, top=3cm,bottom=2cm,left=2in,right=2in,marginparwidth=1.8in]{geometry}
+\usepackage{titlesec}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage[at]{easylist}
+\usepackage[round]{natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{authblk}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage[threshold=2, autopunct=true, autostyle=true]{csquotes}
+
+
+% =============================== Header style =============================== %
+\titlelabel{}
+
+
+% ============================================================================ %
+%                               Macros from Acer                               %
+% ============================================================================ %
+\newenvironment{ants}
+	{
+	 \begin{easylist}[itemize]
+ 	}
+	{
+	\end{easylist}
+	} 
+
+		
+% env question	
+\newcounter{cQuestion}[section]
+\newenvironment{question}
+    {\refstepcounter{cQuestion}\color{Blue}\noindent\newline Q\thecQuestion:}
+    {~\newline}
+    
+% env ans    
+\newenvironment{ans}  
+    {\color{Black}\noindent A:}
+    {~\newline}    
+    
+    
+\newcommand{\QA}[2]{
+    \begin{question}  
+        #1
+    \end{question}
+        
+    \begin{ans}  
+        #2
+    \end{ans}
+}
+
+% \revise
+%   {Page}{original text}{revised text}
+\newcommand{\revise}[3]{
+    \noindent
+    \newline
+    \textbf{On page {#1}:}\newline
+    \newline
+    Original:\newline
+    \textit{"#2"}
+    \newline
+    \newline
+    Revised:\newline
+    \textit{"#3"}\newline}
+% =================================== Title ================================== %
+\title{Response to Reviewers $Rev^1$}
+\date{\today}
+\author{} 
+
+
+
+% =================================== Begin ================================== % 
+\begin{document}
+
+    \maketitle
+    \section*{Reply to Editor}
+        \begin{question}
+        In addition, I have a question. if we view molecules as coarse grains of elementary particles, would the phenomenon of molecular recognition have high NTIC and thus be conscious?
+        \end{question}
+        
+        \begin{ans}
+            Dear Prof. Hoffman,
+            Thank you for this interesting question. 
+            There is no question that molecular complexes are coarse-grained objects of molecules through molecular recognition. Based on our hypothesis, if the dynamics of a molecular complex form an NTIC process, our theory (ICT) claims that the molecular complex is conscious. 
+            We speculate that it may be easy to find informationally closed molecular complexes (isolated complexes) but may not be easy to find ones with NTIC. Nevertheless, this is a legible empirical question, and we look forward to discovering any self-assembly NTIC process at the molecular scales.
+        \end{ans}
+        
+    
+    \section{Reply to Reviewer 1}
+        \begin{question}
+            Regarding the NTCI measure: \\\\
+            a) Bertschinger et al. 2006 define informationally closed as $J_t(E -> Y) = 0$, but this is not a requirement for NTIC. Meaning, a positive NTIC measure does not entail that $J_t = 0$. $J_t = 0$ is only true if the NTIC is equal to $I(Y_{t+1}; E_t)$. In what sense does it correspond to non-trivial information closure then? (see also my concern \#2, maybe that is related) As defined in eq. 6 a video camera might have very high NTIC if it records a natural scene, even though it is in no way informationally closed from the environment.\\\\
+            b) Is $NTIC_t$ state dependent or not? As capital letters are used I assume it is based on (conditional) mutual information measures across one time step but averaged over the possible states of the system at time t and t+1, so state distributions. But which distributions are used to compute $NTIC_t$? The stationary joint distribution of states at t and t+1? It cannot be just some observed measure, because then the level of consciousness would depend on how long the observation is. Moreover, if $NTIC_t$ is not state dependent, then the Reflex example on p. 10 is not intuitive. Because the system (brain) is the same and awake whether it behaves reflexively or not, so while the content may depend on the type of action, the $NTIC_t$ (level) would stay the same.              
+        \end{question}
+        
+        
+        \begin{ans}
+            TBD
+        \end{ans}
+        
+        
+        \begin{question}
+            Hypothesis and Implication 3: Why is it crucial that there is an underlying X with respect to which Y is a C-process? Does Y being informationally closed with respect to X imply that Y is also informationally closed with respect to E, i.e. $J_t(E-Y) = 0$? I don't think that could be true for the brain, or part of it really. My brain's next state, at whatever level, certainly depends to some degree on unpredictable sensory inputs from the environment. In the end, is $I(Y_{t+1}; E_t|Y_t) = 0$ required for consciousness or not? (see point 1a). In other points in the manuscript this does not seem required, e.g. p. 10 "If a process is not informationally closed, the degree of NTIC is low resulting in low or no consciousness".        
+        \end{question}
+        
+        \begin{ans}
+            Yes. Because X is the micro-level of the universe, any coarse-graining of X (including E and S) should have equal or less information of X. Since Y is informationally closed with respect to X meaning that $X_t$ does not have more information about $Y_{t+1}$ than $Y_t$, any coarse-graining of X should also have equal or less information than $Y_t$. Therefore, Y is informationally closed with respect to X implying that Y is also informationally closed with respect to E and all other coarse-grainings of X.\\
+            $\Delta t$
+        \end{ans}
+        
+        
+        \begin{question}
+            Exclusion or no exclusion? The authors state multiple times that "every process with a positive non-trivial information closure (NTCI) has consciousness." (p.3, and also p.12).
+            a) Yet, Figure 4 is ambiguous in the sense that the maximum somehow seems important, while actually all levels should give rise to separate experiences. I don't see how ICT without something like exclusion (IIT style) would indicate that the maximum should correspond to human consciousness. It could just be any one out of many consciousnesses.
+            b) p. 14: comparison to IIT: what does ICT say about different sets of variables at the same level. There might well be multiple ways to partition X into S and E, with many overlapping S's. Would those all be conscious? They would not be informationally closed from each other but they could all fulfill the requirements in the Hypothesis. It seems like finding the maximum within a level over the possible sets of elements/variables is a necessary step to identify boundaries (I think also Krakauer does that across sets of variables, but not 100\% sure)        
+        \end{question}
+
+        
+        \begin{question}
+            Feedback and memory: p. 11. If $NTIC > 0$ is sufficient and true information closure is not required, then feedfoward networks can be conscious according to ICT. Also, in that case, memory is not necessary, as the video camera would have $NTIC > 0$ as long as it records from a stable environment. In that case $I(Y_{t+1}, Y_t) > 0$ and $I(Y_{t+1}, Y_t|E_t)$ is small. This issue here is that having information about the next state does not imply that there is any causation, so if $Y_t$ is highly correlated with $E_t$ and $E_t$ causes $Y_{t+1}$ then NTIC is high. (Thus the IIT emphasis on causation).\\
+            If somehow the fact that Y must be informationally closed wrt X does the heavy-lifting here that should be made more explicit (see above).
+        \end{question}
+        
+        \begin{question}
+            Does ICT imply that one is unconscious while dreaming? In that case $I(Y_{t+1}; Y_t|E)$ should almost be identical to $I(Y_{t+1};I_t)$ and thus lead to NTIC approx. 0.        
+        \end{question}
+        
+        
+        \begin{question}
+            Minor:
+            \begin{itemize}
+                \item "contributions to the field" This section is just a copy paste from the abstract and thus not necessarily helpful. Not sure though what the purpose of this section is meant to be by Frontiers.
+                
+                \item Introduction: "We currently lack a theory... " IIT and the geometric theory of consciousness (Fekete et al.) have proposed solutions. So there are theories. The following paper should be of interest and should probably be cited:
+                Fekete T, van Leeuwen C, Edelman S (2016) System, subsystem, hive: Boundary problems in computational theories of consciousness. Front Psychol 7:1041.
+                
+                \item $y_t$ corresponds to the content. I would argue that an activation state, without taking the system or relation between elements etc into account is meaningless and cannot capture/explain the structure of an experience. Though this issue can be dealt with at a later time.
+            \end{itemize}
+        \end{question}
+        
+        
+    \section{Reply to Reviewer 2}
+        \begin{question}
+I had a few problems in reading the paper, which I think should be addressed (especially the first) before the paper is published. For detailed notes on these see below.
+
+1. The coarse-graining idea seems undefined in critical ways, but the paper reads as though it is well-defined. So maybe the authors have compressed too much detail? In the formalism presented it is unclear what coarse-graining (or information closure to other grains) amounts to. With this lack of detail, it is then unclear to me why intermediate maxima in IC are a plausible result (why does IC not just decline with progressive coarse graining).
+
+2. The idea of 'simulation'. This is a more minor point but I would appreciate if the authors could be clearer on this. It is arguable whether or not consciousness simulates anything (e.g. see Hoffman's interface theory); and some of the assertions the authors make re simulation seem unfounded anyways. But it could be that they mean something different or subtle (that consciousness is linked to or represents or etc the environment)
+
+3. There were several other assertions that stood out to me as strange or wrong, but could be a matter of explanation or ignorance on my part (the feedforward system, the cut-apart system). Either way some more explanation would be good.
+        \end{question}
+        
+        
+        \begin{question}
+            The English is not perfect and needs some good proofreading, though it was understandable throughout.
+            
+            On line 182, defining C-processes as cases where ‘Y is informationally closed to X’. This is now information closure in the sense of coarse-graining, but no such thing has been defined yet? Is it supposed to be so trivial that it is not required to make it explicit? To this point, closure is defined entirely in terms of system with respect to environment.
+            
+            Basically, I am not sure whether closer between scales is a matter of same-time (e.g. $I(Y_{t+1};X_{t+1})$) or across-time interactions ($I(Y_{t+1};X_t)$). Or could it be both?
+            
+            On line 241: “.. not sufficiently coarse-grained variables have low values of NTIC”, this is phrased as though it is necessarily true (and also that “we saw above”, though I do not see above where this is justified), but is it?
+            
+            At the very finest grain, wouldn’t even all the most ‘stochastic’ dynamics of a system be accounted for by prior states of the system, or by the environment? Why wouldn’t we assume that NTIC *only decreases* as the system is coarse-grained (as number of elements/states is decreased), for similar reasons as it must be zero at a 1-element 1-state system as the authors note? This seems an important point to be very clear on…
+            
+            on line 263: “NTIC processes encodes environmental information in its state. This suggests that a NTIC process can be considered as a process that simulates the environmental dynamics.“
+            
+            Why does encoding suggest simulation? An encoding *could* be a simulation, but it could well be nothing like a simulation, if we understand simulation to mean something like an imitation or reconstruction of some structure or dynamics. Two totally different environmental situations could potentially be encoded in exactly the same way (eg. as a string of 1s and 0s).
+            
+            The ‘simulation’ notion is brought up again in section 5.2 (line 344), citing Bertschinger et al, though I do not find the idea in that paper.. I think authors need to be clearer on what they mean by ‘simulation’ to make this point.
+            
+            line 306: “Blindsight patients… make above chancel-level visual judgments without having any conscious perception about visual stimuli” I am not sure this characterization of blindsight is correct, it may be a matter of the phrasing. It could be - or probably is - the case that ‘blindsight’ patients always have some conscious experience of what drives their correct responses, but that the “visual character” of these experiences is degraded or missing.
+            (Overgaard, Experimental Brain Research 2011)
+            for a specific example
+            (Mazzi, Bagattini, Savazzi; Frontiers in Psychology, 2016)
+            
+            on Line 316: On the issue of a feedforward network, the current state of a feedforward network with more than one layer is certainly driven by its own past states! So, mutual information of a feedforward network over a time lag should not be zero, unless I am misunderstanding something here?
+             At the same time, I can see a version of the authors’ argument here - for a unit in a feedforward network with depth (distance-from-input) of N, a time lag of N time steps would always account fully for the states of the element. Is this the idea?
+            
+            on line 441: under the 'Prediction after system damaged', it is suggested that ICT predicts cutting a system in half would render both halves unconscious. But this would only be the case if neither half contains its own C-processes, yes? Since ICT allows that many C-processes can exist at the same time, it would have to be some special case for this prediction to hold true. So it seems to me the prediction is actually similar to that of IIT.
+            
+            Line 540: the theory doesn’t really seem to intend to solve the hard problem(s) at all, much less “completely solve”.
+            
+            I was expecting the problem of dreaming to come up in the last section (maybe along with SMC for which it is a serious problem). When dreaming the information between environment and the system is virtually zero; is this a problem for ICT? Also, more specific phenomena like the eigengrau - if you take away all visual input, for long enough, I do not lose my visual experiences - rather they take on a special state. Does ITC need to accept the possibility that even *trivial* IC can be a conscious process?        
+        \end{question}
+    
+    
+\end{document}

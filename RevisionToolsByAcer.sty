@@ -1,0 +1,97 @@
+% \documentclass[utf8]{article}
+\ProvidesPackage{RevisionToolsByAcer}
+
+
+
+% \usepackage[pagewise]{lineno}
+
+
+% \usepackage{xr}
+% \makeatletter
+% \newcommand*{\addFileDependency}[1]{% argument=file name and extension
+%   \typeout{(#1)}
+%   \@addtofilelist{#1}
+%   \IfFileExists{#1}{}{\typeout{No file #1.}}
+% }
+% \makeatother
+ 
+% \newcommand*{\myexternaldocument}[1]{%
+%     \externaldocument{#1}%
+%     \addFileDependency{#1.tex}%
+%     \addFileDependency{#1.aux}%
+% }
+% \myexternaldocument{ms}
+
+
+
+%% Language and font encoding
+\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Sets page size and margins
+% \usepackage[a4paper, top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=4cm]{geometry}
+% \usepackage[papersize={10in, 12in}, top=3cm,bottom=2cm,left=2in,right=2in,marginparwidth=1.8in]{geometry}
+
+\usepackage{titlesec}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage[at]{easylist}
+\usepackage[round]{natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{authblk}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage[threshold=2, autopunct=true, autostyle=true]{csquotes}
+
+% ============================================================================ %
+%                               Macros from Acer                               %
+% ============================================================================ %
+
+
+\newenvironment{ants}
+	{
+	 \begin{easylist}[itemize]
+ 	}
+	{
+	\end{easylist}
+	} 
+		
+		
+% env question	
+\newcounter{cQuestion}[section]
+\newenvironment{question}
+    {\refstepcounter{cQuestion}\color{Blue}\noindent\newline Q\thecQuestion:}
+    {\newline}
+    
+% env ans    
+\newenvironment{ans}  
+    {\color{Black}\noindent A:}
+    {\newline}    
+    
+    
+\newcommand{\QA}[2]{
+    \begin{question}  
+        #1
+    \end{question}
+        
+    \begin{ans}  
+        #2
+    \end{ans}
+}
+
+% \revise
+%   {Page}{original text}{revised text}
+\newcommand{\revise}[3]{
+    \noindent
+    \newline
+    \textbf{On page {#1}:}\newline
+    \newline
+    Original:\newline
+    \textit{"#2"}
+    \newline
+    \newline
+    Revised:\newline
+    \textit{"#3"}\newline}
+% ============================================================================ %
