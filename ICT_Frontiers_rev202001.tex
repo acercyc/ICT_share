@@ -2,7 +2,7 @@
 \usepackage{import}
 
 
-\ProvidesPackage{WritingToolsByAcer}
+%\ProvidesPackage{WritingToolsByAcer}
 
 
 %% Language and font encoding
@@ -18,7 +18,7 @@
 %% Title style
 \usepackage{stringstrings}
 \usepackage[explicit]{titlesec}
-\usepackage{sectsty}
+%\usepackage{sectsty}
 
 
 
@@ -35,6 +35,7 @@
 \usepackage{tikz}
 \usepackage{lineno}
 \usepackage{csquotes}
+
 
 
 
@@ -370,7 +371,7 @@
 
 		%% scale
 		
-		It seems to be true that we are not consciously accessing information processed at every scale in the neural system. There are both more microscopic and more macroscopic levels than the level corresponding to the conscious contents. On the one hand, dynamics of individual neurons are stochastic \citep{Goldwyn2011, White2000}. However, what we are aware of in our conscious mind shows astonishing stability and robustness against the ubiquitous noise in the neural system \citep{mathis1995computational}. In addition, some parts of the neural system contribute very little to conscious experience (the cerebellum for example \citep{lemon2010life}), also suggesting that conscious contents do not have one-to-one mapping to the entire state of the neural system. On the other hand, human conscious experience is more detailed than just a simple (e.g. binary) process can represent, suggesting that the state space of conscious experience is much larger than what a single overly coarse-grained binary variable can represent. These facts suggest that conscious processes occur at a particular scale. We currently lack a theory to identify the scale which conscious processes correspond to. We refer to this notion as \textbf{the scale problem of consciousness} (Fig.~\ref{fig:scaleproblem}).
+		It seems to be true that we are not consciously accessing information processed at every scale in the neural system. There are both more microscopic and more macroscopic levels than the level corresponding to the conscious contents. On the one hand, dynamics of individual neurons are stochastic \citep{Goldwyn2011, White2000}. However, what we are aware of in our conscious mind shows astonishing stability and robustness against the ubiquitous noise in the neural system \citep{mathis1995computational}. In addition, some parts of the neural system contribute very little to conscious experience (the cerebellum for example \citep{lemon2010life}), also suggesting that conscious contents do not have one-to-one mapping to the entire state of the neural system. On the other hand, human conscious experience is more detailed than just a simple (e.g. binary) process can represent, suggesting that the state space of conscious experience is much larger than what a single overly coarse-grained binary variable can represent. These facts suggest that conscious processes occur at a particular scale. \linelabel{line:lack-theory}We currently lack a theory to identify the scale which conscious processes correspond to. We refer to this notion as \textbf{the scale problem of consciousness} (Fig.~\ref{fig:scaleproblem}).
 
 		%% our argument
 		In this article, we propose a new information-based theory of consciousness, called \acf{OurTheory}. We argue that every process with a positive non-trivial information closure (NTIC) has consciousness. This means that the state of such a process corresponds one-to-one to conscious content.\footnote{In the following IC stands for "informational closure" or "informationally closed" and NTIC stands for "non-trivial informational closure" or "non-trivially informationally closed".}. We further postulate that the \textit{level} of consciousness corresponds to the degree of NTIC. (for a discussion of the distinction between level versus content of consciousness see \cite{laureys2005neural, overgaard2010neural}).
@@ -395,7 +396,7 @@
 
 
 		% Definition of informational closure
-			Consider two processes, the environment process $(E_t)_{t \in \mathbb{N}}$ and the system's process $(Y_t)_{t \in \mathbb{N}}$ and let their interaction be described by the Bayesian network in Fig.~\ref{fig:SystemAndEnv}. Then, information flow $J_{t}$ from the environment $E$ to a system $S$ at time $t$ can be defined as the conditional mutual information $I$ between the current environment state $E_{t}$  and the future system state $Y_{t+1}$ given the current system state $Y_{t}$
+			\linelabel{line:r1q1a}Consider two processes, the environment process $(E_t)_{t \in \mathbb{N}}$ and the system's process $(Y_t)_{t \in \mathbb{N}}$ and let their interaction be described by the Bayesian network in Fig.~\ref{fig:SystemAndEnv}. Then, information flow $J_{t}$ from the environment $E$ to a system $S$ at time $t$ can be defined as the conditional mutual information $I$ between the current environment state $E_{t}$  and the future system state $Y_{t+1}$ given the current system state $Y_{t}$
 
 				\begin{equation}
     				\label{eq:InformationFlow}
@@ -452,10 +453,12 @@
 			\noindent
 			And, non-trivial informational closure can be defined as
 				\begin{align}
-				\label{eq:NTIC}
+%				\label{eq:NTIC}
     				% \left.\begin{array}
-    				NTIC_t(E\rightarrow Y) :&=I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t})\\
-    				&=I(Y_{t+1};E_{t})-I(Y_{t+1};E_{t}|Y_{t})
+    				NTIC_t(E\rightarrow Y) :&=I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t}) 
+    				\label{eq:NTIC1}\\
+    				&=I(Y_{t+1};E_{t})-I(Y_{t+1};E_{t}|Y_{t}) 
+    				\label{eq:NTIC2}
     				% \end{array} \right.
 				\end{align}
 			
@@ -524,7 +527,7 @@
 	   	In order to define C-processes we need to define coarse-grainings first. Every coarse-graining is characterised by a function that maps the microscopic process to the coarse-grained macroscopic process. More formally: 
 	   	
 	   	\begin{definition}
-	   	Given a stochastic process $X$ with state space $\mathcal{X}$, a \emph{coarse-graining of $X$} is a stochastic process $Y$ with state space $\mathcal{Y}$ such that there exists a function\footnote{Functions in the mathematical sense used here are always either one-to-one or many-to-one.} $f_Y:\mathcal{X}\rightarrow \mathcal{Y}$ with $Y_t=f_Y(X_t)$.  
+	   	\linelabel{line:r2q1-1} Given a stochastic process $X$ with state space $\mathcal{X}$, a \emph{coarse-graining of $X$} is a stochastic process $Y$ with state space $\mathcal{Y}$ such that there exists a function \footnote{Functions in the mathematical sense used here are always either one-to-one or many-to-one.} $f_Y:\mathcal{X}\rightarrow \mathcal{Y}$ with $Y_t=f_Y(X_t)$.  
 	   	\end{definition}
 	   	A more general definition of coarse-grainings that maps temporally extended sequences of the microscopic process to macroscopic states are possible but for his first exposure of our theory the simpler definition above is sufficient. 
 	   	
@@ -557,7 +560,7 @@
         \end{align}
         \end{hypothesis}
         
-        A concrete example in the context of neuroscience is that $X$ represents the microscopic level of the universe, $S$ a cellular level process in the neural system, $Y$ a more macroscopic process of the neural system coarse-grained from the cellular level process $S$, and $E$ the environment which the cellular level process $S$ interacts with. The environment $E$ may include other processes in the neural system, the sensors for perception and interoception, and external physical worlds.\\
+        A concrete example in the context of neuroscience is that $X$ represents the microscopic level of the universe, $S$ a cellular level process in the neural system, $Y$ a more macroscopic process of the neural system coarse-grained from the cellular level process $S$, and $E$ the environment which the cellular level process $S$ interacts with. \linelabel{line:neu-env} The environment $E$ may include other processes in the neural system, the sensors for perception and interoception, and external physical worlds.\\
         
         Based on the hypothesis, \ac{OurTheory} leads to five core implications: 
         \begin{description}
@@ -617,7 +620,7 @@
     		% CC doesn't include all microscopic states
     		As mentioned above, informational closure can happen between scales of coarse-graining within a single system. Thus, a macroscopic NTIC process can be ignorant to its microscopic states. \ac{OurTheory} argues that human conscious contents do not reflect cellular level activity because the conscious process which corresponds to a macroscopic NTIC process is informationally closed to the cellular level in the human neural system. Further more, since NTIC processes are informationally closed, each of them can be considered as a reality. In the extreme case, when the information flow from its microscopic processes and environment to the informationally closed process is completely zero (Eq.~\ref{eq:informationflow2}), the future states of the process is only determined by its past states. 
     		
-    		Importantly, NTIC processes encodes environmental information in its state. This suggests that a NTIC process can be considered as a process that simulates the environmental dynamics. This implication fits well with some theories of consciousness (for example, world simulation metaphor ~\citep{revonsuo2006inner}). Note that \ac{OurTheory} doesn't assume that generative models are necessary for consciousness. The implication is a natural result of processes with NTIC. 
+    		Importantly, NTIC processes encode environmental information in its state. This suggests that a NTIC process can be considered as a process that simulates the environmental dynamics. This implication fits well with some theories of consciousness (for example, world simulation metaphor ~\citep{revonsuo2006inner}). Note that \ac{OurTheory} doesn't assume that generative models are necessary for consciousness. The implication is a natural result of processes with NTIC. 
             
             Finally, a coarse-graining can be a many to one map from microscopic to macroscopic states and \ac{OurTheory} proposes that conscious contents $C^{Content}$ is the state of the NTIC process $Y$. Therefore, \ac{OurTheory} implies multiple realisation thesis of consciousness \citep{putnam1967psychological,bechtel1999multiple} which suggests that different physical implementations could map to the same conscious experience.
             
@@ -664,7 +667,8 @@
         			\label{fig:reflexive}
         		\end{figure}  
         		
-        		The same principle can be applied to interpret blindsight \citep{humphrey1999history, humphrey1974vision, Humphrey1970} and procedural memory \citep{doyon2009contributions, ashby2010cortical} which are often considered as unconscious processes. Blindsight patients are able to track objects, avoid obstacles, and make above chance-level visual judgements without having any conscious perception about visual stimuli. We argue that action outputs of blindsight can be directly guided by sensory inputs through stimulus-response maps. The neural circuits are not informationally closed and, therefore, unconscious. Similarly, for procedural memory, the state transitions of action controls largely depends on the concurrent environmental states. This prevents the internal processes of procedure memory from informational closure and being conscious. \ac{OurTheory} also offer an interpretation as to why patients with visual apperceptive agnosia \citep{james2003ventral} can perform online motor controls without visual awareness of action targets \citep{10.3389/fneur.2014.00255}. 
+        		The same principle can be applied to interpret blindsight \citep{humphrey1999history, humphrey1974vision, Humphrey1970} and procedural memory \citep{doyon2009contributions, ashby2010cortical} which are often considered as unconscious processes.
+        		\linelabel{line:r2q6}Blindsight patients are able to track objects, avoid obstacles, and make above chance-level visual judgements when their visual experiences is degraded or missing (however, they may still preserve some forms of conscious experience, see \cite{overgaard2011visual, mazzi2016blind}). We argue that action outputs of blindsight can be directly guided by sensory inputs through stimulus-response maps. The neural circuits are not informationally closed and, therefore, unconscious. Similarly, for procedural memory, the state transitions of action controls largely depends on the concurrent environmental states. This prevents the internal processes of procedure memory from informational closure and being conscious. \ac{OurTheory} also offer an interpretation as to why patients with visual apperceptive agnosia \citep{james2003ventral} can perform online motor controls without visual awareness of action targets \citep{10.3389/fneur.2014.00255}. 
 
         		As we have seen in the examples above, a crucial implication of \ac{OurTheory} is that a pure feedforward network cannot produce consciousness because NTIC requires a form of memory $I(Y_{t+1};Y_{t})$. Without memory, a network's current state is entirely driven by the input the network receives from the environment without any influence from its own past states. Therefore, such a network is incapable of forming an NTIC. In contrast, a network with recurrent loops can maintain information about its own past states. This forms an information channel between the past and the future states of the network and, thus, makes the network capable of being informationally closed. This result coincides with theories of consciousness emphasising the importance of recurrent circuits to consciousness \citep{lamme2006towards, edelman1992bright, tononi2008neural}.
 
@@ -755,7 +759,7 @@
 
 		    \textbf{The concept of "integration"}: In IIT, integrated information is one of the core concept of defining conscious individuals. In the current paper, we did not include the notion of integrated information within \ac{OurTheory}. This, however, results in one of the current weaknesses of \ac{OurTheory} that it lacks the ability to individuate NTIC processes in some extreme cases (i.e., the problem of individuality). We discussed this weaknesses in Sec.~\ref{sec:Limitation and Future work}.
 		    
-		    \textbf{Prediction after system damaged}: \ac{OurTheory} and IIT lead to different predictions when a system suffers from a damage. For example, considering a densely connected networks whose dynamics forms an NTIC process. If we cut the network in half, IIT would predict that this results in two consciousnesses because elements in both networks still maintain high degrees of interactions. In contrast, \ac{OurTheory} would predict that this operation could completely destroy NTIC rendering both parts unconscious.
+		    \textbf{Prediction after system damaged}:\linelabel{line:r2-cutting} \ac{OurTheory} and IIT lead to different predictions when a system suffers from a damage. For example, considering a densely connected networks whose dynamics forms an NTIC process. If we cut the network in half, IIT would predict that this results in two consciousnesses because elements in both networks still maintain high degrees of interactions. In contrast, \ac{OurTheory} would predict that this operation could completely destroy NTIC rendering both parts unconscious.
 		    
 
         % ---------------------------------------------------------------------------- %
@@ -770,7 +774,7 @@
     		Second, PP can be considered as a sophisticated computation for perceptual inference. It takes von Helmholtz's conception of perception as unconscious inference. Thus, only the most probable outcome computed by the inference processes can be conscious while other details of the computation remain unconscious. PP also needs to explain how unconscious inferences is able to give rise to conscious results. In short, while PP is often discussed in the context of consciousness, these explanatory gaps prevent PP from being a theory of consciousness. 
     		
     		% compatible things
-    		\ac{OurTheory} is well compatible with PP. Crucially, \ac{OurTheory} further provides natural and fundamental explanations to fills the two explanatory gaps which PP encounters. According to the definition of NTIC, a process with high NTIC can be regarded as a powerful predictive machine which has accurate self-predictive information ($I(Y_{t+1};Y_{t})$, E.q.~\ref{eq:NTIC}) and concurrently incorporates environmental information into its dynamic ($I(Y_{t+1};Y_{t}|E_{t})$, E.q.~\ref{eq:NTIC}). This predictive nature of NTIC processes is in agreement with the core notion of PP in which the conscious contents are always the predicted (inferred) outcome of our predictive mechanisms. Second, due to the informational closure to the environment, the encoded information about its environment in an NTIC process can be seemed as "the best guess" about the external environment in the context of Bayesian inference. 
+    		\ac{OurTheory} is well compatible with PP. Crucially, \ac{OurTheory} further provides natural and fundamental explanations to fills the two explanatory gaps which PP encounters. According to the definition of NTIC, a process with high NTIC can be regarded as a powerful predictive machine which has accurate self-predictive information ($I(Y_{t+1};Y_{t})$, E.q.~\ref{eq:NTIC1}) and concurrently incorporates environmental information into its dynamic ($I(Y_{t+1};Y_{t}|E_{t})$, E.q.~\ref{eq:NTIC1}). This predictive nature of NTIC processes is in agreement with the core notion of PP in which the conscious contents are always the predicted (inferred) outcome of our predictive mechanisms. Second, due to the informational closure to the environment, the encoded information about its environment in an NTIC process can be seemed as "the best guess" about the external environment in the context of Bayesian inference. 
     		
     		% fill the gaps
     		So, eventually, why are some predictive information conscious and some are not? \ac{OurTheory} predicts that only the predictions generated from mechanisms involving the NTIC process are conscious. Note that predictive processes are not necessary to involve NTIC processes. A predictive process can make prediction about the future state of its environment based on the current sensory inputs. In this case, the the process is not informationally closed and could not be conscious.
@@ -821,12 +825,15 @@
         % About the environment
         The current version of \ac{OurTheory} assume that consciousness is only contributed by non-trivial rather than trivial information encoded in a process. In other words, how much information about environmental states and dynamics encoded in a process is a key quantity for consciousness. However, we do not exclude the possibility that environmental information may be just a proxy of other informational quantities. More theoretical work is needed to elucidate the role of environments. This issue will also be discuss in our next theoretical paper. 
         
+        \linelabel{line:dream}
         
         % ================================= Empirical ================================ 
         % finding the coarse-graining function 
         Empirically, a major challenge to \ac{OurTheory} is to find proper coarse-graining functions which map microscopic processes to macroscopic NTIC processes. This will become an imperative issue of finding neurological supporting evidence for \ac{OurTheory}. To find proper coarse-graining functions among infinite candidates \citep{price2007causation} seem to be very challenging. Nevertheless, there are still theoretical and technical progresses recently that may contribute to  solving this issue. For example, the concept of \textit{causal emergence} proposed by Hoel \citep{Hoel19790, Hoel2018} has been further developed recently. Causal emergence is highly relevant to the relationship between informational closure and coarse-graining. In their new study by \cite{klein2019uncertainty}, they started to compare how different coarse-graining functions influence causal emergence at macroscopic levels. \cite{PFANTE.2014, PFANTE.2014b} provides thorough mathematical analyses on level identification including informational closure. In neuroscience, the understanding of neural population codes also achieves a tremendous progress due to the advancement of recording technique and data science \citep{Kohn2016, panzeri2015neural}. \cite{Gamez2016} has also systematically described relevant issues in terms of finding data correlates of consciousness amount different levels of abstraction. We believe that interdisciplinary research is required to narrow down the scope of searching the coarse-graining functions and conscious processes at the coarse-grained levels in the neural system and beyond. 
         
-        Finally another empirical challenge to \ac{OurTheory} is the lack of empirical supporting evidence. This is understandable because the concept of NTIC is relatively new in the history of information science, not to mention in neuroscience. Very few experiments and data collections are designed for examining NTIC properties in neural systems. To our knowledge, only two studies \citep{Palmer2015, sederberg2018learning} coincidentally examine relevant properties in salamander retina. They found that the a large group of neural populations of retinal ganglion cells encoded predictive information about external stimuli also had high self-predictive information about their own future states. This result is in line with the characteristic of NTIC. We expect that there will be more empirical studies examining relevant neural properties of NTIC. 
+        \linelabel{line:r1-state-dep}
+        
+        Finally another empirical challenge to \ac{OurTheory} is the  of empirical supporting evidence. This is understandable because the concept of NTIC is relatively new in the history of information science, not to mention in neuroscience. Very few experiments and data collections are designed for examining NTIC properties in neural systems. To our knowledge, only two studies \citep{Palmer2015, sederberg2018learning} coincidentally examine relevant properties in salamander retina. They found that the a large group of neural populations of retinal ganglion cells encoded predictive information about external stimuli also had high self-predictive information about their own future states. This result is in line with the characteristic of NTIC. We expect that there will be more empirical studies examining relevant neural properties of NTIC. 
 
 % ============================================================================ %
 %                                  Conclusion                                  %
