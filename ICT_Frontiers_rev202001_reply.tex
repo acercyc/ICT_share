@@ -44,22 +44,15 @@
 % ============================================================================ %
 %                               Macros from Acer                               %
 % ============================================================================ %
-\newenvironment{ants}
-	{
-	 \begin{easylist}[itemize]
- 	}
-	{
-	\end{easylist}
-	} 
 
 		
-% env question	
+% --------------------------------- Question --------------------------------- %	
 \newcounter{cQuestion}[section]
 \newenvironment{question}
     {\refstepcounter{cQuestion}\color{Blue}\noindent\newline Q\thecQuestion:}
     {~\newline}
     
-% env ans    
+% ------------------------------------ Ans ----------------------------------- %
 \newenvironment{ans}  
     {\color{Black}\noindent A:}
     {~\newline}    
@@ -75,8 +68,8 @@
     \end{ans}
 }
 
-% \revise
-%   {Page}{original text}{revised text}
+% ---------------------------------- Revise ---------------------------------- %
+% \Revise{Page}{original text}{revised text}
 \newcommand{\revise}[3]{
 	\newline
 	\newline
@@ -89,6 +82,11 @@
     \newline
     Revised:\newline
     \textit{"#3"}\newline}
+
+% ---------------------------------- Add New --------------------------------- %
+% \addnew{line number}{text}
+\newcommand{\addnew}[2]{\blockcquote{}{Line #1:~\newline\textit{"#2"}}
+}
 
 % ================================ Annotation ================================ %
 \newcommand{\toWrite}[1]{\noindent
@@ -127,29 +125,19 @@
     
     	\begin{ans}
     		\newline
-    		a) In one of the fomulations of NTIC, Equation 7, NTIC is the sum of  two terms: $I(Y_{t+1}; E_t)$ and $J_t(E -> Y)$. 
-    		It is true that having high NTIC $I(Y_{t+1}; E_t)$ needs to be high. However, based on the setting in both Bertschinger et al. 2006 and our Section 2 (from Line \lineref{line:r1q1a}),  if $Y_t$ does not have information $J_t(E -> Y)$
+    		a) Considering Eq.\ref{eq:NTIC2}, it is true that the transfer entropy term $J_t(E -> Y)=0$ is not required for $NTIC>0$. It is possible to have a high degree of NTIC when $J_t(E -> Y) > 0$, i.e. the process is not completely closed.  \\
+    		However, based on the setting in both Bertschinger et al. 2006 and our Section 2 (at Line \lineref{line:r1q1a}), $Y_{t+1}$ is determined by both $Y_t$ and $E_t$. Simply increasing $I(Y_{t+1}; E_t)$ without closedness (e.g, copy the information in sensory signals to the process such as the case in the video camera example), the transfer entropy term $J_t(E -> Y)$ should increase at the same rate and cancel out the increment of $I(Y_{t+1}; E_t)$ resulting low NTIC. Namely, keeping high closedness, i.e. minimising $J_t(E -> Y)$, is crucial to increase NTIC even though $J_t(E -> Y) > 0$.\\
+    		In our current version of ICT, we consider the level of consciousness corresponds to the degree of NTIC of a process. Therefore, a conscious process does not have to be completely closed. However, a high degree of closedness is crucial to have a high level of consciousness.\\
     		
-    		
-    		In the video camera example that the reviewer proposed, we can consider two cases. If the sensory information extracted by the camera is only partially predictive to the (predictive information \citep{bialek2001predictability} is small).
-    		
-    		We then consider the other case which the environment E is deterministic and fully observable. If $H(E_{t+1|E_t}=0$ 
-    		It is true that simply copy the entire environment state to $Y$ will yield 
-    		$I(Y_{t+1}; E_t)>0$ and $J_t(E -> Y)=0$. 
-    		
-    		$I(Y_{t+1}; E_t)$ will be large. However, 
-    		\\
-    		\toWrite{Don't know how much to write there}
-    		
-    		b) Thank the reviewer for this outstanding question. 
-    		Actually, we are currently working on state-dependent formulations of ICT. 
-    		In this first version of ICT, we did not use state-dependent formulations. 
-    		However, we do think a state-dependent measurement is important to describe the conscious experience. 
-    		We have been working on a state-dependent version of NTIC using point-wise informational measurements. 
-    		We have been planning to propose state-dependent ICT in our next version. 
-    		We have added a short paragraph about this issue at Line \lineref{line:r1-state-dep}.
-    		\toWrite{add a short para}
-    		
+    		\noindent
+    		b) Thank the reviewer for this outstanding question. We entirely agree that state-dependent measurements are essential to describe the dynamics of conscious experience. In fact, we now are working on state-dependent formulations for the next version of the ICT. In contrast to the current version, this work involves point-wise informational measures and certainly require more space and discussion. Therefore, we prefer to address the state-dependent version of ICT in future studies and keep the first version of our theory simple.\\
+    		We appreciated that the reviewer pointed this out. We have added a short paragraph about this issue.
+    	
+	    	\addnew{\lineref{line:r1-state-dep}}{
+	    		In this article, we do not use a state-dependent formulation of NTIC in the current version of ICT. However, we believe that the state-dependent NTIC is essential to describe the dynamics of conscious experience. Therefore, further research using point-wise informational measures to construct state-dependent NTIC is needed in the next version of ICT.}
+	    	
+	    		
+	    		
     	\end{ans}
         
        
@@ -158,15 +146,9 @@
             Hypothesis and Implication 3: Why is it crucial that there is an underlying X with respect to which Y is a C-process? Does Y being informationally closed with respect to X imply that Y is also informationally closed with respect to E, i.e. $J_t(E-Y) = 0$? I don't think that could be true for the brain, or part of it really. My brain's next state, at whatever level, certainly depends to some degree on unpredictable sensory inputs from the environment. In the end, is $I(Y_{t+1}; E_t|Y_t) = 0$ required for consciousness or not? (see point 1a). In other points in the manuscript this does not seem required, e.g. p. 10 "If a process is not informationally closed, the degree of NTIC is low resulting in low or no consciousness".        
         \end{question}
         
-        \begin{ans}
-            Yes. Because X is the micro-level of the universe, any coarse-graining of X (including E and S) should have equal or less information of X. Since Y is informationally closed with respect to X meaning that $X_t$ does not have more information about $Y_{t+1}$ than $Y_t$, any coarse-graining of X should also have equal or less information than $Y_t$. Therefore, Y is informationally closed with respect to X implying that Y is also informationally closed with respect to E and all other coarse-grainings of X.\\
-            $\Delta t$ regards to the temporal coarse-graining and, therefore, determines the temporal scale that form higher NTIC. It's true that the 
-            \toWrite{Something here}\\
-			In our current version, NTIC was proposed because we attribute both closureness $-I(Y_{t+1}; E_t|Y_t)$ and non-triviality $I(Y_{t+1}; E_t) = 0$. 
-			$I(Y_{t+1}; E_t|Y_t) = 0$ is not necessary. 
-			\toWrite{Really difficult to say this part}
-            
-           
+        \begin{ans}        	
+            Because X is the micro-level of the universe, any coarse-graining of X (including E and S) should have equal or less information about Y than X, i.e. $I(Y_{t+1}; X_t|Y_t) \geq I(Y_{t+1}; S_t|Y_t)$ and  $I(Y_{t+1}; X_t|Y_t) \geq I(Y_{t+1}; E_t|Y_t)$. Therefoe, Y is informationally closed with respect to X implying that Y is also informationally closed with respect to S, E, and all other coarse-grainings of X. As explained in Question 1a, it is not required for NTIC processes to be completely closed. Therefore, the closedness of Y with respect to X $I(Y_{t+1}; X_t|Y_t)$ serves as the lower bound of the closedness of Y to any other processes. 
+            For this first exposure of our theory, we did not discuss NTIC in the context of the temporal coarse-graining. It is true that we certainly encounter some degree on unpredictable sensory inputs from the environment from time to time. Therefore, NTIC should be higher for finer temporal scales than for coarser temporal scales. We also speculate that the temporal coarse-graining is related to the speed of "stream of consciousness" and will address this issue in our future studies. 
         \end{ans}
         
         
@@ -177,7 +159,8 @@
         \end{question}
     
     	\begin{ans}
-    		\toWrite{Maybe this needs to be written together with previous reply.}
+    		
+    		
     	\end{ans}
 
         
@@ -254,7 +237,7 @@
 					
 					
     			\item \toWrite{TBD}
-    			\item \toWrite{After replying the first reviewer}
+%    			\item \toWrite{After replying the first reviewer}
     		\end{enumerate}
     		
     	\end{ans}
@@ -349,6 +332,13 @@
     
  		\begin{ans}
  			Thank the reviewer for this valuable comment. 
+ 			\begin{figure}[H]
+ 				\centering
+ 				\includegraphics[width=\textwidth]{WritingMaterials/Fig_ScaleProblemOfConsciousness/ScaleProblemOfConsciousness.pdf}
+ 				\caption{The scale problem of consciousness: Human conscious experience does not reflect information from every scale. Only information at a certain coarse-grained scale in the neural system is reflected in consciousness.}
+ 				\label{fig:scaleproblem}
+ 			\end{figure}
+ 			
  			Indeed, 
  			\\
  			\toWrite{This is really a good question.}
