@@ -74,7 +74,7 @@
 	\newline
 	\newline
     \noindent
-    \textbf{line #1:}
+    \textbf{Line #1:}
     \newline
     Original:\newline
     \textit{"#2"}
@@ -85,7 +85,7 @@
 
 % ---------------------------------- Add New --------------------------------- %
 % \addnew{line number}{text}
-\newcommand{\addnew}[2]{\blockcquote{}{Line #1:~\newline\textit{"#2"}}
+\newcommand{\addnew}[2]{\blockcquote{}{\textbf{Line #1:}~\newline\textit{"#2"}}
 }
 
 % ================================ Annotation ================================ %
@@ -159,8 +159,16 @@
         \end{question}
     
     	\begin{ans}
-    		
-    		
+			We do not impose the exclusion criterion in ICT. Instead, the concept of informational closure already involved the notion of individuality and was used to identify the system-environment distinction \citep{BERTSCHINGER.2006} and level identification \citep{PFANTE.2014} in system theory (however not complete, please see our discussion at Line \lineref{line:individuality}). In \cite{BERTSCHINGER.2006},
+			
+			It is true that if we assume a process $Y$ is NITC with respect to $E$. Every subset of $Y$ can have different degrees of NTIC with respect to $E$ as well. However, it is important to note that the subsets are not "other consciousnesses". Rather, they are subspaces of this conscious process $Y$.
+			
+			\toWrite{I this this is still bad}
+			
+%			\textit{If we sample a subset of elements, if its closedness is lower than 
+%			Consider a simplified case, a process $Y$ is NITC with respect to $E$. 
+%			For Any subset of 
+%			A partition of $Y$ is a set $P_y$ which divides $Y$ into two subsets $P_y=\{Y_1, Y_2\}$. }    		    		    		
     	\end{ans}
 
         
@@ -174,8 +182,14 @@
         \end{question}
     
     	\begin{ans}
-    		\toWrite{Add something here}
-    		We have added a paragraph at Line \lineref{line:dream}
+	    	We want to emphasise that not all the processes in the neural system are NTIC processes. This is evident since some processes in the neural system are not informationally closed. They only passively react to sensory inputs or other processes of the neural system. 
+	    	
+	    	To the conscious (NTIC) process, the rest of the neural system is considered as part of the environment. This notion is shortly indicated at line \lineref{line:neu-env} in our original manuscript. There is no doubt that these processes are still active during sleep and dreaming. We speculate that, during dreaming, the neural system can stably form the NTIC process with respect to its environment, i.e. other parts of the neural system.  However, at the current stage, this is mere speculation so we restrained ourself from making the statement in our manuscript. However, we thank the reviewer for bringing up this important question. We believe that this is still worth mentioning. We have added a short paragraph as follows:
+	    	
+			\addnew{\lineref{line:dream}}{Explaining conscious experience during dreaming is always a challenge to all the theories of consciousness. ICT currently does not have a certain answer to dreaming. However, we want to emphasise that not all the processes in the neural system are NTIC. This is trivial since some processes are evidently not informationally closed. They mainly passively react to sensory inputs or other processes in the neural system. To the conscious (NTIC) process, the rest of the neural system is part of the environment, and undoubtedly retains some degree of activity during sleep and dreaming. We speculate that, during dreaming, the neural system stably forms an NTIC process with respect to its environment, i.e. the other parts of the neural system. However, at the current stage, this is mere speculation. Searching for the NTIC process(es) during dreaming is a crucial step to extend the scope of ICT in future research.}
+	    	
+	    	Finally, we believe that this is also an
+	    	empirical question that can and should be tested in future studies.
     	\end{ans}
         
         
@@ -197,12 +211,15 @@
     			We have modified this as follows: \\
     			\toWrite{"contributions to the field"}
     			
-    			\item Thank the reviewer for this suggestion. We have modified our manuscript and cited  the reference at Line \lineref{line:lack-theory}. \toWrite{Change main text}
+    			\item Thank the reviewer for the reminder. We have modified our manuscript and cited the relevant references. 
+    			\revise{\lineref{line:lack-theory}}
+    			{We currently lack a theory to identify the scale which conscious processes correspond to.}
+    			{We currently have only few theories (e.g., Integrated Information Theory \citep{hoel2016can} and Geometric Theory of consciousness \citep{fekete2011towards,fekete2012lack}) to identify the scale which conscious processes correspond to (please also see the discussion in \cite{fekete2016system}).}    			
     			
-    			\item We fully agree with the reviewer's comment. 
-    			In fact, in our theory, we do not partition states of processes into activation and relation. For example, both activation and structure states of a neural network should be considered. After all, they can be parameterised as the parameters of processes. The only difference is the temporal scales of parameter changes. States of activation may have more rapid dynamics than states of relation. In ICT, this difference is crucially related to the temporal coarse-graining which we did not address in this article but can be easily generalised in future versions of ICT. 
+    			\item We agree with the reviewer's comment. 
+    			In fact, in ICT, we do not differentiate states of processes between activation and relation. Take neural networks as an example, activation and structure states of a neural network should be both considered. After all, they are all just parameters of the process of the neural network. The only difference between the two groups of the parameters is the temporal scales of the parameter changes. States of activation may have more rapid dynamics than states of relation. In ICT, this is crucially related to the coarse-graining at the temporal domain which we did not address in this article but can be easily generalised in the future versions of ICT. 
     			
-    			\toWrite{To write something in the main text?}
+    			\todo{Do we need to write something in the main text?}
     			
     			
     		\end{enumerate}
@@ -226,16 +243,25 @@
     
     	\begin{ans}
     		\begin{enumerate}
-    			\item In this article, the definition of coarse-graining is our "Definition 1" (line: \lineref{line:r2q1-1}) which is simply a function mapping a stochastic process $X$ with state space $\mathcal{X}$ to a stochastic process $Y$ with state space $\mathcal{Y}$.
-    			We do not specify any specific types of coarse-graining.
-    			\toWrite{Instead, our hypothesis states that any process which coarse-graining which}
+    			\item In this article, the definition of coarse-graining is our "Definition 1" (line: \lineref{line:r2q1-1}). Coarse-graining is simply a function which maps a stochastic process $X$ with state space $\mathcal{X}$ to a stochastic process $Y$ with state space $\mathcal{Y}$. As we explained in Footnote 2, functions in the mathematical sense used here are always either one-to-one or many-to-one. We do not constrain ICT to be applied to any specific classes of coarse-graining.
+    			Thank the reviewer for proposing the question about the relationship between NTIC and scale of coarse-graining. We currently know that NTIC is not a non-monotonic function of the scale of coarse-graining. Some coarse-grainings lead to higher NTICs for macroscopic than microscopic processes. However, we are just starting the research on this relationship, and have not yet had a systematic understanding of it. This work may involve the technique of partial information decomposition and related research fields. 
+    			We agree that our original claim about existing a intermediate maxima in NTIC was too strong. 
+    			
+    			
+    			We hope to address this question in future research. 
+    			
+    			
     			
     			We emphasise the non-monotonic relation between the scales of coarse-graining and the degrees of NTIC. However, we do not exclude the possibility that there exist multiple NTIC picks across scales of coarse-graining of a process. 
     			This implies that we do not exclude the possibility that there exist multiple high conscious processes at different scales. 
     			(However, due to IC, conscious processes are not able to know the existence of each other. 
-					\todo{Discuss this}
-					
-					
+    			\revise{\lineref{line:non-monotonic}}
+    			{
+    				It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining. We saw above that not sufficiently coarse-grained variables have low values of NTIC. On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any information capacity and thus cannot have high mutual information across time steps. Therefore, only processes at a certain level of coarse-graining in the neural system can form a high degree of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). ICT indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system.
+    			}
+    			{
+    				It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining. Insufficiently coarse-grained variables could lead to lower values of NTICs at micro than macroscopic processes. On the other hand, overly coarse-grained macroscopic variables also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any information capacity and thus cannot have high mutual information across time steps. Therefore, processes at certain levels of coarse-graining may have higher values of NTIC than other levels (Fig.~\ref{fig:LevelOfConsciousness}). ICT suggests that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system.
+    			}										
     			\item \toWrite{TBD}
 %    			\item \toWrite{After replying the first reviewer}
     		\end{enumerate}
@@ -263,8 +289,13 @@
     	\end{question}
     
     	\begin{ans}
-			Here, we followed a common setup of coarse-graining (e.g. \toWrite{cite here}), which does not take time $Y_t=f_Y(X_t)$ (in Definition 1). In this setup, coarse-graining is unidirectional ad does not involve interaction between scales. This means that coarser scales supervene on finer scales, and there exists no top-down causation. \\
-			In our hypothesis, Y is IC with respect to the microstate of the universe, X. This is critical in the hypothesis because Y is IC with respect to X, implying that Y is also IC with respect to its intermediate level S and its environment E in Fig. \ref{fig:fullgraph}.\todo{need any change in the main text?}
+			We followed a common setting of coarse-graining (e.g. \cite{PFANTE.2014}) which does not and should not take time $Y_t=f_Y(X_t)$ (in Definition 1). Coarse-graining is merely a function which maps microstates of a system to macrostates, and the microstates and the macrostates are simply different level of descriptions of a system. 
+			Following this setting, the definition of information closure (flow) $J_{t}(X \rightarrow Y )$ can also be applied in the sense of coarse-graining. 
+						
+			We understand that this may lead to confusion for our readers. We have added the following sentence to make this point explicit.     		
+			\addnew{\lineref{line:IC2CG}}{Note that we applied the same definition of information closure (Eq.\ref{eq:InformationFlow}) to processes at different coarse-grained levels \citep{{PFANTE.2014}}.}
+%			Here, we followed a common setup of coarse-graining (e.g. \cite{PFANTE.2014}) which does not take time $Y_t=f_Y(X_t)$ (in Definition 1). In this setup, coarse-graining is unidirectional ad does not involve interaction between scales. This means that coarser scales supervene on finer scales, and there exists no top-down causation. \\
+%			In our hypothesis, Y is IC with respect to the microstate of the universe, X. This is critical in the hypothesis because Y is IC with respect to X, implying that Y is also IC with respect to its intermediate level S and its environment E in Fig. \ref{fig:fullgraph}.\todo{need any change in the main text?}
     	\end{ans}
     
     
@@ -294,11 +325,18 @@
     
     	\begin{ans}
     		Thank the reviewer for this mindful comment. 
-    		Our description indeed is not clear enough. The environmental information here about not only states but also state transitions. 
-    		This is because high NTIC implies high mutual information between a process and its environment $I(Y_{t+1};E_t)$ (Eq. \ref{eq:nticObjective2}). Therefore, the dynamics of the process $Y$ needs to covary with the dynamics of its environment $E$. Here, we consider 'simulation' is a more precise expression than 'encoding'. 
-    		The notion of simulation is the same as the 'Modeling' case on Page 4 in Bertschinger et al. , 2006: \\
-    		\textit{"B2)~Modeling: The system reaches synchronization and internalizes the correlations observed in the environment by building up own structures."}
-    		\\ \toWrite{add something in the main text}
+    		Our wording indeed is not clear. The notion of simulation is the same as the 'Modeling' case on Page 4 in \cite{BERTSCHINGER.2006}: 
+    		\begin{quote}
+		    	\textit{"B2)~Modeling: The system reaches synchronization and internalizes the correlations observed in the environment by building up own structures."}    	
+    		\end{quote}    	
+    	
+    		To avoid the confusion We have revised the following sentence, changed "simulation" to "modeling", and added the reference.
+    		\revise{\lineref{line:encode}}
+    		{
+    			Importantly, NTIC processes encode environmental information in its state. This suggests that a NTIC process can be considered as a process that simulates the environmental dynamics. }
+    		{
+    			Importantly, NTIC processes internalise the environmental dynamics in its states \citep[also see P.~4][]{BERTSCHINGER.2006}. This suggests that a NTIC process can be considered as a process that models the environmental dynamics.
+    		}
     	\end{ans}
     
    	\begin{question}
@@ -311,14 +349,14 @@
     
    		\begin{ans}
    			Thank the reviewer for the clarification. 
-   			Yes, we specifically address the visual character of their experience.
-   			We have changed our sentence as follows:
+   			Yes, we specifically wanted to address the visual character of their experience. We agree that some patients still preserve some forms of conscious experience. 
+   			We have changed our sentence and cited the relevant references as follows:
    			\revise{\lineref{line:r2q6}}
    			{
    				Blindsight patients are able to track objects, avoid obstacles, and make above chance-level visual judgements without having any conscious perception about visual stimuli.
    			}
    			{
-   				Blindsight patients are able to track objects, avoid obstacles, and make above chance-level visual judgements when their visual experiences is degraded or missing (however, they may still preserve some forms of conscious experience, see \cite{overgaard2011visual, mazzi2016blind}). 
+   				Blindsight patients are able to track objects, avoid obstacles, and make above chance-level visual judgements with degraded or missing visual experience (however, in some cases, they may still preserve some forms of conscious experience, see \cite{overgaard2011visual, mazzi2016blind}). 
    			}
    		\end{ans}
     
@@ -331,18 +369,27 @@
     	\end{question}
     
  		\begin{ans}
- 			Thank the reviewer for this valuable comment. 
+			Thank the reviewer for proposing this interesting and valuable comment. \\
+			We can consider a simple case in which a feedforward neural network $Y$ consists of three layers, $Y^0$, $Y^1$, and $Y^2$. 
+			$Y^0$ receives sensory input from the environment $E$. Each layer $Y^i_t$ passes information to the next layer $Y^{i+1}_{t+1}$ with a constant time cost $\Delta t$ as showed in the following figure.
+
  			\begin{figure}[H]
  				\centering
- 				\includegraphics[width=\textwidth]{WritingMaterials/Fig_ScaleProblemOfConsciousness/ScaleProblemOfConsciousness.pdf}
- 				\caption{The scale problem of consciousness: Human conscious experience does not reflect information from every scale. Only information at a certain coarse-grained scale in the neural system is reflected in consciousness.}
- 				\label{fig:scaleproblem}
+ 				\includegraphics[width=\textwidth]{WritingMaterials/Fig_rev1_feedforward/Fig_rev1_feedforward} 				
+ 				\label{fig:rev1_feedforward}
  			\end{figure}
  			
- 			Indeed, 
- 			\\
- 			\toWrite{This is really a good question.}
- 			\todo{Indeed, if information is just copied to the process, it will still be NTIC. Feedforward is just a way to copy the information}
+			Because $Y^0_t$ determines $Y^1_{t+1}$ and $Y^1_t$ determines $Y^2_{t+1}$, it is true that the mutual information $I(Y_t; Y_{t+1}) \geq 0$. However, $E_t$ only influences $Y^0_{t+1}$ at time $t+1$. Therefore
+			\begin{equation*}
+				\begin{aligned}
+					& I(Y_t; Y_{t+1}|E_t) = I(Y_t; Y_{t+1}) & \text{and} \\
+					& NTIC_t(E\rightarrow Y)=I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t}) =0  { }
+				\end{aligned}
+			\end{equation*}	
+			
+			Therefore, a feedforward network passively driven by input signals should have zero NTIC even though when time step (temporal coarse-graining) is small. 
+			\todo{I don't think I answer this question well. Do we need to add anything in the main text?}
+			 		
  		\end{ans}
  	
     
@@ -364,15 +411,16 @@
         \end{question}
     
     	\begin{ans}
-    		ICT is our first attempt to approach the hard problem of consciousness. We hope that ICT and our following works can establish an informational perspective on conscious experience. Instead of solving the hard problem of consciousness, we more look forward to mathematically determining whether the hard problem can be solved or not by information theory. However, because the relevant discussion is clearly outside the scope of this article, we prefer not to discuss the hard problem here. n
+    		ICT is our first attempt to approach the hard problem of consciousness. We hope that ICT and our following works can establish an informational perspective on conscious experience. Instead of solving the hard problem of consciousness, we more look forward to mathematically determining whether the hard problem can be solved or not by information theory. However, because the relevant discussion is clearly outside the scope of this article, we prefer not to discuss the hard problem here.
     		
-    		It is important to note that we reckon only part of the neural system is involved in the NTIC process(es). This is due to the fact that some parts of the neural system are evidently not informationally closed. They only passively react to sensory inputs or other parts of the neural system. 
-    		To the NTIC process(es), the rest of the neural system is considered as the environment. This notion is shortly indicated at line \lineref{line:neu-env}.
-    		We speculate that, during dreaming, the neural system can still form the NTIC process(es) with respect to other parts of the neural system which we know they maintain high activities. The same idea can be also applied to phenomena like Eigengrau. However, at the current stage, this is mere speculation so we restrained ourself from making the statement in our last version of the manuscript. However, thank the reviewer for bringing up this question. We believe that it is still worth to mention issues about dreaming. We have added a short paragraph as follows:
+			We want to emphasise that not all the processes in the neural system are NTIC processes. This is evident since some processes in the neural system are not informationally closed. They only passively react to sensory inputs or other processes of the neural system. 
+
+    		To the conscious (NTIC) process, the rest of the neural system is considered as part of the environment. This notion is shortly indicated at line \lineref{line:neu-env} in the original manuscript. There is no doubt that these processes are still active during sleep and dreaming. We speculate that, during dreaming, the neural system can stably form the NTIC process with respect to its environment, i.e. other parts of the neural system. The same idea can be also applied to phenomena like Eigengrau. However, at the current stage, this is mere speculation so we restrained ourself from making the statement in our last version of the manuscript. However, we thank the reviewer for bringing up this important question. We believe that this is still worth mentioning. We have added a short paragraph as follows:
     		
-    		\toWrite{add something in the main text at Line \lineref{line:dream}}
+    		\addnew{\lineref{line:dream}}{Explaining conscious experience during dreaming is always a challenge to all the theories of consciousness. ICT currently does not have a certain answer to dreaming. However, we want to emphasise that not all the processes in the neural system are NTIC. This is trivial since some processes are evidently not informationally closed. They mainly passively react to sensory inputs or other processes in the neural system. To the conscious (NTIC) process, the rest of the neural system is part of the environment, and undoubtedly retains some degree of activity during sleep and dreaming. We speculate that, during dreaming, the neural system stably forms an NTIC process with respect to its environment, i.e. the other parts of the neural system. However, at the current stage, this is mere speculation. Searching for the NTIC process(es) during dreaming is a crucial step to extend the scope of ICT in future research.}
     		    
-    		Finally, we believe that this is also a clear empirical question that can be tested in future studies. 
+    		Finally, we believe that this is also an
+    		empirical question that can and should be tested in future studies. 
     	\end{ans}
 
 	\bibliography{ref}
