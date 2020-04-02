@@ -191,13 +191,45 @@
 
         
         \begin{question}
-            \todo{*****}
             Feedback and memory: p. 11. If $NTIC > 0$ is sufficient and true information closure is not required, then feedfoward networks can be conscious according to ICT. Also, in that case, memory is not necessary, as the video camera would have $NTIC > 0$ as long as it records from a stable environment. In that case $I(Y_{t+1}, Y_t) > 0$ and $I(Y_{t+1}, Y_t|E_t)$ is small. This issue here is that having information about the next state does not imply that there is any causation, so if $Y_t$ is highly correlated with $E_t$ and $E_t$ causes $Y_{t+1}$ then NTIC is high. (Thus the IIT emphasis on causation).\\
             If somehow the fact that Y must be informationally closed wrt X does the heavy-lifting here that should be made more explicit (see above).
         \end{question}
         
         \begin{ans}
-            \toWrite{Thinking to combine the answer to this question with other answers. But not sure yet. Need to think about it. We can skip this one for now.}
+		    @ The reviewer is correct about the example of the video camera under the condition that the environment past state $E_{t-1}$ shares information with its current state $E_t$, i.e., $I(E_{t-1}, E_t)>0$. 
+		    
+		    @ In such case, simply copying the environmental states to another process (assuming that the sensor of the video camera can capture the whole state of the environment) can lead to positive NTIC. 
+		    
+		    @ This is, in fact, the "Passive adaptation" case mentioned in \cite[p.~4]{BERTSCHINGER.2006},	
+		    \begin{quote}
+			      	\textit{"B1)~Passive adaptation: The system is driven by the environment and adapts passively to all changes in the environment. In the case of an environment, that appears deterministic to the system, $H(\hat{e}_{n+1} |\hat{e}_n)=0$, this can be achieved by simply copying the observation of the environment into the system, $S_{n+1} = \hat{e}_n$."}        
+		    \end{quote} 
+	    
+	    
+	    @ The reviewer is correct about the video camera example under the condition that the environment past state $E_{t-1}$ shares information with its current state $E_t$, i.e., $I(E_{t-1}, E_t)>0$. 
+	    
+	    @ In such case, simply copying environmental states to a process can lead to positive NTIC. 
+	    
+	    @ In fact, this is one way to achieve NTIC discribed in \cite[p.~4]{BERTSCHINGER.2006},    
+	    \begin{quote}
+	    	\textit{"B1)~Passive adaptation: The system is driven by the environment and adapts passively to all changes in the environment. In the case of an environment, that appears deterministic to the system, $H(\hat{e}_{n+1} |\hat{e}_n)=0$, this can be achieved by simply copying the observation of the environment into the system, $S_{n+1} = \hat{e}_n$."}        
+	    \end{quote} 
+	    
+	    @ We can also consider this is a special case of modelling the environment when a system has enough sensory and memory capacities, and, therefore, can virtually model the environment by simply copying the environmental states into the system.  
+
+	    @ Because this question point to the core concept of ICT, we would like to clarify and emphasise two critical points here. 
+	    
+	    @ a) Informational closure and causation: The definition of information closure \citep{BERTSCHINGER.2006} does not involve causation. As described in \cite{BERTSCHINGER.2006}, NTIC can be achieved via "modelling" or "passive adaptation".  In the "modelling" case, the future state of a process ($Y_{t+1}$) can be caused by $Y_t$, which contain predictive information about how the environment influences the system. In the "passive adaptation" case,  the future state of a process ($Y_{t+1}$) is caused by copying environmental information which involves environmental dynamics. 
+	    
+	    The latter case may be conceptually counterintuitive because the internal state of the system (e,g, the video camera) is entirely driven by external input. However, it is crucial to know that both cases lead the information flow $J(E\rightarrow Y)$ to (virtually) zero. This means that if $Y_t$ contains information about how the environment $E_t$ causes $Y_{t+1}$, 
+	    
+	    However, this is the most critical consequence of solving the scale problem of consciousness in ICT. In physical reality, there only exists microscopic processes at the finest microscopic level. Any causal dependency at coarse-graining levels should be virtual. For example, when Y is informationally closed to X, even though $Y_t$
+	    
+	    @ b) As described in our manuscript, to form a higher level of NTIC, the informational richness of the environment, i.e. $H(E)$ also has to be higher since $H(E_t)$ and $H(Y_{t+1})$ both are the lower bound of $I(Y_{t+1}; H(E_t))$. Practically, we believe that with limited sensory and memory capacities, it is difficult to give rise to high NTIC via copying sensory signals to a system. 
+	    
+	    
+	    
+	    
             
             
         \end{ans}
@@ -315,13 +347,29 @@
     	\end{question}
     
     	\begin{ans}
-			We followed the common setting of coarse-graining (e.g. \cite{PFANTE.2014}) which does not and should not take time $Y_t=f_Y(X_t)$ (in Definition 1). Coarse-graining is merely a function which maps microstates of a system to macrostates, and the microstates and the macrostates are simply different level of descriptions of a system. 
-			Following this setting, the definition of information closure (flow) $J_{t}(X \rightarrow Y )$ can also be applied in the sense of coarse-graining. 
-			
-			\todo{Add the definition to the conttext of coarse-graining}
-						
-			We understand that this may lead to confusion for our readers. We have added the following sentence to make this point explicit.     		
-			\addnew{\lineref{line:IC2CG}}{Note that we applied the same definition of information closure (Eq.\ref{eq:InformationFlow}) to processes at different coarse-grained levels \citep{{PFANTE.2014}}.}
+    		We thank the reviewer for this question. We agree that this point is not clear in our original manuscript.
+    		
+    		Even though the Bayesian graphs for the system-environment dependency are different from the one for the micro-macro level dependency, we apply the same definitions of information flow ($J_{t}(X \rightarrow Y )$) and informational closure ($J_{t}(X \rightarrow Y )=0$) to both graphs. 
+    		
+    		This is a critical assumption in ICT because applying the same definition of informational closure in both scenarios can solve the scale problem of consciousness (informational closure from one level to other levels) and construct our hypothesis about NTIC and consciousness (informational closure from a process to its environment) in an integrated framework.
+    		
+    		In terms of the Bayesian graphs for the micro-macro level dependency and the definition of informational closure between scales, we followed the conventional setting (e.g. \cite{PFANTE.2014}). It is important to note that coarse-graining does not and should not take time $Y_t=f_Y(X_t)$ (also see our Definition 1). Coarse-graining is merely a function which maps microstates of a system to macrostates, and the microstates and the macrostates are only different level of descriptions of the same system.
+    		
+    		We agree that we did not indicate this assumption explicitly and may lead to some confusion for our readers. We have added a footnote to make this point explicit. 
+    		
+    		\addnew{\lineref{line:IC2CG}}{
+    			Note that, here we applied the same definitions of information flow (Eq.~\ref{eq:InformationFlow}) and informational closure (Eq.~\ref{eq:informationflow2}) to the system-environment dependency (e.g. $J_{t}(E \rightarrow Y )=0$) and the micro-macro level dependency (e.g. $J_{t}(X \rightarrow Y )=0$), even though the Bayesian graphs are different between the two scenarios. This follows the common settings in previous studies (e.g. \cite{BERTSCHINGER.2006, PFANTE.2014}).
+    		}	
+    		
+    		
+    		
+%			We followed the common setting of coarse-graining (e.g. \cite{PFANTE.2014}) which does not and should not take time $Y_t=f_Y(X_t)$ (in Definition 1). Coarse-graining is merely a function which maps microstates of a system to macrostates, and the microstates and the macrostates are simply different level of descriptions of a system. 
+%			Following this setting, the definition of information closure (flow) $J_{t}(X \rightarrow Y )$ can also be applied in the sense of coarse-graining. 
+%			
+%			\todo{Add the definition to the conttext of coarse-graining}
+%						
+%			We understand that this may lead to confusion for our readers. We have added the following sentence to make this point explicit.     		
+%			\addnew{\lineref{line:IC2CG}}{Note that we applied the same definition of information closure (Eq.\ref{eq:InformationFlow}) to processes at different coarse-grained levels \citep{{PFANTE.2014}}.}
 %			Here, we followed a common setup of coarse-graining (e.g. \cite{PFANTE.2014}) which does not take time $Y_t=f_Y(X_t)$ (in Definition 1). In this setup, coarse-graining is unidirectional ad does not involve interaction between scales. This means that coarser scales supervene on finer scales, and there exists no top-down causation. \\
 %			In our hypothesis, Y is IC with respect to the microstate of the universe, X. This is critical in the hypothesis because Y is IC with respect to X, implying that Y is also IC with respect to its intermediate level S and its environment E in Fig. \ref{fig:fullgraph}.\todo{need any change in the main text?}
     	\end{ans}
