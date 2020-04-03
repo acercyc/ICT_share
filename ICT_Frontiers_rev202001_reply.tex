@@ -196,6 +196,7 @@
         \end{question}
         
         \begin{ans}
+        	\todo{Everything I want to say is here. Just hard to make these pieces into a whole. Feel frustrated. }
 		    @ The reviewer is correct about the example of the video camera under the condition that the environment past state $E_{t-1}$ shares information with its current state $E_t$, i.e., $I(E_{t-1}, E_t)>0$. 
 		    
 		    @ In such case, simply copying the environmental states to another process (assuming that the sensor of the video camera can capture the whole state of the environment) can lead to positive NTIC. 
@@ -374,7 +375,7 @@
     
     
     	\begin{question}            
-    	\todo{*****}
+    	\todo{I am rewriting this part, please wait}
     		On line 241: '.. not sufficiently coarse-grained variables have low values of NTIC', this is phrased as though it is necessarily true (and also that 'we saw above', though I do not see above where this is justified), but is it?
     		
     		At the very finest grain, wouldn't even all the most 'stochastic' dynamics of a system be accounted for by prior states of the system, or by the environment? Why wouldn't we assume that NTIC *only decreases* as the system is coarse-grained (as number of elements/states is decreased), for similar reasons as it must be zero at a 1-element 1-state system as the authors note? This seems an important point to be very clear on\dots
@@ -446,7 +447,7 @@
     
     
     	\begin{question}
-    	\todo{Camera thing...}
+    	\todo{Camera thing..., we need to rewrite this reply as well}
             on Line 316: On the issue of a feedforward network, the current state of a feedforward network with more than one layer is certainly driven by its own past states! So, mutual information of a feedforward network over a time lag should not be zero, unless I am misunderstanding something here?
 			At the same time, I can see a version of the authors' argument here - for a unit in a feedforward network with depth (distance-from-input) of N, a time lag of N time steps would always account fully for the states of the element. Is this the idea?		
     	\end{question}
