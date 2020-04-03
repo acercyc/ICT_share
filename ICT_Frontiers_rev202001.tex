@@ -596,7 +596,7 @@
     	    Second, one can minimise the conditional mutual information $I(Y_{t+1};Y_{t}|E_{t})$ to increase the level of NTIC. This quantity suggests that conscious level increases with the amount of information about the environment state $E_t$ that the NTIC process encodes in its own state $Y_t$. In other words, $Y_t$ should not contain more information about $Y_{t+1}$ than $E_t$. An important implication is that agents interacting with a complex environment have the chance to build a higher level of NTIC within their systems than those living in a simple environment. In other words, the level of consciousness is associated with environmental complexity. 
     	   
     	    %% not monotonic
-    		\linelabel{line:non-monotonic}It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining. We saw above that not sufficiently coarse-grained variables have low values of NTIC. On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any information capacity and thus cannot have high mutual information across time steps.  Therefor, only processes at a certain level of coarse-graining in the neural system can form a high degree of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). \ac{OurTheory} indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system. 
+    		\linelabel{line:non-monotonic}It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining\footnote{We have known that NTIC is not a non-monotonic function of the scale of coarse-graining. However, we currently have limited understanding about this relationship. Future work is needed and may involve relevant informational techniques (e.g.,partial information decomposition).}. At the finest scale, when we consider the dynamics of the whole universe as a process, the universe should be an informationally closed. However, there exists no environment to the universe and, therefore, NTIC of the universe is zero (trivially closed). On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any informational capacity and thus cannot have  mutual information between adjacent time steps.  Therefor, processes at certain levels of coarse-graining in the neural system can form high degrees of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). \ac{OurTheory} indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system. 
     		
     		\begin{figure}[H]				
         		\includegraphics[width=\textwidth]{WritingMaterials/Fig_nonMono/nonMono.pdf}
@@ -647,10 +647,52 @@
         \subsection{Unconscious Processing}
             Regarding unconscious processing, we highlight two scenarios in which the degree of NTIC is rendered low for a process, and thereby making the process less conscious.
         
-            \subsubsection*{Processes are not Informationally Closed}\label{sec:reflexive}
-           		If the environment is info closed we could copy it to get closure. In realistic situations we are not sure whether the environment is informationally closed but even if we assume it is we can confidently assert that we don't observe it completely and that the part we do observe (our sensory values) are not themselves closed. For example, the images on our retina are insufficient to predict their successors without imagining the outside world behind them. This imagining however requires internal processing like recurrent connections.
+            \subsubsection*{Processes that are not Informationally Closed}\label{sec:reflexive}
+            ICT leads to some surprisingly simple conscious processes. Consider the case already noted by \citet{BERTSCHINGER.2006} where the environment process is deterministic (or close to it) and the system just copies the environment process. Then the system achieves a high value of NTIC with respect to the environment. ICT states that such processes are conscious. 
+            
+            (We assume Transfer entropy from environment to system is equal to transfer entropy from sensor to system by definition).
+            
+            However, in more realistic cases the system cannot copy the environment state because it observes only part of it. 
+            % and/or because it is itself not large enough to contain a copy of the environment. 
+            
+            Let us assume that the system only observes a part of the (still environment state.
+            \footnote{In theory this part of the environment state may still evolve deterministically over time in which case the system need only copy this part to achieve NTIC and consciousness. This seems to be a rare case as well and we assume the observed part of the environment is not close to deterministic in the following.} 
+            In this case it is well known that the observed part of the environment need not even be a Markov process even if the environment itself is deterministic. So the mutual information between subsequent observations may be much lower than the mutual information between subsequent environment states.
+            
+            Furthermore, in this case the transfer entropy from environment to the system becomes equal to the transfer entropy from the observed part of the environment to the system. 
+            
+            Finally, note that the transfer entropy that can be achieved by copying the environment state or the observed part of the environment state is bounded from above by the mutual information between the subsequent environment states or observations. Copying the environment state corresponds to setting $S_{t+1}=E_t$ such that the transfer entropy is
+            \begin{align}
+             I(S_{t+1}:E_t|S_t)=I(E_t:E_t|E_{t-1})=H(E_t|E_{t-1}).
+            \end{align}
+            We can represent the part of the environment that we observe by the value of a function applied to the environment state so that
+            
+            
+            
+            
+            
+            
+            % In such situations ITC predicts that higher levels of consciousness are achieved if the system can anticipate the next observed values which requires a higher internal self-determination than that of the copies of the observations.
+            
+            % Another way to put this is the higher the difference in predictability of the sensor values and the entrie environment state the more potential is there to increase the level of consciousness for the system by modelling the underlying hidden Markov process i.e.\ environment.
+            
+            % Also assume that the part that the system observes is not itself deterministic or close to it but that the underlying environment is. 
+            
+            % A system with a high NTIC in such situations must 
+            % Then the system can decrease the transfer entropy from the environment to itself by anticipating the next observation. This is due to the fact that the transfer entropy from the environment to the system is equal to the transfer entropy from the observations to the system.
+            
+            
+            
+            
+            
+            % does not have access to the entire environment state and instead observes only part of it. This part is rarely close to deterministic even if the entire environment is deterministic. In order to achieve informational closure with respect to the entire environment the system has to achieve closure exactly with respect to its sensor values.  
+            
+            
+            % we could copy it to get closure. In realistic situations we are not sure whether the environment is informationally closed but even if we assume it is we can confidently assert that we don't observe it completely and that the part we do observe (our sensory values) are not themselves closed. For example, the images on our retina are insufficient to predict their successors without imagining the outside world behind them. This imagining however requires internal processing like recurrent connections.
            		
-                If a process is not informationally closed, the degree of NTIC is low (Eq.~\ref{eq:nticObjective2}) resulting in low or no consciousness. In such cases, the current state of a process depends primarily on the environment state (see Fig.~\ref{fig:reflexive}), but receives little influence from its past state. Reflexive behaviours \citep{casali2013theoretically} can be considered an example of this scenario. In \ac{OurTheory}, if we can view reflexive behaviours as situations in which the internal state $Y_t$, which triggers reflexive action, is determined by the environment state $E_{t-1}$ overruling the influences from its own past $Y_{t-1}$.  Such interpretation of reflexive behaviour from the viewpoint of \ac{OurTheory} naturally explains why reflexes do not involve conscious experience of external stimuli. 
+                The higher the transfer entropy from environment to the system the lower NTIC (Eq.~\ref{eq:nticObjective2}) and therefore, according to ICT, the lower the level of consciousness. Under the assumptions above, 
+                
+                high transfer entropies occur when the current state of a process depends primarily on the environment state (see Fig.~\ref{fig:reflexive}), but receives little influence from its past state. Reflexive behaviours \citep{casali2013theoretically} can be considered an example of this scenario. In \ac{OurTheory}, if we can view reflexive behaviours as situations in which the internal state $Y_t$, which triggers reflexive action, is determined by the environment state $E_{t-1}$ overruling the influences from its own past $Y_{t-1}$.  Such interpretation of reflexive behaviour from the viewpoint of \ac{OurTheory} naturally explains why reflexes do not involve conscious experience of external stimuli. 
 
              	% reflexive behaviour
         		\begin{figure}[H]
@@ -666,7 +708,7 @@
 
         		As we have seen in the examples above, a crucial implication of \ac{OurTheory} is that a pure feedforward network cannot produce consciousness because NTIC requires a form of memory $I(Y_{t+1};Y_{t})$. Without memory, a network's current state is entirely driven by the input the network receives from the environment without any influence from its own past states. Therefore, such a network is incapable of forming an NTIC. In contrast, a network with recurrent loops can maintain information about its own past states. This forms an information channel between the past and the future states of the network and, thus, makes the network capable of being informationally closed. This result coincides with theories of consciousness emphasising the importance of recurrent circuits to consciousness \citep{lamme2006towards, edelman1992bright, tononi2008neural}.
 
-            \subsubsection*{Information is Trivial}
+            \subsubsection*{Processes are Trivial closed}
                 According to \ac{OurTheory}, when encoded information in a process is trivial, i.e. no mutual information between the process states and its environment states $I(Y_{t+1};E_{t})$ (Eq.~\ref{eq:nticObjective2}), this could lead low NTIC. In such case, this process is considered to be unconscious due to the low level of NTIC. This implies an isolated process which is simply informationally closed is insufficient to be conscious. 
                 This mathematical property of \ac{OurTheory} provides a natural and intuitive (but only partial, see the current challenge in  Sec.~\ref{sec:Limitation and Future work}) solution to the boundary and the individuality problem of consciousness
                     \footnote{The boundary problem of consciousness refers to identifying physical boundaries of conscious processes and the individuality problem of consciousness refers to identifying individual consciousnesses in the universe.}
