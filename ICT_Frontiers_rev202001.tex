@@ -661,13 +661,19 @@
             
             Furthermore, in this case the transfer entropy from environment to the system becomes equal to the transfer entropy from the observed part of the environment to the system. 
             
-            Finally, note that the transfer entropy that can be achieved by copying the environment state or the observed part of the environment state is bounded from above by the mutual information between the subsequent environment states or observations. Copying the environment state corresponds to setting $S_{t+1}=E_t$ such that the transfer entropy is
+            Finally, note that the transfer entropy that can be achieved by copying the environment state or the observed part of the environment state equal to the mutual information between the subsequent environment states or observations. Copying the environment state corresponds to setting $S_{t+1}=E_t$ such that the transfer entropy is
             \begin{align}
              I(S_{t+1}:E_t|S_t)=I(E_t:E_t|E_{t-1})=H(E_t|E_{t-1}).
             \end{align}
-            We can represent the part of the environment that we observe by the value of a function applied to the environment state so that
-            
-            
+            We can represent the part of the environment that we observe by the value of a function applied to the environment state so that in this case we get
+            \begin{align}
+             I(S_{t+1}:f(E_t)|S_t)=I(f(E_t):f(E_t)|f(E_{t-1}))=H(f(E_t)|f(E_{t-1}).
+            \end{align}
+            Now additionally apply a feedforward network with layer $i$ represented by function $g_i$ then we get
+            \begin{align}
+             I(S_{t+1}: f(E_t)|S_t)=I(g\circ f(E_t):f(E_t)|f(E_{t-1}))=H(f(E_t)|f(E_{t-1}).
+            \end{align}
+             
             
             
             
