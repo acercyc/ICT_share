@@ -120,13 +120,13 @@
     \section{Reply to Reviewer 1}
         \begin{question}
             Regarding the NTCI measure: \\\\
-            a) Bertschinger et al. 2006 define informationally closed as $J_t(E -> Y) = 0$, but this is not a requirement for NTIC. Meaning, a positive NTIC measure does not entail that $J_t = 0$. $J_t = 0$ is only true if the NTIC is equal to $I(Y_{t+1}; E_t)$. In what sense does it correspond to non-trivial information closure then? (see also my concern \#2, maybe that is related) As defined in eq. 6 a video camera might have very high NTIC if it records a natural scene, even though it is in no way informationally closed from the environment.\\\\
+            a) Bertschinger et al. 2006 define informationally closed as $J_t(E\rightarrow Y) = 0$, but this is not a requirement for NTIC. Meaning, a positive NTIC measure does not entail that $J_t = 0$. $J_t = 0$ is only true if the NTIC is equal to $I(Y_{t+1}; E_t)$. In what sense does it correspond to non-trivial information closure then? (see also my concern \#2, maybe that is related) As defined in eq. 6 a video camera might have very high NTIC if it records a natural scene, even though it is in no way informationally closed from the environment.\\\\
             b) Is $NTIC_t$ state dependent or not? As capital letters are used I assume it is based on (conditional) mutual information measures across one time step but averaged over the possible states of the system at time t and t+1, so state distributions. But which distributions are used to compute $NTIC_t$? The stationary joint distribution of states at t and t+1? It cannot be just some observed measure, because then the level of consciousness would depend on how long the observation is. Moreover, if $NTIC_t$ is not state dependent, then the Reflex example on p. 10 is not intuitive. Because the system (brain) is the same and awake whether it behaves reflexively or not, so while the content may depend on the type of action, the $NTIC_t$ (level) would stay the same.              
         \end{question}
     
     	\begin{ans}
     		\newline
-    		a) Considering Eq.\ref{eq:NTIC2}, it is true that the transfer entropy term $J_t(E -> Y)$ does not have to be zero for $NTIC>0$. It is possible to have a high degree of NTIC when $J_t(E -> Y) > 0$, i.e. the process is not completely closed. We consider NTIC here as just the quantity defined in Eq.\ref{eq:NTIC2}.   \\
+    		a) Considering Eq.\ref{eq:NTIC2}, it is true that the transfer entropy term $J_t(E\rightarrow Y)$ does not have to be zero for $NTIC>0$. It is possible to have a high degree of NTIC when $J_t(E\rightarrow Y) > 0$, i.e. the process is not completely closed. We consider NTIC here as just the quantity defined in Eq.\ref{eq:NTIC2}.   \\
             % 		However, based on the setting in both Bertschinger et al. 2006 and our Section 2 (at Line \lineref{line:r1q1a}), $Y_{t+1}$ is determined by both $Y_t$ and $E_t$. Simply increasing $I(Y_{t+1}; E_t)$ without closedness (e.g, copy the information in sensory signals to the process such as the case in the video camera example), the transfer entropy term $J_t(E -> Y)$ should increase at the same rate and cancel out the increment of $I(Y_{t+1}; E_t)$ resulting in low NTIC. Namely, keeping high closedness, i.e. minimising $J_t(E -> Y)$, is crucial to increase NTIC even though $J_t(E -> Y) > 0$.\\
             % 		In our current version of ICT, we consider the level of consciousness corresponds to the degree of NTIC of a process. 
             Therefore, a conscious process does not have to be completely closed. 
@@ -151,17 +151,22 @@
         \end{question}
         
         \begin{ans}        	
-            It is crucial to have an underlying $X$ with respect to $Y$ because this assumption can solve the scale problem of consciousness. It ensures that the information transfer from all coarse-grainings of $X$ to $Y$ vanishes. Therefore, human conscious experiences do not involve information from other scales of coarse-graining. 
-            Because $X$ is the micro-level of the universe, the information transfer from any coarse-graining (including E and S) of $X$  to $Y$ must be lower than that from $X$ to Y, i.e. $I(Y_{t+1}; X_t|Y_t) \geq I(Y_{t+1}; S_t|Y_t)$ and $I(Y_{t+1}; X_t|Y_t) \geq I(Y_{t+1}; E_t|Y_t)$. So that $Y$ is informationally closed with respect to $X$ implies that $Y$ is also informationally closed with respect to S, E, and all other coarse-grainings of X.
+            The C-processes are constructed to answer questions about the scale problem of consciousness. Their definition therefore states their relation to the microscopic scale $X$. 
+            At the same time it would be possible to remove $X$ from the definition and instead require that $Y$ is informationally closed with respect to all other processes. In some cases such a definition would be more general than the present one for example when there is no final microscale and instead there is an infinite number of more and more microscopic scales. However, we find the use of an explicit microscale $X$ easier to understand and sufficient to communicate the idea. Note that closure with respect to $X$ (if it exists) implies closure with respect to every coarse-graining of $X$.   
+            % For this We use the underlying $X$ with respect to $Y$ in order to illustrate the scale problem of consciousness. 
+            % It ensures that the information transfer from all coarse-grainings of $X$ to $Y$ vanishes. Therefore, human conscious experiences do not involve information from other scales of coarse-graining. 
+            % 
+            To see this note that the information transfer from any coarse-graining (including $E$ and $S$) of $X$ to $Y$ must be lower than that from $X$ to $Y$, i.e. $I(Y_{t+1}; X_t|Y_t) \geq I(Y_{t+1}; S_t|Y_t)$ and $I(Y_{t+1}; X_t|Y_t) \geq I(Y_{t+1}; E_t|Y_t)$. So that $Y$ is informationally closed with respect to $X$ implies that $Y$ is also informationally closed with respect to $S, E$, and all other coarse-grainings of $X$.
         \end{ans}
         
         \begin{question}
-            Does $Y$ being informationally closed with respect to $X$ imply that $Y$ is also informationally closed with respect to E, i.e. $J_t(E-Y) = 0$? I don't think that could be true for the brain, or part of it really. My brain's next state, at whatever level, certainly depends to some degree on unpredictable sensory inputs from the environment. In the end, is $I(Y_{t+1}; E_t|Y_t) = 0$ required for consciousness or not? (see point 1a). In other points in the manuscript this does not seem required, e.g. p. 10 "If a process is not informationally closed, the degree of NTIC is low resulting in low or no consciousness".    
+            Does $Y$ being informationally closed with respect to $X$ imply that $Y$ is also informationally closed with respect to E, i.e. $J_t(E\rightarrow Y)= 0$? I don't think that could be true for the brain, or part of it really. My brain's next state, at whatever level, certainly depends to some degree on unpredictable sensory inputs from the environment. In the end, is $I(Y_{t+1}; E_t|Y_t) = 0$ required for consciousness or not? (see point 1a). In other points in the manuscript this does not seem required, e.g. p. 10 "If a process is not informationally closed, the degree of NTIC is low resulting in low or no consciousness".    
         \end{question}
         
         \begin{ans}
-            Yes. $Y$ being informationally closed with respect to $X$ implies that $Y$ is also informationally closed with respect to E, i.e. $J_t(E-Y) = 0$ (Please see our reply to Q2).\\
-            As explained in Question 1a, it is not required for NTIC processes to be completely closed. The information transfer from $X$ to $Y$ $I(Y_{t+1}; X_t|Y_t)$ (if non-zero) serves as the upper bound of the information transfer from any other process to Y. So unpredictable sensory inputs will contribute to a positive information transfer. For high NTIC systems however this transfer must be less than the mutual information between the sensory inputs and the next system state.        
+            Yes. As mentioned in our answer to Q2 $Y$ being informationally closed with respect to $X$ implies that $Y$ is also informationally closed with respect to E, i.e. $J_t(E\rightarrow Y) = 0$.
+            As explained in Question 1a, it is not required for NTIC processes to be completely closed. The information transfer from $X$ to $Y$ $I(Y_{t+1}; X_t|Y_t)$ (if non-zero) serves as the upper bound of the information transfer from any other process to Y. So unpredictable sensory inputs will contribute to a positive information transfer. 
+            As mentioned before higher NTIC values are achieved when this information transfer can be reduced without reducing the mutual information between the sensory inputs and the next system state.   
         \end{ans}
         
         \begin{question}
@@ -171,13 +176,17 @@
         \end{question}
     
     	\begin{ans}
-            We thank the reviewer for this critical question. We do not impose the exclusion criterion in ICT. This is a critical difference between IIT and ICT. \\
+            We can see how Figure 4 was ambiguous with respect to this question. We do not impose the exclusion criterion in ICT and have changed Figure 4 to remove the impression that it does. 
+            % This is a difference between IIT and ICT. \\
             % The exclusion criterion is based on the assumption that individual entities (e,g, consciousnesses) should share no subset with any other entities. Namely, within the boundary of an individual, we should not find any subset also belonging to other individuals. \\
-            A key feature of ICT is that, instead of imposing the exclusion criterion, the concept of informational closure itself already involves the notion of system-environment separation and a boundary of a system \citep{BERTSCHINGER.2006}. For example, \citet{krakauer2014information} proposed an algorithm to add and remove variables in order to find the boundary. \\
-            It is true that every subset of a system can be computed and can have a positive value of NTIC. However, following the notion of informational closure, if a subset is not informationally closed, the subset is considered as a part of the system.
-            ICT applies the same notion to consciousness. A subprocess (partition) of a conscious (NTIC) process can have a positive value of NTIC, and therefore, is conscious. However, the subprocess is not "another conscious process". Instead, it is considered as a subspace of the consciousness. Namely, the information contributed from the subprocess corresponds to a part of the whole conscious experience. \\
-            This is also why ICT allowed the existence of multiple consciousnesses across the scale of coarse-graining. Because conscious processes are informationally closed from each other across the scale of coarse-graining, they are not able to know the existence of other consciousnesses within the same system (information flow from other processes is zero). This is in line with using informational closure in level identification \citep{PFANTE.2014} . \\
-            Therefore, ICT without exclusion criterion can parsimoniously explain the individuality of consciousness within and across the scale of coarse-graining.
+            A key feature of ICT is that, instead of imposing the exclusion criterion, the concept of informational closure itself already involves the notion of system-environment separation and a boundary of a system \citep{BERTSCHINGER.2006}. For example, \citet{krakauer2014information,krakauer2020information} proposed an algorithm to add and remove variables in order to find the boundary. \\
+            It is true that NTIC can be computed for every subset of a system and can also have a positive value of NTIC for multiple of those. All such subsets are thus conscious. However, while conscious, they are not necessarily the entire or whole consciousness. They may be part of a more extended consciousness. In order to find whole or entire consciousnesses we can use the algorithm in \citet{krakauer2014information, krakauer2020information}. This algorithm adds variables to or removes variables from the system if this results in a reduction of transfer entropy from the corresponding environment. This means that whole consciousnesses are maximally closed subsets of variables. We currently do not know if such maxima also are maxima of NTIC. We also currently do not know whether multiple such whole consciousnesses can overlap or not and will accept either case within ICT. In this way either exclusion emerges from our definitions or not. 
+            
+            
+            % if a subset is not informationally closed the subset is considered as a part of the system.
+            % ICT applies the same notion to consciousness. A subprocess (partition) of a conscious (NTIC) process can have a positive value of NTIC, and therefore, is conscious. However, the subprocess is not "another conscious process". Instead, it is considered as a subspace of the consciousness. Namely, the information contributed from the subprocess corresponds to a part of the whole conscious experience. \\
+            This is also why ICT allowed the existence of multiple consciousnesses across the scales of coarse-graining. Because conscious processes are informationally closed from each other across the scale of coarse-graining, they are not able to know the existence of other consciousnesses within the same system (information flow from other processes is zero). This is in line with using informational closure in level identification \citep{PFANTE.2014} . \\
+            % Therefore, ICT without exclusion criterion can parsimoniously explain the individuality of consciousness within and across the scale of coarse-graining.
             \todo{Maybe add something in the manuscript}
 % 			We do not impose the exclusion criterion in ICT. Instead, the concept of informational closure already involves the notion of identifying the boundary of a system. 
 			
@@ -195,48 +204,50 @@
 %			A partition of $Y$ is a set $P_y$ which divides $Y$ into two subsets $P_y=\{Y_1, Y_2\}$. }    		    		    		
     	\end{ans}
 
-        
         \begin{question}
             Feedback and memory: p. 11. If $NTIC > 0$ is sufficient and true information closure is not required, then feedfoward networks can be conscious according to ICT. Also, in that case, memory is not necessary, as the video camera would have $NTIC > 0$ as long as it records from a stable environment. In that case $I(Y_{t+1}, Y_t) > 0$ and $I(Y_{t+1}, Y_t|E_t)$ is small. This issue here is that having information about the next state does not imply that there is any causation, so if $Y_t$ is highly correlated with $E_t$ and $E_t$ causes $Y_{t+1}$ then NTIC is high. (Thus the IIT emphasis on causation).\\
             If somehow the fact that $Y$ must be informationally closed wrt $X$ does the heavy-lifting here that should be made more explicit (see above).
         \end{question}
         
         \begin{ans}
-            \todo{camera}
-        	\todo{Everything I want to say is here. Just hard to make these pieces into a whole. Feel frustrated. }
+        	The reviewer is right. Feed-forward networks can be conscious under ICT. Similarly, a video camera can achieve positive levels of NTIC and, therefore, be conscious. We have worked extensively on Section 5 to make this clear (see from Line:~\lineref{line:notIC}).
+        	There we have weakened multiple claims involving a clear conscious to unconscious distinction to claims about differences between levels of consciousness. 
+        	Concerning the camera example we can show that for a camera system filming an environment for which the mutual information from one step to the next is higher than the mutual information between one camera image and the next there are systems that achieve higher NTIC. 
+        	For the case of the feedforward network we speculate that a similar situation remains true and that there are always systems that achieve higher levels of consciousness than those consisting only of feedforward networks.
         	
         	
+    %     	Please note that 
         	
-		    @ The reviewer is correct about the example of the video camera under the condition that the environment past state $E_{t-1}$ shares information with its current state $E_t$, i.e., $I(E_{t-1}, E_t)>0$. 
+		  %  @ The reviewer is correct about the example of the video camera under the condition that the environment past state $E_{t-1}$ shares information with its current state $E_t$, i.e., $I(E_{t-1}, E_t)>0$. 
 		    
-		    @ In such case, simply copying the environmental states to another process (assuming that the sensor of the video camera can capture the whole state of the environment) can lead to positive NTIC. 
+		  %  @ In such case, simply copying the environmental states to another process (assuming that the sensor of the video camera can capture the whole state of the environment) can lead to positive NTIC. 
 		    
-		    @ This is, in fact, the "Passive adaptation" case mentioned in \cite[p.~4]{BERTSCHINGER.2006},	
-		    \begin{quote}
-			      	\textit{"B1)~Passive adaptation: The system is driven by the environment and adapts passively to all changes in the environment. In the case of an environment, that appears deterministic to the system, $H(\hat{e}_{n+1} |\hat{e}_n)=0$, this can be achieved by simply copying the observation of the environment into the system, $S_{n+1} = \hat{e}_n$."}        
-		    \end{quote} 
+		  %  @ This is, in fact, the "Passive adaptation" case mentioned in \cite[p.~4]{BERTSCHINGER.2006},	
+		  %  \begin{quote}
+			 %     	\textit{"B1)~Passive adaptation: The system is driven by the environment and adapts passively to all changes in the environment. In the case of an environment, that appears deterministic to the system, $H(\hat{e}_{n+1} |\hat{e}_n)=0$, this can be achieved by simply copying the observation of the environment into the system, $S_{n+1} = \hat{e}_n$."}        
+		  %  \end{quote} 
 	    
 	    
-	    @ The reviewer is correct about the video camera example under the condition that the environment past state $E_{t-1}$ shares information with its current state $E_t$, i.e., $I(E_{t-1}, E_t)>0$. 
+	   % @ The reviewer is correct about the video camera example under the condition that the environment past state $E_{t-1}$ shares information with its current state $E_t$, i.e., $I(E_{t-1}, E_t)>0$. 
 	    
-	    @ In such case, simply copying environmental states to a process can lead to positive NTIC. 
+	   % @ In such case, simply copying environmental states to a process can lead to positive NTIC. 
 	    
-	    @ In fact, this is one way to achieve NTIC discribed in \cite[p.~4]{BERTSCHINGER.2006},    
-	    \begin{quote}
-	    	\textit{"B1)~Passive adaptation: The system is driven by the environment and adapts passively to all changes in the environment. In the case of an environment, that appears deterministic to the system, $H(\hat{e}_{n+1} |\hat{e}_n)=0$, this can be achieved by simply copying the observation of the environment into the system, $S_{n+1} = \hat{e}_n$."}        
-	    \end{quote} 
+	   % @ In fact, this is one way to achieve NTIC discribed in \cite[p.~4]{BERTSCHINGER.2006},    
+	   % \begin{quote}
+	   % 	\textit{"B1)~Passive adaptation: The system is driven by the environment and adapts passively to all changes in the environment. In the case of an environment, that appears deterministic to the system, $H(\hat{e}_{n+1} |\hat{e}_n)=0$, this can be achieved by simply copying the observation of the environment into the system, $S_{n+1} = \hat{e}_n$."}        
+	   % \end{quote} 
 	    
-	    @ We can also consider this is a special case of modelling the environment when a system has enough sensory and memory capacities, and, therefore, can virtually model the environment by simply copying the environmental states into the system.  
+	   % @ We can also consider this is a special case of modelling the environment when a system has enough sensory and memory capacities, and, therefore, can virtually model the environment by simply copying the environmental states into the system.  
 
-	    @ Because this question point to the core concept of ICT, we would like to clarify and emphasise two critical points here. 
+	   % @ Because this question point to the core concept of ICT, we would like to clarify and emphasise two critical points here. 
 	    
-	    @ a) Informational closure and causation: The definition of information closure \citep{BERTSCHINGER.2006} does not involve causation. As described in \cite{BERTSCHINGER.2006}, NTIC can be achieved via "modelling" or "passive adaptation".  In the "modelling" case, the future state of a process ($Y_{t+1}$) can be caused by $Y_t$, which contain predictive information about how the environment influences the system. In the "passive adaptation" case,  the future state of a process ($Y_{t+1}$) is caused by copying environmental information which involves environmental dynamics. 
+	   % @ a) Informational closure and causation: The definition of information closure \citep{BERTSCHINGER.2006} does not involve causation. As described in \cite{BERTSCHINGER.2006}, NTIC can be achieved via "modelling" or "passive adaptation".  In the "modelling" case, the future state of a process ($Y_{t+1}$) can be caused by $Y_t$, which contain predictive information about how the environment influences the system. In the "passive adaptation" case,  the future state of a process ($Y_{t+1}$) is caused by copying environmental information which involves environmental dynamics. 
 	    
-	    The latter case may be conceptually counterintuitive because the internal state of the system (e,g, the video camera) is entirely driven by external input. However, it is crucial to know that both cases lead the information flow $J(E\rightarrow Y)$ to (virtually) zero. This means that if $Y_t$ contains information about how the environment $E_t$ causes $Y_{t+1}$, 
+	   % The latter case may be conceptually counterintuitive because the internal state of the system (e,g, the video camera) is entirely driven by external input. However, it is crucial to know that both cases lead the information flow $J(E\rightarrow Y)$ to (virtually) zero. This means that if $Y_t$ contains information about how the environment $E_t$ causes $Y_{t+1}$, 
 	    
-	    However, this is the most critical consequence of solving the scale problem of consciousness in ICT. In physical reality, there only exists microscopic processes at the finest microscopic level. Any causal dependency at coarse-graining levels should be virtual. For example, when $Y$ is informationally closed to X, even though $Y_t$
+	   % However, this is the most critical consequence of solving the scale problem of consciousness in ICT. In physical reality, there only exists microscopic processes at the finest microscopic level. Any causal dependency at coarse-graining levels should be virtual. For example, when $Y$ is informationally closed to X, even though $Y_t$
 	    
-	    @ b) As described in our manuscript, to form a higher level of NTIC, the informational richness of the environment, i.e. $H(E)$ also has to be higher since $H(E_t)$ and $H(Y_{t+1})$ both are the upper bound of $I(Y_{t+1}; H(E_t))$. Practically, we believe that with limited sensory and memory capacities, it is difficult to give rise to high NTIC via copying sensory signals to a system. 
+	   % @ b) As described in our manuscript, to form a higher level of NTIC, the informational richness of the environment, i.e. $H(E)$ also has to be higher since $H(E_t)$ and $H(Y_{t+1})$ both are the upper bound of $I(Y_{t+1}; H(E_t))$. Practically, we believe that with limited sensory and memory capacities, it is difficult to give rise to high NTIC via copying sensory signals to a system. 
 	    
 	    
 	    
@@ -254,7 +265,7 @@
 	    	
 	    	To the conscious (NTIC) process, the rest of the neural system is considered as part of the environment. This notion is shortly indicated at line \lineref{line:neu-env} in our original manuscript. There is no doubt that these processes are still active during sleep and dreaming. We speculate that, during dreaming, the neural system can stably form the NTIC process with respect to its environment, i.e. other parts of the neural system.  However, at the current stage, this is mere speculation so we restrained ourself from making the statement in our manuscript. However, we thank the reviewer for bringing up this important question. We believe that this is still worth mentioning. We have added a short paragraph as follows:
 	    	
-			\addnew{\lineref{line:dream}}{Explaining conscious experience during dreaming is always a challenge to all the theories of consciousness. ICT currently does not have a certain answer to dreaming. However, we want to emphasise that not all the processes in the neural system are NTIC. This is trivial since some processes are evidently not informationally closed. They mainly passively react to sensory inputs or other processes in the neural system. To the conscious (NTIC) process, the rest of the neural system is part of the environment, and undoubtedly retains some degree of activity during sleep and dreaming. We speculate that, during dreaming, the neural system stably forms an NTIC process with respect to its environment, i.e. the other parts of the neural system. However, at the current stage, this is mere speculation. Searching for the NTIC process(es) during dreaming is a crucial step to extend the scope of ICT in future research.}
+			\addnew{\lineref{line:dream}}{Explaining conscious experience during dreaming is always a challenge to all the theories of consciousness. ICT currently does not have a certain answer to dreaming. However, we want to emphasise that not all the processes in the neural system are NTIC. Some processes in the neural system are not informationally closed. They mainly passively react to sensory inputs or other processes in the neural system. To the conscious (NTIC) process, the rest of the neural system is part of the environment, and undoubtedly retains some degree of activity during sleep and dreaming. We speculate that, during dreaming, the neural system stably forms an NTIC process with respect to its environment, i.e. the other parts of the neural system. However, at the current stage, this is mere speculation. Searching for the NTIC process(es) during dreaming is a crucial step to extend the scope of ICT in future research.}
 	    	
 	    	Finally, we believe that this is also an
 	    	empirical question that can and should be tested in future studies.
@@ -380,7 +391,7 @@
 %			We understand that this may lead to confusion for our readers. We have added the following sentence to make this point explicit.     		
 %			\addnew{\lineref{line:IC2CG}}{Note that we applied the same definition of information closure (Eq.\ref{eq:InformationFlow}) to processes at different coarse-grained levels \citep{{PFANTE.2014}}.}
 %			Here, we followed a common setup of coarse-graining (e.g. \cite{PFANTE.2014}) which does not take time $Y_t=f_Y(X_t)$ (in Definition 1). In this setup, coarse-graining is unidirectional ad does not involve interaction between scales. This means that coarser scales supervene on finer scales, and there exists no top-down causation. \\
-%			In our hypothesis, $Y$ is IC with respect to the microstate of the universe, X. This is critical in the hypothesis because $Y$ is IC with respect to X, implying that $Y$ is also IC with respect to its intermediate level S and its environment E in Fig. \ref{fig:fullgraph}.\todo{need any change in the main text?}
+%			In our hypothesis, $Y$ is IC with respect to the microstate of the universe, X. This is critical in the hypothesis because $Y$ is IC with respect to X, implying that $Y$ is also IC with respect to its intermediate level S and its environment $E$ in Fig. \ref{fig:fullgraph}.\todo{need any change in the main text?}
     	\end{ans}
     
     
@@ -403,9 +414,8 @@
 			It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining. We saw above that not sufficiently coarse-grained variables have low values of NTIC. On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any information capacity and thus cannot have high mutual information across time steps. Therefore, only processes at a certain level of coarse-graining in the neural system can form a high degree of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). ICT indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system.
 		}
 		{
-			It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining\footnote{We have known that NTIC is not a non-monotonic function of the scale of coarse-graining. However, we currently have limited understanding about this relationship. Future work is needed and may involve relevant informational techniques (e.g.,partial information decomposition).}. At the finest scale, when we consider the dynamics of the whole universe as a process, the universe should be an informationally closed. However, there exists no environment to the universe and, therefore, NTIC of the universe is zero (trivially closed). On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any informational capacity and thus cannot have  mutual information between adjacent time steps.  Therefor, processes at certain levels of coarse-graining in the neural system can form high degrees of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). \ac{OurTheory} indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system. 
-		}	    		
-            % 		We thank the reviewer for this critical comment. It is true that NTIC a monotonic function of scales of coarse-graining. NTIC can increase or decrease when the grains are coarser. We are currently still working on the relationship between scales and NTIC. We will systematically address NTIC and functions of coarse-graining in our following studies. Further more, in our current analysis, it seems that this is also related to informational synergy and redundancy. We aim for presenting the core concept of ICT in this article. The reviewer's critical question is on our list of future work. 
+			It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining\footnote{We have known that NTIC is not a non-monotonic function of the scale of coarse-graining. However, we currently have limited understanding about this relationship. Future work is needed and may involve relevant informational techniques (e.g.,partial information decomposition).}. At the finest scale, when we consider the dynamics of the whole universe as a process, the universe should be an informationally closed. However, there exists no environment to the universe and, therefore, NTIC of the universe is zero (trivially closed). On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any informational capacity and thus cannot have  mutual information between adjacent time steps.  Therefor, processes at certain levels of coarse-graining in the neural system can form high degrees of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). ICT indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system.
+		}
     	\end{ans}
     
     
