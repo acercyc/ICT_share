@@ -126,15 +126,18 @@
     
     	\begin{ans}
     		\newline
-    		a) Considering Eq.\ref{eq:NTIC2}, it is true that the transfer entropy term $J_t(E\rightarrow Y)$ does not have to be zero for $NTIC>0$. It is possible to have a high degree of NTIC when $J_t(E\rightarrow Y) > 0$, i.e. the process is not completely closed. We consider NTIC here as just the quantity defined in Eq.\ref{eq:NTIC2}.   \\
-            % 		However, based on the setting in both Bertschinger et al. 2006 and our Section 2 (at Line \lineref{line:r1q1a}), $Y_{t+1}$ is determined by both $Y_t$ and $E_t$. Simply increasing $I(Y_{t+1}; E_t)$ without closedness (e.g, copy the information in sensory signals to the process such as the case in the video camera example), the transfer entropy term $J_t(E -> Y)$ should increase at the same rate and cancel out the increment of $I(Y_{t+1}; E_t)$ resulting in low NTIC. Namely, keeping high closedness, i.e. minimising $J_t(E -> Y)$, is crucial to increase NTIC even though $J_t(E -> Y) > 0$.\\
-            % 		In our current version of ICT, we consider the level of consciousness corresponds to the degree of NTIC of a process. 
-            Therefore, a conscious process does not have to be completely closed. 
-            However, processes that manage to reduce the transfer entropy from the environment without reducing their mutual information with the environment achieve 
-            % higher degreed of closedness is crucial to have a
-            higher levels of consciousness. 
-            Regarding the video camera example, please see more discussion in our reply to your Q6. \\
+    		a) It is true it is true that the information flow term $J_t(E\rightarrow Y)$ does not have to be zero for $NTIC>0$. However, in Definition 2, a C-process is informationally closed to the microscopic universe process $X$. This implies C-process is also informationally closed to any other coarse-grainings of X including E (see also our reply to Q2. Therefore, only completely closed NTIC processes are consider as C-processes. 
+    		Regarding the video camera example, please see more discussion in our reply to your Q6. \\
     		
+    		% Backup 2020/04/07 14:23
+    		% ====================================
+            % 		a) Considering Eq.\ref{eq:NTIC2}, it is true that the transfer entropy term $J_t(E\rightarrow Y)$ does not have to be zero for $NTIC>0$. It is possible to have a high degree of NTIC when $J_t(E\rightarrow Y) > 0$, i.e. the process is not completely closed. We consider NTIC here as just the quantity defined in Eq.\ref{eq:NTIC2}.   \\
+
+            %         Therefore, a conscious process does not have to be completely closed. 
+            %         However, processes that manage to reduce the transfer entropy from the environment without reducing their mutual information with the environment achieve higher levels of consciousness. 
+            %         Regarding the video camera example, please see more discussion in our reply to your Q6. \\
+            % ====================================
+            		
     		\noindent
     		b) It is true that NTIC is not state-dependent. We agree that state-dependent measurements are essential to describe the dynamics of conscious experience. We are  working on state-dependent formulations for the next version of the ICT. In contrast to the current version, this work involves point-wise informational measures and requires more space and discussion. Therefore, we prefer to address the state-dependent version of ICT in future studies and keep the first version of our theory simple.\\
     		We appreciated that the reviewer pointed this out. We have added a short paragraph about this issue.
@@ -369,16 +372,26 @@
     	\end{question}
     
     	\begin{ans}
-    		We thank the reviewer for this question. We agree that this point is not clear in our original manuscript. Even though the Bayesian graphs for the system-environment dependency are different from the one for the micro-macro level dependency, we apply the same definitions of information flow ($J_{t}(X \rightarrow $Y$ )$) and informational closure ($J_{t}(X \rightarrow $Y$ )=0$) to both graphs. 
+    		We agree that this point is not clear in our original manuscript. Even though the Bayesian graphs for the system-environment dependency are different from the one for the micro-macro level dependency, we apply the same definitions of information flow ($J_{t}(X \rightarrow $Y$ )$) and informational closure ($J_{t}(X \rightarrow $Y$ )=0$) to both graphs. 
     		
-    		This is a critical assumption in ICT because applying the same definition of informational closure in both scenarios can solve the scale problem of consciousness (informational closure from one level to other levels) and construct our hypothesis about the relation between NTIC and consciousness (informational closed from a process to its environment) in an integrated framework.
+    % 		This is a critical assumption in ICT because applying the same definition of informational closure in both scenarios can solve the scale problem of consciousness (informational closure from one level to other levels) and construct our hypothesis about the relation between NTIC and consciousness (informational closed from a process to its environment) in an integrated framework.
     		
-    		In terms of the Bayesian graphs for the micro-macro level dependency and the definition of informational closure between scales, we followed the conventional setting (e.g. \cite{PFANTE.2014}). It is important to note that coarse-graining does not and should not take time $Y_t=f_Y(X_t)$ (also see our Definition 1). Coarse-graining is merely a function which maps microstates of a system to macrostates, and the microstates and the macrostates are only different level of descriptions of the same system.
+    % 		In terms of the Bayesian graphs for the micro-macro level dependency and the definition of informational closure between scales, we followed the conventional setting (e.g. \cite{PFANTE.2014}). It is important to note that coarse-graining does not and should not take time $Y_t=f_Y(X_t)$ (also see our Definition 1). Coarse-graining is merely a function which maps microstates of a system to macrostates, and the microstates and the macrostates are only different level of descriptions of the same system.
     		
-    		We agree that we did not indicate this assumption explicitly and may lead to some confusion for our readers. We have added a footnote to make this point explicit. 
+    % 		We agree that we did not indicate this assumption explicitly and may lead to some confusion for our readers. 
+    		We have added a paragraph to make this point explicit. 
     		
     		\addnew{\lineref{line:IC2CG}}{
-    			Note that, here we applied the same definitions of information flow (Eq.~\ref{eq:InformationFlow}) and informational closure (Eq.~\ref{eq:informationflow2}) to the system-environment dependency (e.g. $J_{t}(E \rightarrow $Y$ )=0$) and the micro-macro level dependency (e.g. $J_{t}(X \rightarrow $Y$ )=0$), even though the Bayesian graphs are different between the two scenarios. This follows the common settings in previous studies (e.g. \cite{BERTSCHINGER.2006, PFANTE.2014}).
+    			Note that, here we applied the same definitions of information flow (Eq.~\ref{eq:InformationFlow}) 
+    			\begin{align}
+    			    J_{t}(E \rightarrow Y )=I(Y_{t+1};E_t|Y_t)
+    			\end{align}
+    			to the system-environment dependency
+                 and the micro-macro level dependency
+                 \begin{align}
+    			    J_{t}(X \rightarrow Y )=I(Y_{t+1};X_t|Y_t)
+    			\end{align}  
+                 even though the Bayesian graphs are different in the two scenarios. Both of these settings have already been used in the literature \citep[see][]{BERTSCHINGER.2006, PFANTE.2014}).
     		}	
     		
     		
@@ -396,16 +409,14 @@
     
     
     	\begin{question}            
-    	\todo{I am rewriting this part, please wait}
     		On line 241: '.. not sufficiently coarse-grained variables have low values of NTIC', this is phrased as though it is necessarily true (and also that 'we saw above', though I do not see above where this is justified), but is it?
     		
     		At the very finest grain, wouldn't even all the most 'stochastic' dynamics of a system be accounted for by prior states of the system, or by the environment? Why wouldn't we assume that NTIC *only decreases* as the system is coarse-grained (as number of elements/states is decreased), for similar reasons as it must be zero at a 1-element 1-state system as the authors note? This seems an important point to be very clear on\dots
     	\end{question}
     
     	\begin{ans}
-    	We thank the reviewer for asking this question. We did not write this part clearly. 
-    	
-    	It is true that at the finest scale, when we consider the whole universe as a system, the universe should be an informationally closed and deterministic process. However, there exists no environment to the universe and, therefore, NTIC of the universe is zero (trivially closed).We currently know that NTIC is not a non-monotonic function of the scale of coarse-graining. However, we currently have very limited understanding of this relationship. Future work is needed and may involve the techniques of partial information decomposition and related research fields. 
+    % 	It is true that at the finest scale, when we consider the whole universe as a system, the universe should be an informationally closed and deterministic process. However, there exists no environment to the universe and, therefore, NTIC of the universe is zero (trivially closed). 
+    	We currently know that NTIC is not a non-monotonic function of the scale of coarse-graining. However, we currently have very limited understanding of this relationship. Future work is needed and may involve the techniques of partial information decomposition and related research fields. 
     	
 		We agree that our original claim about existing a intermediate maxima in NTIC was too strong and have revised the paragraph as follows: 
     
@@ -414,7 +425,7 @@
 			It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining. We saw above that not sufficiently coarse-grained variables have low values of NTIC. On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any information capacity and thus cannot have high mutual information across time steps. Therefore, only processes at a certain level of coarse-graining in the neural system can form a high degree of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). ICT indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system.
 		}
 		{
-			It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining\footnote{We have known that NTIC is not a non-monotonic function of the scale of coarse-graining. However, we currently have limited understanding about this relationship. Future work is needed and may involve relevant informational techniques (e.g.,partial information decomposition).}. At the finest scale, when we consider the dynamics of the whole universe as a process, the universe should be an informationally closed. However, there exists no environment to the universe and, therefore, NTIC of the universe is zero (trivially closed). On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any informational capacity and thus cannot have  mutual information between adjacent time steps.  Therefor, processes at certain levels of coarse-graining in the neural system can form high degrees of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). ICT indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system.
+			It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining\footnote{We know that NTIC is not a non-monotonic function of the scale of coarse-graining. However, we currently have limited understanding about this relationship. Future work is needed and may involve relevant informational techniques (e.g.,partial information decomposition).}. At the finest scale, when we consider the dynamics of the whole universe as a process, the universe should be an informationally closed. However, there exists no environment to the universe and, therefore, NTIC of the universe is zero (trivially closed). On the other hand, overly coarse-grained macroscopic variables  also result in low values of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have any informational capacity and thus cannot have  mutual information between adjacent time steps.  Therefor, processes at certain levels of coarse-graining in the neural system can form high degrees of NTIC (Fig.~\ref{fig:LevelOfConsciousness}). ICT indicates that human consciousness occurs at the level of coarse-graining where higher NTIC is formed within the neural system.
 		}
     	\end{ans}
     
