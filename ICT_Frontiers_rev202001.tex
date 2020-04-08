@@ -562,37 +562,42 @@
     %     \end{enumerate}
     %   \end{definition}
                                
-        \linelabel{line:IC2CG}
-		Note that, here we applied the same definitions of information flow (Eq.~\ref{eq:InformationFlow}) 
-		\begin{align}
-		    J_{t}(E \rightarrow Y )=I(Y_{t+1};E_t|Y_t)
-		\end{align}
-		to the system-environment dependency
-         and the micro-macro scale dependency
-         \begin{align}
-		    J_{t}(X \rightarrow Y )=I(Y_{t+1};X_t|Y_t)
-		\end{align}  
-         even though the Bayesian graphs are different in the two scenarios. Both of these settings have already been used in the literature \citep[see][]{BERTSCHINGER.2006, PFANTE.2014}).
+        \noindent Note that, here we applied the same definitions of information flow (Eq.~\ref{eq:InformationFlow}) \linelabel{line:IC2CG}
+        \begin{align}
+            J_{t}(E \rightarrow Y )=I(Y_{t+1};E_t|Y_t)
+        \end{align}
+            to the system-environment dependency
+            and the micro-macro scale dependency
+        \begin{align}
+            J_{t}(X \rightarrow Y )=I(Y_{t+1};X_t|Y_t)
+        \end{align}  
+        even though the Bayesian graphs are different in the two scenarios. Both of these settings have already been used in the literature \citep[see][]{BERTSCHINGER.2006, PFANTE.2014}).\\
         
         With the two definitions we can state the main hypothesis of \ac{OurTheory}
         \begin{hypothesis}
-        A process $Y$ is conscious if and only if it is a C-process of some process $X$. Also the content of consciousness $C_t^{Content}$ at time $t$ is the state $y_t$ of the C-process at time $t$ and the level of consciousness $C_t^{Level}$ is the degree of NTIC of the C-process to the environment i.e. $NTIC_t(E\rightarrow Y)$:
+        A process $Y$ is conscious if and only if it is a C-process of some process $X$. Also the content of consciousness $C_t^{Content}$ at time $t$ is the state $y_t$ of the C-process at time $t$ and the level of consciousness $C_t^{Level}$ is the degree of NTIC of the process to the environment i.e. $NTIC_t(E\rightarrow Y)$:
+        \begin{align}
+            C_t^{Content} &= y_t \label{eq:cContent}\\
+            C_t^{Level} &= NTIC_t(E\rightarrow Y) \label{eq:cLevel}
+        \end{align}
+        \end{hypothesis}
+        
+        \begin{hypothesis}
+        A process $Y$ is conscious if and only if it is a C-process of some process $X$. Also the content of consciousness $C_t^{Content}$ at time $t$ is the state $y_t$ of the C-process at time $t$ and the level of consciousness $C_t^{Level}$ is the degree of NTIC of the process to the environment i.e. $NTIC_t(E\rightarrow Y)$:
         \begin{align}
             C_t^{Content} &= y_t \label{eq:cContent}\\
             C_t^{Level} &= NTIC_t(E\rightarrow Y) \label{eq:cLevel}
         \end{align}
         \end{hypothesis}
 
-\begin{hypothesis}
-        For any coarse-graining $Y$ of a stochastic process $X$, a refinement $S$ of $Y$ and the environment $E$ of $S$.  
-        The \emph{content $C_t^{Content}(Y)$ of the consciousness of $Y$ at time $t$} is the state $y_t$ of $Y$ at time $t$ and \emph{the level $C_t^{Level}(Y)$ of the consciousness of $Y$} is the degree of NTIC of the C-process to the environment minus the information flow from the microscopic process $X$ to $Y$:
-        \begin{align}
-            C_t^{Content} &= y_t \label{eq:cContent}\\
-            C_t^{Level} &= NTIC_t(E\rightarrow Y)-J_t(X \rightarrow Y) \label{eq:cLevel}
-        \end{align}
-        \end{hypothesis}
-
-        
+        % \begin{hypothesis}
+        %         For any coarse-graining $Y$ of a stochastic process $X$, a refinement $S$ of $Y$ and the environment $E$ of $S$.  
+        %         The \emph{content $C_t^{Content}(Y)$ of the consciousness of $Y$ at time $t$} is the state $y_t$ of $Y$ at time $t$ and \emph{the level $C_t^{Level}(Y)$ of the consciousness of $Y$} is the degree of NTIC of the C-process to the environment minus the information flow from the microscopic process $X$ to $Y$:
+        %         \begin{align}
+        %             C_t^{Content} &= y_t \label{eq:cContent}\\
+        %             C_t^{Level} &= NTIC_t(E\rightarrow Y)-J_t(X \rightarrow Y) \label{eq:cLevel}
+        %         \end{align}
+        %         \end{hypothesis}
 
         A concrete example in the context of neuroscience is that $X$ represents the microscopic scale of the universe, $S$ a cellular scale process in the neural system, $Y$ a more macroscopic process of the neural system coarse-grained from the cellular scale process $S$, and $E$ the environment which the cellular level process $S$ interacts with. \linelabel{line:neu-env} The environment $E$ may include other processes in the neural system, the sensors for perception and interoception, and external physical worlds.\\
         
@@ -707,17 +712,11 @@
             Regarding unconscious processing, we highlight two scenarios which decrease the degree of NTIC of a process, thereby making the process less conscious.
         
             \subsubsection*{Processes that are not Informationally Closed}\label{sec:reflexive}
-            \linelable{line:notIC}
+             \linelabel{line:notIC}The first scenario is that of a system partially observing the environment in such a way that the current observation is insufficient to predict the next. In this situation we can show that a system passively processing the observations (including copying them) achieves lower values of NTIC and therefore lower levels of consciousness than a system that is able to accurately predict the observations. 
             % \paragraph{@ Acer's version}
             % Based on Eq.~\ref{eq:nticObjective2}), to maximise NTIC, a process can minimise the information flow from the environment to the process $J_{t}(E \rightarrow Y ) := I(Y_{t+1};E_{t}|Y_{t})$ (Eq.~\ref{eq:InformationFlow}). For agents such as human being, who always face informationally rich environments, the environment is usually partially observable with limited sensory capacities. This leads to the sensor values are not deterministic (or close to it). In such cases, if the state of a internal process is mainly driven by sensory inputs, the information flow from the environment to the process is considered to be large and the process is not informationally closed. 
-            
-            
             % First, to maximise NTIC, a process can minimise the information flow from the environment to the process $J_{t}(E \rightarrow Y ) := I(Y_{t+1};E_{t}|Y_{t})$ (Eq.~\ref{eq:InformationFlow}). Here, we illustrate two distinctive scenarios which shade light of the relationship between informational closure and consciousness. 
             % \paragraph{@ Martin's version}
-            The first scenario is that of a system partially observing the environment in such a way that the current observation is insufficient to predict the next. In this situation we can show that a system passively processing the observations (including copying them) achieves lower values of NTIC and therefore lower levels of consciousness than a system that is able to accurately predict the observations. 
-            
-            
-            
             %Is there a (generative) epsilon machine that achieves higher NTIC than copying? If yes, under what conditions (e.g. reversibility of the underlying environment process?) on the sensor process does it exist?
             %Is Bertschinger's system better than copying? 
             \ac{OurTheory} leads to some surprisingly simple conscious processes. Consider the case already noted by \citet{BERTSCHINGER.2006} where the environment process is deterministic (or close to it) and the system just copies the environment process. Then the system can achieve positive values of NTIC with respect to the environment. ICT states that such processes are conscious. 
