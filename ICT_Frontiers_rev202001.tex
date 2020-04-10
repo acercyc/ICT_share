@@ -481,6 +481,21 @@
 			\noindent
 			This implies the system contains in itself all the information about its own future and the self-predictive information contains the information about the environment. Therefore, to form NTIC, the system can internalise and synchronise with the dynamics of the environment, e.g., model the environment. Furthermore, having high degrees of NTIC entails having high predictive power about the environment. This gives biological agents a great functional and evolutionary advantage. 
 			
+			\subsection{Informational Closure and Causality}
+			A surprising result of the definition of information flow $Jt(E\rightarrow Y)$ (Eq. \ref{eq:InformationFlow}) is that it does not involve causal dependency between $E$ and $Y$.
+			Consider the case already noted by \citet{BERTSCHINGER.2006} where the sensory process $\hat{e_t}$ is deterministic (or close to it) and the system just copies the sensory states. Then the system can potentially achieve positive values of NTIC and informational closure with respect to the environment. 
+			This scenario is called "passive adaptation" \citet{BERTSCHINGER.2006}. Counterintuitively, in such case, the future state is totally determined by the environment however, the information flow $Jt(E\rightarrow Y)$ is (or nearly) zero.  
+			
+			@ However, in more realistic cases, the environment is often partial obseriable. The system cannot copy the entire environment state because it observes only part of it. 
+        
+            We show in Appendix \ref{sec:appendix} that whenever the environment has itself more predictable dynamics than the observations there is potential for a predictive process to achieve higher NTIC than a copying system or any system that only processes its last observations without taking into account other internal memory. In this case is called "modelling" in \cite{BERTSCHINGER.2006}
+            
+            In such case, the system can potentially achieve higher NTIC than simply copy the sensory value. 
+            
+            We can see both senatios are critical in ICT. 
+        
+            % Similar to \citet{BERTSCHINGER.2006} we will refer to systems of the latter type as \textit{passive}. We will call all other systems that achieve positive NTIC \textit{predictive}. Note that the predictive process might need to be more complex than the system that only copies its observations.
+			
 
 % ============================================================================ %
 %                            Neural coarse-graining                            %
@@ -488,7 +503,7 @@
 	\section{Coarse-graining in the Neural System} \label{sec:Neural coarse-graining}
 
 		%% stochasticity at microscopic levels
-		The formation of NTIC with a  highly stochastic process is challenging. NTIC requires the predictability of the system state and is therefore impeded by noise in the system. Information processing at the microscopic scales (the cellular scale) in neural systems suffers from multiple environmental noise sources such as sensor, cellular, electrical, and synaptic noises. For example, neurons exhibit large trial-to-trial variability at the cellular scale, and are subject to thermal fluctuations and other physical noises \citep{faisal2008noise}. 
+		The formation of NTIC with a highly stochastic process is challenging. NTIC requires the predictability of the system state and is therefore impeded by noise in the system. Information processing at the microscopic scales (the cellular scale) in neural systems suffers from multiple environmental noise sources such as sensor, cellular, electrical, and synaptic noises. For example, neurons exhibit large trial-to-trial variability at the cellular scale, and are subject to thermal fluctuations and other physical noises \citep{faisal2008noise}. 
 		
   
         %% Our argument
@@ -543,6 +558,12 @@
         \end{enumerate}
        \end{definition}
        
+    % ==================================== %
+    % martin.biehl: 
+    % doesn't work because the information closrue with respect to $X$ implies full closrure with respect to every 
+    % other process. This means all conscious processes are fully closed. This contradicts what we say below.
+    % Apr 7, 2020 3:23 AM
+    % ==================================== %
     %     \begin{definition}
     %     Given a stochastic process $X$ called the universe process, a \emph{C-process} is a coarse-graining $Y$ of $X$ such that the following two conditions are satisfied (see Fig.~\ref{fig:fullgraph}):
     %     \begin{enumerate}
@@ -561,6 +582,7 @@
     %     \end{itemize} 
     %     \end{enumerate}
     %   \end{definition}
+    % ====================================%
                                
         \noindent Note that, here we applied the same definitions of information flow (Eq.~\ref{eq:InformationFlow}) \linelabel{line:IC2CG}
         \begin{align}
@@ -580,7 +602,7 @@
             C_t^{Content} &= y_t \label{eq:cContent}\\
             C_t^{Level} &= NTIC_t(E\rightarrow Y) \label{eq:cLevel}
         \end{align}
-        \end{hypothesis}       
+        \end{hypothesis}
 
         % \begin{hypothesis}
         %         For any coarse-graining $Y$ of a stochastic process $X$, a refinement $S$ of $Y$ and the environment $E$ of $S$.  
@@ -605,8 +627,6 @@
             
             \item[Implication 3.] 
             Conscious processes are self-determining. This is a direct implication of the requirement that $Y$ is informationally closed with respect to $X$. To be informationally closed with respect to $X$, no coarse-graining knows anything about the conscious process' future that the conscious process does not know itself. This self-determining characteristics is also in line with our daily life conscious experience which often shows stability and continuity and is ignorant of the stochasticity (e.g., noise) of the cellular scales.
-            
-
             
             \item[Implication 4.] 
             Conscious processes encode the environmental influence on itself. This is due to the non-triviality of the informational closure of $Y$ to $E$. At the same time all of this information is known to the conscious processes themselves since they are informationally closed with respect to their environments. This also suggests that conscious processes can model the environmental influence without knowing more information from the environment.
@@ -634,16 +654,9 @@
     	    Second, one can minimise the conditional mutual information $I(Y_{t+1};Y_{t}|E_{t})$ to increase the level of NTIC. This quantity suggests that conscious level increases with the amount of information about the environment state $E_t$ that the NTIC process encodes in its own state $Y_t$. In other words, $Y_t$ should not contain more information about $Y_{t+1}$ than $E_t$. An important implication is that agents interacting with a complex environment have the chance to build a higher level of NTIC within their systems than those living in a simple environment. In other words, the level of consciousness is associated with environmental complexity. 
     	   
     	    %% not monotonic
-    		\linelabel{line:non-monotonic}It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining
-    % 		\footnote{We have known that NTIC is not a non-monotonic function of the scale of coarse-graining. However, we currently have limited understanding about this relationship. Future work is needed and may involve relevant informational techniques (e.g.,partial information decomposition).}. 
-    		At the finest scale we consider the whole universe $X$ as the process $Y$. then, since $Y$ is a coarse graining of $S$ we have $Y=S=X$.  
-    % 		the universe should be informationally closed. 
-    		In this case the environment $E$ corresponding to the universe seen as a system is the constant coarse-graining\footnote{Recall that, for a system with state space $\S$ the environment state space $\E$ must be such that $\X=\S \times \E$. I $\S =\X$ then we need $\E$ with $\X \times \E=\X$ such that $\E$ must be a singleton set. All coarse-grainings mapping $\X$ to a singleton set are constant over $\X$.} and therefore the mutual information $I(E_t;Y_{t+1})=0$ and the transfer entropy $I(Y_{t+1};E_t|Y_t)$ are zero. Then NTIC of the universe with respect to its environment is zero and $X$ can never be a C-process.
-    % 		For simplicity let us assume that we choose $Y=S$ in the following as well. This lets 
+    		\linelabel{line:non-monotonic}It is important to note that NTIC can be a non-monotonic function of the scale of coarse-graining. At the finest scale we consider the whole universe $X$ as the process $Y$. then, since $Y$ is a coarse graining of $S$ we have $Y=S=X$. In this case the environment $E$ corresponding to the universe seen as a system is the constant coarse-graining\footnote{Recall that, for a system with state space $\S$ the environment state space $\E$ must be such that $\X=\S \times \E$. I $\S =\X$ then we need $\E$ with $\X \times \E=\X$ such that $\E$ must be a singleton set. All coarse-grainings mapping $\X$ to a singleton set are constant over $\X$.} and therefore the mutual information $I(E_t;Y_{t+1})=0$ and the transfer entropy $I(Y_{t+1};E_t|Y_t)$ are zero. Then NTIC of the universe with respect to its environment is zero and $X$ can never be a C-process.
     		
-    		If we now increase the scale of $Y$, this allows $S$ to also reduce in scale and therefore $E$ can become more and more fine-grained. This means that the mutual information $I(E_t;Y_{t+1})$ between $E$ and $Y$ can at least potentially become positive. Up to the point where $E$ accounts for half of the bits of $X$ and $S$ for the other half (and we have $Y=S$) the maximally possible mutual information $I(E_t;Y_{t+1})$ increases. Even further refining $E$ then again leads to a reduction of the maximally possible $I(E_t;Y_{t+1})$.  
-    		
-    		
+    		If we now increase the scale of $Y$, this allows $S$ to also reduce in scale and therefore $E$ can become more and more fine-grained. This means that the mutual information $I(E_t;Y_{t+1})$ between $E$ and $Y$ can at least potentially become positive. Up to the point where $E$ accounts for half of the bits of $X$ and $S$ for the other half (and we have $Y=S$) the maximally possible mutual information $I(E_t;Y_{t+1})$ increases. Even further refining $E$ then again leads to a reduction of the maximally possible $I(E_t;Y_{t+1})$.
             % ==================================== %
             %    WHY DO WE NEED the FUCKING $Y$    %
             % ==================================== %
@@ -681,14 +694,6 @@
     	    
     	    According to Sec.~\ref{sec:cl} and Sec.~\ref{sec:cc}, an important implication from \ac{OurTheory} is that both conscious levels and conscious contents are associated with the state space of an NTIC process $Y$. A large state space of $Y$ contributes conscious levels through the mutual information $I(Y_{t+1};Y_{t})$ and also contributes richer conscious contents by providing more possible states of conscious processes. 
     	    \ac{OurTheory} therefore explains why, in normal physiological states, conscious levels and conscious contents are often positively correlated \citep{laureys2005neural}. This implication is also in line with the intuition in which consciousness is often associated with complex systems.
-    			
-            % ---------------------------------------------------------------------------- %
-            %                              Dynamical Boundary                              %
-            % ---------------------------------------------------------------------------- %
-            % \subsection{Dynamical Boundary}
-            % Our theory predicts that the boundary of a conscious system is dynamical. The boundary is determined by the NTIC process. This implies that when the structure of interaction between variables changes the physical boundaries supporting consciousness should also change. If some coarse-grained variables encode environmental information, they may become necessary components to form high NTIC. In such case, these coarse-grained variables are "recruited" inside the boundary of conscious processes. Note that, due to synergistic information, even recruiting some new variables may largely increase the level of NTIC. 
-            % This may explain why consciousness is tightly associated with binding and integration of information in human perception and cognition. Another crucial implication is that the same neural substrates may not be always involved in conscious processing rather it depends on whether it creates high NTIC with other members in the neural system. \needfig{Maybe I need a figure here as well}
-    
     
     % ============================================================================ %
     %                    Conscious versus Unconscious Processing                   %
