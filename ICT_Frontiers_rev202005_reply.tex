@@ -1,0 +1,222 @@
+% \input{ICT_Frontiers_rev202001.tex}
+\documentclass[utf8]{article}
+% \usepackage{RevisionToolsByAcer}
+% \ProvidesPackage{RevisionToolsByAcer}
+% \documentclass[utf8]{article}
+% \ProvidesPackage{RevisionToolsByAcer}
+%% Language and font encoding
+\usepackage[english]{babel}
+\usepackage[round, sort]{natbib}
+\usepackage[T1]{fontenc}
+
+
+
+% ============================ Sourcing main file ============================ %
+\usepackage{xr}
+\externaldocument{ICT_Frontiers_rev202005}
+\usepackage{lineno}
+
+
+
+
+
+% Sets page size and margins
+% \usepackage[a4paper, top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=4cm]{geometry}
+\usepackage[papersize={10in, 12in}, top=3cm,bottom=2cm,left=2in,right=2in,marginparwidth=1.8in]{geometry}
+\usepackage{titlesec}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage[at]{easylist}
+\usepackage[round]{natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{authblk}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage[threshold=2, autopunct=true, autostyle=true]{csquotes}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+% =============================== Header style =============================== %
+\titlelabel{}
+
+
+% ============================================================================ %
+%                               Macros from Acer                               %
+% ============================================================================ %
+
+		
+% --------------------------------- Question --------------------------------- %	
+\newcounter{cQuestion}[section]
+\newenvironment{question}
+    {\refstepcounter{cQuestion}\color{Blue}\noindent\newline Q\thecQuestion:}
+    {~\newline}
+    
+% ------------------------------------ Ans ----------------------------------- %
+\newenvironment{ans}  
+    {\color{Black}\noindent A:}
+    {~\newline}    
+    
+    
+\newcommand{\QA}[2]{
+    \begin{question}  
+        #1
+    \end{question}
+        
+    \begin{ans}  
+        #2
+    \end{ans}
+}
+
+% ---------------------------------- Revise ---------------------------------- %
+% \Revise{Page}{original text}{revised text}
+\newcommand{\revise}[3]{
+	\newline
+	\newline
+    \noindent
+    \textbf{Line #1:}
+    \newline
+    Original:\newline
+    \textit{"#2"}
+    \newline
+    \newline
+    Revised:\newline
+    \textit{"#3"}\newline}
+
+% ---------------------------------- Add New --------------------------------- %
+% \addnew{line number}{text}
+\newcommand{\addnew}[2]{\blockcquote{}{\textbf{Line #1:}~\newline\textit{"#2"}}
+}
+
+% ================================ Annotation ================================ %
+\newcommand{\toWrite}[1]{\noindent
+	\textcolor{Orange}{\textbf{[[ #1 ]]}}}
+
+
+% =================================== Title ================================== %
+\title{Response to Reviewers (Revision 2)}
+\date{\today}
+\author{} 
+
+
+
+% =================================== Begin ================================== % 
+\begin{document}
+
+    \maketitle
+    \section{Reply to Reviewer 1}
+    	\begin{question}
+    		The authors should formally define what an "NTIC process" is (l. 155, l. 182). I take it to be "NTIC > 0" but I am not clear on whether the condition $J_t = 0$ also applies at this point. I do understand now that $J_t = 0$ is implied by a C-process.
+    	\end{question}
+    
+    	\begin{ans}
+			The reviewer is correct. We refereed NTIC processes as processes with positive NTIC. To avoid potential ambiguity, we added a sentence to make this explicit at 
+			\addnew{\lineref{line:nticdef}}{For simplicity, in what follows, we refer to \textit{NTIC processes} as those \textit{processes with positive NTIC}.}
+					
+			Furthermore, we also replaced "NTIC process" with "C-process" in many places in this revision especially when the contexts involve conscious experience and informational closure.     		
+    	\end{ans}
+    
+    	\begin{question}
+    		There are still some language issues and typos, especially in the new sections (2.1 etc). 
+    	\end{question}
+    
+    	\begin{ans}
+    		We have read through this revision. We hope that we have corrected the language issues especially in Sec. 2.1.
+    	\end{ans}
+    
+    	\begin{question}
+    		l. 266-277: This paragraph is a bit confusing. There are two factors mixed together that influence the level of consciousness: the relative size of S and E, and then the coarse-graining scale of Y. Fig. 4 is only about the latter. In understand that the potential for consciousness is highest if X is split into equal parts S and E, but the relative size of S and E is not about coarse-graining per se. This could be made more explicit. Also, it seems like this paragraph contradicts a statement in l. 434-437 where it says that an NTIC micro process is sufficient for consciousness.     		    	
+    	\end{question}
+    
+    	\begin{ans}
+    		The reviewer is correct. In our current setup, the relative size of the state space $\mathcal{S}$ of $S$ and the state space $\mathcal{E}$ of $E$ is intertwined with the scale of coarse-graining. This is because the scale of coarse-graining a coarse-grained variable is quantified by the size of its state space. This means that we consider a coarse-grained variable is finer when we maps a microscopic variable to a coarse-grained variable with a larger state space.  
+    		
+    		In our current setup, the relationship among the state spaces $\mathcal{S}$,  $\mathcal{E}$, and  $\mathcal{X}$ are defined by the Cartesian product $\mathcal{X}=\mathcal{S}\times\mathcal{E}$. As described in Footnote 3, this setup implies that increasing the size of $\mathcal{S}$ inevitably decreases the size of $\mathcal{E}$. Consequently, increasing the relative size of $\mathcal{S}$ moves $S$ (so as $Y$) and $E$ toward a finer and a coarser scale, respectively. 
+    		
+    		We understand that this is not an ideal construction of ICT and is one of the current limitations of ICT (which is also related to an added paragraph in Limitation at Line \lineref{line:individuality} in our last revision). To make this point clear, we made the two following changes:    		    	
+    		\revise{\lineref{line:sizeAndScale}}
+    		{At the finest scale we consider the whole universe $X$ as the process $Y$}
+    		{Since we can quantify the scale of a coarse-grained variable by the size of its state space, therefore, at the finest scale we consider the whole universe $X$ as the process $Y$.}  
+
+    		 		
+    		\noindent
+    		A footnote is added at
+    		\addnew{\lineref{line:non-monotonic_end}}{In our current setup, the size of the state space $\mathcal{S}$ and $\mathcal{E}$ correspondingly determines the scale of coarse-graining of $S$ and $E$. Further research is needed to reveal the relationship among NTIC, scales of coarse-graining, and different constructions of $S$ and $E$. 
+    		}
+    		
+    		
+    		
+%    		are currently working on this by finding a better definition for $E$
+%    		
+%    		i.e, a variable with larger state space is considered to be finer, and vice versa )
+%    		
+%    		($S$, $E$, and $Y$). 
+%    		
+%    		This problem is one of the current limitations of ICT and is related to what we added in Limitation at Line \lineref{line:individuality} in our last revision.
+%    		
+%    		In this setup, the relationship among the state spaces $\mathcal{S}$,  $\mathcal{E}$, and  $\mathcal{X}$ are defined by the Cartesian product $\mathcal{X}=\mathcal{S}\times\mathcal{E}$. This implies that if the size of $\mathcal{X}$ is fixed, increasing the size of $\mathcal{S}$ to cover more states in $\mathcal{X}$ inevitably decreases the size of $\mathcal{E}$. , increasing the relative size of $\mathcal{S}$ moves $S$ (so as $Y$,  a coarse-graining of $S$) and $E$ toward a finer and a coarser scale, respectively. 
+    		
+    		We also agree that Line 434-437 is not well expressed. We did not mean to refer to the microscopic process as a process at the finest scale. We revised it as follows:
+    		\revise{\lineref{line:microNTIC}}
+    		{
+    			However, ICT suggests that coarse-graining is necessary only when the microscopic processes are not NTIC (e.g. the neural system). An NTIC process can be formed in a noise-free deterministic system without coarse-graining. According to ICT, this NTIC process is sufficient for consciousness.}
+    		{
+    			However, ICT suggests that coarse-graining is necessary only when a process is not informationally closed. Therefore, if a C-process is formed at a microscopic scale (e.g. the scale of individual neurons), according to ICT, this C-process is sufficient for consciousness.}
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+%    		In our setup, the state space $\mathcal{E}$ of $E$ is determined by the state space $\mathcal{X}$ of $X$ and the state space $\mathcal{S}$ of $S$ through the relationship $\mathcal{X}=\mathcal{S}\times\mathcal{E}$. This 
+    	\end{ans}
+    
+    	\begin{question}
+    		l. 388-391: "Consequently, mental simulation, imagination, computing alternative realities, and generating counterfactuals often come with conscious experience" I'm not sure this statement fits with ICT. It seems to me that the internal process $Y_t \rightarrow Y_{t+1}$ has to be deterministic, or at least any uncertainty cannot be uncertainty that could be resolved at a lower level (because then it wouldn't be a C-process, as it would not be informationally closed with respect to S or X). This means that the C-process needs to be a good model of the environment, meaning that the correlation between $Y_{t+1}$ and $E_{t+1}$ needs to be very strong. So I don't see there being room for modeling "alternative realities". Because imagining counterfactuals would mean that $Y_{t+1}$ ultimately does not fit with $ E_t $ and thus $ I(Y_{t+1}; Y_t|E_t) $ would be much larger than if $ Y_{t+1} $ actually fit with $ E_{t+1} $. So correct predictions should be good, but imagining counterfactuals seems bad from an ITC point of view. No?
+    	\end{question}
+    
+    	\begin{ans}
+			If we understand the reviewer's question correctly, this question includes two contradictions to ICT from the paragraph about mental simulations: 
+			\begin{enumerate}
+				\item The correlation $Y_{t+1}$ and $E_{t+1}$ needs to be strong for a C-process to be a good model of the environment.
+				\item During imagining counterfactuals and modelling alternative realities, $Y_{t+1}$ ultimately does not fit with $ E_t $. However, ICT hypothesises that the level of consciousness is contributed by the degrees of mutual information $I(Y_{t+1}:E_t)$.
+			\end{enumerate}
+			    		
+    		To the first point, we can consider both NTIC processes (including C-processes) and the "synchronised" processes, which have high mutual information $I(Y_{t+1}:E_{t+1})$ are both good models of the environment. However, to be informationally closed, i.e. $I(Y_{t+1}:E_t|Y_t)=0$, NTIC more emphasises how a process models the influence from the environment to its future states. We consider this as a critical feature for a system which models system-environment interactions.
+    		
+    		Further more, $Y_t \rightarrow Y_{t+1}$ does not have to be deterministic ($H(Y_{t+1}|Y_t)=0)$ to be a C-process. A C-process needs to be informationally closed meaning that the transfer entropy term
+    		\begin{align*}
+    			I(Y_{t+1}:E_t|Y_t)&=H(Y_{t+1}|Y_t) - H(Y_{t+1}|E_t, Y_t)\\
+    			&=0    			
+   			\end{align*}
+   			Therefore,
+ 			\begin{align*}
+	   			 H(Y_{t+1}|Y_t)&=H(Y_{t+1}|E_t, Y_t)  			
+   			\end{align*}
+   			This indicates that when information about $Y_{t+1}$ given $E_t$ is involved in information about $Y_{t+1}$ given $Y_t$, $Y$ is informationally closed with respect to $E$ even though $Y$ is not deterministic. \\
+   			
+			Regarding the second point, the reviewer is correct that these mental simulations seem to be disentangled from the environment.  However, other processes inside the bodies should also be considered as part of the environment of C-processes. Therefore, similar to our argument about dreaming, we consider that conscious experience happening in these internal simulations is contributed by the mutual information between the C-process and other processes in the neural system. 
+			
+			We agree that our original statement is too strong. We have revised this paragraph as follows:
+   			\revise{\lineref{line:MentalSimulation}}{Cognitive functions involving simulations are expected to involve NTIC processes. Consequently, mental simulation, imagination, computing alternative realities, and generating counterfactuals often come with conscious experience. }{Cognitive functions involving internal simulations about agent-environment interactions (e.g. imagination, computing alternative realities, and generating counterfactuals) are expected to involve NTIC processes. We speculate that, these internal simulations may involve interactions between C-processes and other processes in the neural system. Therefore, they often come with conscious experience.}
+    		
+    	\end{ans}
+    
+    	\begin{question}
+    		l. 602: if you mean integration in the IIT sense, IIT should be cited here.    	    		
+    	\end{question}
+    	\begin{ans}
+			Thank the reviewer for clarifying this. We do not intend to refer to the specific notion of integration defined by IIT. More generally, here we refer to any high-order dependencies. 
+			This is one of our work in progress and we are still working on potential informational objects that can be well adapted in our current framework. 
+			
+			We have added a footnote to disambiguate this concept at 
+			\addnew{\lineref{notIIT}}{Integration here refers to any high-order dependencies.}
+    	\end{ans}
+    
+
+    	
+    
+    
+	\bibliography{ref}
+\end{document}
